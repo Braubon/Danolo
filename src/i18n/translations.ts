@@ -37,7 +37,7 @@ export const translations = {
     },
     contact: {
       eyebrow: "¿trabajamos juntos?",
-      title: "¿Trabajamos juntos? Hablemos.",
+      title: "¿Trabajamos juntos? Hablemos",
       writeMe: "Cuéntame tu idea por email:",
       openEmail: "Abrir email",
       preferCall: "¿Prefieres un trato más directo? Llámame:",
@@ -419,7 +419,7 @@ export const translations = {
     },
     contact: {
       eyebrow: "shall we work together?",
-      title: "Shall we work together? Let's talk.",
+      title: "Shall we work together? Let's talk",
       writeMe: "Tell me your idea via email:",
       openEmail: "Open email",
       preferCall: "Prefer a more direct approach? Call me:",
