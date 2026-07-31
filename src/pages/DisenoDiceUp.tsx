@@ -6,21 +6,21 @@ import { Footer } from "@/components/Footer";
 import { ContactSection } from "@/components/ContactSection";
 import { useT } from "@/i18n/LanguageContext";
 
-import videoSrc from "@/assets/diceup/Presentación_DiceUp_1-video.mp4";
-import estuche from "@/assets/diceup/Presentación_DiceUp_2-estuche dados.jpg";
-import carteles from "@/assets/diceup/Presentación_DiceUp_3-carteles.jpg";
-import cartelesDado from "@/assets/diceup/Presentación_DiceUp_3-1 carteles dado.jpg";
-import colores from "@/assets/diceup/Presentación_DiceUp_4-colores.jpg";
-import tipografia from "@/assets/diceup/Presentación_DiceUp_5-tipografía.jpg";
-import fachada from "@/assets/diceup/Presentación_DiceUp_6-fachada.jpg";
-import pattern1 from "@/assets/diceup/Presentación_DiceUp_7-pattern.jpg";
-import papelRegalo from "@/assets/diceup/Presentación_DiceUp_8-papel regalo.jpg";
-import bolsas from "@/assets/diceup/Presentación_DiceUp_9-bolsas.jpg";
-import pattern2 from "@/assets/diceup/Presentación_DiceUp_10-pattern.jpg";
-import tarjetas from "@/assets/diceup/Presentación_DiceUp_11-tarjetas.jpg";
-import identificaciones from "@/assets/diceup/Presentación_DiceUp_12-identificaciones.jpg";
-import pattern3 from "@/assets/diceup/Presentación_DiceUp_13-pattern.jpg";
-import cajaCartas from "@/assets/diceup/Presentación_DiceUp_14- caja cartas.jpg";
+import videoSrc from "@/assets/diceup/1-video.mp4";
+import estuche from "@/assets/diceup/2-estuche-dados.jpg";
+import carteles from "@/assets/diceup/3-carteles.jpg";
+import cartelesDado from "@/assets/diceup/3-1-carteles-dado.jpg";
+import colores from "@/assets/diceup/4-colores.jpg";
+import tipografia from "@/assets/diceup/5-tipografia.jpg";
+import fachada from "@/assets/diceup/6-fachada.jpg";
+import pattern1 from "@/assets/diceup/7-pattern.jpg";
+import papelRegalo from "@/assets/diceup/8-papel-regalo.jpg";
+import bolsas from "@/assets/diceup/9-bolsas.jpg";
+import pattern2 from "@/assets/diceup/10-pattern.jpg";
+import tarjetas from "@/assets/diceup/11-tarjetas.jpg";
+import identificaciones from "@/assets/diceup/12-identificaciones.jpg";
+import pattern3 from "@/assets/diceup/13-pattern.jpg";
+import cajaCartas from "@/assets/diceup/14-caja-cartas.jpg";
 
 const DisenoDiceUp = () => {
   const t = useT();

@@ -7,7 +7,7 @@ import { ProjectsShowcase, ShowcaseProject } from "@/components/ProjectsShowcase
 import { useT } from "@/i18n/LanguageContext";
 import { RichText } from "@/i18n/RichText";
 import dewImg from "@/assets/service-design.jpg";
-import diceupCover from "@/assets/diceup/Presentación_DiceUp_2-estuche dados.jpg";
+import diceupCover from "@/assets/diceup/2-estuche-dados.jpg";
 import oshunCover from "@/assets/oshun/revista-abierta.webp";
 import arsenalCover from "@/assets/arsenal/Presentación Portfolio_2_store.webp";
 
