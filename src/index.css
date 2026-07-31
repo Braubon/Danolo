@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Danolo Designs — Tech-noir minimalista
+   Fondo grain, bloques con borde negro y sombra dura, acento magenta. */
+
+@layer base {
+  :root {
+    --background: 0 0% 86%;
+    --foreground: 255 4% 16%;
+
+    --card: 0 0% 92%;
+    --card-foreground: 255 4% 16%;
+
+    --popover: 0 0% 92%;
+    --popover-foreground: 255 4% 16%;
+
+    --primary: 255 4% 16%;
+    --primary-foreground: 0 0% 86%;
+
+    --secondary: 0 0% 80%;
+    --secondary-foreground: 255 4% 16%;
+
+    --muted: 0 0% 78%;
+    --muted-foreground: 255 4% 35%;
+
+    --accent: 289 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --cta: 13 100% 55%;
+    --cta-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 255 4% 16%;
+    --input: 0 0% 75%;
+    --ring: 289 100% 50%;
+
+    --radius: 0.25rem;
+
+    /* Sombra dura para el efecto squish */
+    --shadow-hard: 8px 8px 0 0 hsl(var(--foreground));
+    --shadow-hard-sm: 5px 5px 0 0 hsl(var(--foreground));
+    --shadow-hard-accent: 8px 8px 0 0 hsl(var(--accent));
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    background-image: url('/src/assets/noise.jpg');
+    background-repeat: repeat;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  /* Bloque con borde + sombra dura */
+  .hard-block {
+    @apply border-2 border-foreground bg-card;
+    box-shadow: var(--shadow-hard);
+    transition: transform 180ms ease, box-shadow 180ms ease;
+  }
+
+  .hard-block-sm {
+    @apply border-2 border-foreground bg-card;
+    box-shadow: var(--shadow-hard-sm);
+    transition: transform 180ms ease, box-shadow 180ms ease;
+  }
+
+  /* Efecto squish: el elemento se desplaza hacia su sombra */
+  .squish:hover,
+  .squish:focus-visible {
+    transform: translate(8px, 8px);
+    box-shadow: 0 0 0 0 hsl(var(--foreground));
+  }
+
+  .squish-sm:hover,
+  .squish-sm:focus-visible {
+    transform: translate(5px, 5px);
+    box-shadow: 0 0 0 0 hsl(var(--foreground));
+  }
+
+  /* Botón enviar del formulario: sombra blanca sobre fondo oscuro */
+  .contact-submit {
+    box-shadow: 5px 5px 0 0 hsl(var(--background));
+    transition: transform 180ms ease, box-shadow 180ms ease;
+  }
+  .contact-submit:hover,
+  .contact-submit:focus-visible {
+    transform: translate(5px, 5px);
+    box-shadow: 0 0 0 0 hsl(var(--background));
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Space Mono', ui-monospace, monospace;
+    letter-spacing: -0.02em;
+  }
+  .font-sans {
+    font-family: 'Funnel Display', system-ui, sans-serif;
+  }
+  .font-mono {
+    font-family: 'Space Mono', ui-monospace, monospace;
+  }
+
+  /* Marquee infinito */
+  .animate-marquee {
+    animation: marquee 40s linear infinite;
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* Flechas en onda */
+  .arrow-wave {
+    animation: wave 1.4s ease-in-out infinite;
+  }
+  @keyframes wave {
+    0%, 100% { transform: translateY(-6px); opacity: 0.4; }
+    50% { transform: translateY(6px); opacity: 1; }
+  }
+
+  /* Punto parpadeante */
+  .blink-dot {
+    animation: blink 1s steps(2, start) infinite;
+  }
+  @keyframes blink {
+    to { opacity: 0; }
+  }
+}
