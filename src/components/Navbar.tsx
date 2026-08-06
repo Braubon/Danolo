@@ -33,10 +33,7 @@ export const Navbar = () => {
     {
       label: t.nav.threed,
       to: "/3d",
-      projects: [
-        { label: t.nav.product, to: "/3d/producto" },
-        { label: t.nav.arch, to: "/3d/arquitectura" },
-      ],
+      projects: undefined as undefined | { label: string; to: string }[],
     },
     { label: t.nav.about, to: "/about", projects: undefined as undefined | { label: string; to: string }[] },
     { label: t.nav.contact, to: "#contacto", projects: undefined },

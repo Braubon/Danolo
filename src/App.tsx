@@ -1,5 +1,5 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { LanguageProvider } from "./i18n/LanguageContext.tsx";
 import Index from "./pages/Index.tsx";
@@ -13,8 +13,6 @@ import DisenoArsenal from "./pages/DisenoArsenal.tsx";
 import IA from "./pages/IA.tsx";
 import IAProject from "./pages/IAProject.tsx";
 import ThreeD from "./pages/ThreeD.tsx";
-import ThreeDProducto from "./pages/ThreeDProducto.tsx";
-import ThreeDArquitectura from "./pages/ThreeDArquitectura.tsx";
 import About from "./pages/About.tsx";
 
 const queryClient = new QueryClient();
@@ -35,8 +33,8 @@ const App = () => (
           <Route path="/ia" element={<IA />} />
           <Route path="/ia/:slug" element={<IAProject />} />
           <Route path="/3d" element={<ThreeD />} />
-          <Route path="/3d/producto" element={<ThreeDProducto />} />
-          <Route path="/3d/arquitectura" element={<ThreeDArquitectura />} />
+          <Route path="/3d/producto" element={<Navigate to="/3d" replace />} />
+          <Route path="/3d/arquitectura" element={<Navigate to="/3d" replace />} />
           <Route path="/about" element={<About />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
