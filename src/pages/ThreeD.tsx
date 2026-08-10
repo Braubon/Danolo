@@ -89,40 +89,60 @@ const ThreeD = () => {
 
         <section className="container pb-12">
           {/* Proyecto 1: Cámara */}
-          <div className="hard-block w-full overflow-hidden flex flex-col mb-12 md:mb-16 bg-[#1a1a1c]">
-            <img src={camara1} alt="3D Cámara 1" onClick={() => openImage(camara1)} className="w-full h-auto block cursor-pointer" />
-            <div className="flex w-full justify-center">
-              <img src={camara2} alt="3D Cámara 2" onClick={() => openImage(camara2)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
-              <img src={camara3} alt="3D Cámara 3" onClick={() => openImage(camara3)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+          <div className="mb-12 md:mb-16">
+            <h2 className="font-display font-bold text-2xl md:text-3xl text-accent mb-4 tracking-wider uppercase">
+              01 — Cámara
+            </h2>
+            <div className="hard-block w-full overflow-hidden flex flex-col bg-[#1a1a1c]">
+              <img src={camara1} alt="3D Cámara 1" onClick={() => openImage(camara1)} className="w-full h-auto block cursor-pointer" />
+              <div className="flex w-full justify-center">
+                <img src={camara2} alt="3D Cámara 2" onClick={() => openImage(camara2)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                <img src={camara3} alt="3D Cámara 3" onClick={() => openImage(camara3)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+              </div>
+              <img src={camara4} alt="3D Cámara 4" onClick={() => openImage(camara4)} className="w-full h-auto block cursor-pointer" />
             </div>
-            <img src={camara4} alt="3D Cámara 4" onClick={() => openImage(camara4)} className="w-full h-auto block cursor-pointer" />
           </div>
 
           {/* Proyecto 2: Sesderma */}
-          <div className="hard-block w-full overflow-hidden flex flex-col mb-12 md:mb-16 bg-[#1a1a1c]">
-            <img src={sesderma5} alt="3D Sesderma 5" onClick={() => openImage(sesderma5)} className="w-full h-auto block cursor-pointer" />
-            <div className="flex w-full justify-center">
-              <img src={sesderma6} alt="3D Sesderma 6" onClick={() => openImage(sesderma6)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
-              <img src={sesderma7} alt="3D Sesderma 7" onClick={() => openImage(sesderma7)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+          <div className="mb-12 md:mb-16">
+            <h2 className="font-display font-bold text-2xl md:text-3xl text-accent mb-4 tracking-wider uppercase">
+              02 — Sesderma
+            </h2>
+            <div className="hard-block w-full overflow-hidden flex flex-col bg-[#1a1a1c]">
+              <img src={sesderma5} alt="3D Sesderma 5" onClick={() => openImage(sesderma5)} className="w-full h-auto block cursor-pointer" />
+              <div className="flex w-full justify-center">
+                <img src={sesderma6} alt="3D Sesderma 6" onClick={() => openImage(sesderma6)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                <img src={sesderma7} alt="3D Sesderma 7" onClick={() => openImage(sesderma7)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+              </div>
             </div>
           </div>
 
           {/* Proyecto 3: Infoarquitectura */}
-          <div className="hard-block w-full overflow-hidden flex flex-col mb-12 md:mb-16 bg-[#1a1a1c]">
-            <img src={info8} alt="3D Infoarquitectura 8" onClick={() => openImage(info8)} className="w-full h-auto block cursor-pointer" />
-            <img src={info9} alt="3D Infoarquitectura 9" onClick={() => openImage(info9)} className="w-full h-auto block cursor-pointer" />
-            <img src={info10} alt="3D Infoarquitectura 10" onClick={() => openImage(info10)} className="w-full h-auto block cursor-pointer" />
-            <div className="flex w-full justify-center">
-              <img src={info11} alt="3D Infoarquitectura 11" onClick={() => openImage(info11)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
-              <img src={info12} alt="3D Infoarquitectura 12" onClick={() => openImage(info12)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+          <div className="mb-12 md:mb-16">
+            <h2 className="font-display font-bold text-2xl md:text-3xl text-accent mb-4 tracking-wider uppercase">
+              03 — Infoarquitectura
+            </h2>
+            <div className="hard-block w-full overflow-hidden flex flex-col bg-[#1a1a1c]">
+              <img src={info8} alt="3D Infoarquitectura 8" onClick={() => openImage(info8)} className="w-full h-auto block cursor-pointer" />
+              <img src={info9} alt="3D Infoarquitectura 9" onClick={() => openImage(info9)} className="w-full h-auto block cursor-pointer" />
+              <img src={info10} alt="3D Infoarquitectura 10" onClick={() => openImage(info10)} className="w-full h-auto block cursor-pointer" />
+              <div className="flex w-full justify-center">
+                <img src={info11} alt="3D Infoarquitectura 11" onClick={() => openImage(info11)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                <img src={info12} alt="3D Infoarquitectura 12" onClick={() => openImage(info12)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+              </div>
             </div>
           </div>
 
           {/* Proyecto 4: Reloj */}
-          <div className="hard-block w-full overflow-hidden flex flex-col mb-14 bg-[#1a1a1c]">
-            <div className="flex w-full justify-center">
-              <img src={reloj13} alt="3D Reloj 13" onClick={() => openImage(reloj13)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
-              <img src={reloj14} alt="3D Reloj 14" onClick={() => openImage(reloj14)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+          <div className="mb-14">
+            <h2 className="font-display font-bold text-2xl md:text-3xl text-accent mb-4 tracking-wider uppercase">
+              04 — Reloj
+            </h2>
+            <div className="hard-block w-full overflow-hidden flex flex-col bg-[#1a1a1c]">
+              <div className="flex w-full justify-center">
+                <img src={reloj13} alt="3D Reloj 13" onClick={() => openImage(reloj13)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                <img src={reloj14} alt="3D Reloj 14" onClick={() => openImage(reloj14)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+              </div>
             </div>
           </div>
 

@@ -6,7 +6,7 @@ import { ContactSection } from "@/components/ContactSection";
 import { ProjectsShowcase, ShowcaseProject } from "@/components/ProjectsShowcase";
 import { useT } from "@/i18n/LanguageContext";
 import fotografiaCover from "@/assets/fresli/cartel-01.png";
-import identidadCover from "@/assets/fresli/cartel-02.png";
+import identidadCover from "@/assets/identidad-consistente/becca/becca-3.jpg";
 import bocetoCover from "@/assets/fresli/cartel-03.png";
 
 const IA = () => {
