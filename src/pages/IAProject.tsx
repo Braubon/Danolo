@@ -34,6 +34,22 @@ import burt20 from "@/assets/identidad-consistente/burt/burt-20.jpg";
 import burt21 from "@/assets/identidad-consistente/burt/burt-21.jpg";
 import burt22 from "@/assets/identidad-consistente/burt/burt-22.jpg";
 
+import claudia23 from "@/assets/identidad-consistente/claudia/claudia-23.jpg";
+import claudia24 from "@/assets/identidad-consistente/claudia/claudia-24.jpg";
+import claudia25 from "@/assets/identidad-consistente/claudia/claudia-25.jpg";
+import claudia26 from "@/assets/identidad-consistente/claudia/claudia-26.jpg";
+import claudia27 from "@/assets/identidad-consistente/claudia/claudia-27.jpg";
+import claudia28 from "@/assets/identidad-consistente/claudia/claudia-28.jpg";
+import claudia29 from "@/assets/identidad-consistente/claudia/claudia-29.jpg";
+import claudia30 from "@/assets/identidad-consistente/claudia/claudia-30.jpg";
+import claudia31 from "@/assets/identidad-consistente/claudia/claudia-31.jpg";
+import claudia32 from "@/assets/identidad-consistente/claudia/claudia-32.jpg";
+import claudia33 from "@/assets/identidad-consistente/claudia/claudia-33.jpg";
+import claudia34 from "@/assets/identidad-consistente/claudia/claudia-34.jpg";
+import claudia35 from "@/assets/identidad-consistente/claudia/claudia-35.jpg";
+import claudia36 from "@/assets/identidad-consistente/claudia/claudia-36.jpg";
+import claudia37 from "@/assets/identidad-consistente/claudia/claudia-37.jpg";
+
 const IAProject = () => {
   const t = useT();
   const { slug = "" } = useParams();
@@ -44,7 +60,7 @@ const IAProject = () => {
     { src: fresli03, alt: t.ia.altFresli3 },
   ];
 
-  const beccaAndBurtImages = [
+  const allCharacterImages = [
     { src: becca1, alt: "Identidad Consistente — Becca 1" },
     { src: becca2, alt: "Identidad Consistente — Becca 2" },
     { src: becca3, alt: "Identidad Consistente — Becca 3" },
@@ -67,9 +83,24 @@ const IAProject = () => {
     { src: burt20, alt: "Identidad Consistente — Burt 20" },
     { src: burt21, alt: "Identidad Consistente — Burt 21" },
     { src: burt22, alt: "Identidad Consistente — Burt 22" },
+    { src: claudia23, alt: "Identidad Consistente — Claudia 23" },
+    { src: claudia24, alt: "Identidad Consistente — Claudia 24" },
+    { src: claudia25, alt: "Identidad Consistente — Claudia 25" },
+    { src: claudia26, alt: "Identidad Consistente — Claudia 26" },
+    { src: claudia27, alt: "Identidad Consistente — Claudia 27" },
+    { src: claudia28, alt: "Identidad Consistente — Claudia 28" },
+    { src: claudia29, alt: "Identidad Consistente — Claudia 29" },
+    { src: claudia30, alt: "Identidad Consistente — Claudia 30" },
+    { src: claudia31, alt: "Identidad Consistente — Claudia 31" },
+    { src: claudia32, alt: "Identidad Consistente — Claudia 32" },
+    { src: claudia33, alt: "Identidad Consistente — Claudia 33" },
+    { src: claudia34, alt: "Identidad Consistente — Claudia 34" },
+    { src: claudia35, alt: "Identidad Consistente — Claudia 35" },
+    { src: claudia36, alt: "Identidad Consistente — Claudia 36" },
+    { src: claudia37, alt: "Identidad Consistente — Claudia 37" },
   ];
 
-  const currentGallery = slug === "identidad-consistente" ? beccaAndBurtImages : fresliImages;
+  const currentGallery = slug === "identidad-consistente" ? allCharacterImages : fresliImages;
 
   const projectMap: Record<string, { title: string; tagline: string }> = {
     "fotografia-publicitaria": { title: t.ia.projects.photo.title, tagline: t.ia.projects.photo.tagline },
@@ -179,6 +210,50 @@ const IAProject = () => {
                   <div className="flex w-full justify-center">
                     <img src={burt21} alt="Burt 21" onClick={() => setOpenIdx(20)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                     <img src={burt22} alt="Burt 22" onClick={() => setOpenIdx(21)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Sección 03: Claudia */}
+              <div>
+                <h2 className="font-display font-bold text-2xl md:text-3xl text-accent mb-4 tracking-wider uppercase">
+                  03 — Claudia
+                </h2>
+                <div className="hard-block w-full overflow-hidden flex flex-col bg-[#1a1a1c]">
+                  <img src={claudia23} alt="Claudia 23" onClick={() => setOpenIdx(22)} className="w-full h-auto block cursor-pointer" />
+
+                  <div className="flex w-full justify-center">
+                    <img src={claudia24} alt="Claudia 24" onClick={() => setOpenIdx(23)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={claudia25} alt="Claudia 25" onClick={() => setOpenIdx(24)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                  </div>
+
+                  <div className="flex w-full justify-center">
+                    <img src={claudia26} alt="Claudia 26" onClick={() => setOpenIdx(25)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={claudia27} alt="Claudia 27" onClick={() => setOpenIdx(26)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                  </div>
+
+                  <img src={claudia28} alt="Claudia 28" onClick={() => setOpenIdx(27)} className="w-full h-auto block cursor-pointer" />
+
+                  <div className="flex w-full justify-center">
+                    <img src={claudia29} alt="Claudia 29" onClick={() => setOpenIdx(28)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={claudia30} alt="Claudia 30" onClick={() => setOpenIdx(29)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                  </div>
+
+                  <img src={claudia31} alt="Claudia 31" onClick={() => setOpenIdx(30)} className="w-full h-auto block cursor-pointer" />
+
+                  <div className="flex w-full justify-center">
+                    <img src={claudia32} alt="Claudia 32" onClick={() => setOpenIdx(31)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={claudia33} alt="Claudia 33" onClick={() => setOpenIdx(32)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                  </div>
+
+                  <div className="flex w-full justify-center">
+                    <img src={claudia34} alt="Claudia 34" onClick={() => setOpenIdx(33)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={claudia35} alt="Claudia 35" onClick={() => setOpenIdx(34)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                  </div>
+
+                  <div className="flex w-full justify-center">
+                    <img src={claudia36} alt="Claudia 36" onClick={() => setOpenIdx(35)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={claudia37} alt="Claudia 37" onClick={() => setOpenIdx(36)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                   </div>
                 </div>
               </div>
