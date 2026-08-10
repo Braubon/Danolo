@@ -151,36 +151,36 @@ const IAProject = () => {
                   01 — Becca
                 </h2>
                 <div className="hard-block w-full overflow-hidden flex flex-col bg-[#1a1a1c]">
-                  {/* 1. Becca 1 (Ancho completo) */}
+                  {/* Becca 1 (Ancho completo) */}
                   <img src={becca1} alt="Becca 1" onClick={() => setOpenIdx(0)} className="w-full h-auto block cursor-pointer" />
                   
-                  {/* 2. Becca 2 y Becca 3 (2 columnas) */}
+                  {/* Becca 2 y Becca 3 (2 columnas) */}
                   <div className="flex w-full justify-center">
                     <img src={becca2} alt="Becca 2" onClick={() => setOpenIdx(1)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                     <img src={becca3} alt="Becca 3" onClick={() => setOpenIdx(2)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                   </div>
 
-                  {/* 3. Becca 4 (Ancho completo) */}
+                  {/* Becca 4 (Ancho completo) */}
                   <img src={becca4} alt="Becca 4" onClick={() => setOpenIdx(3)} className="w-full h-auto block cursor-pointer" />
 
-                  {/* 4. Becca 5 (Ancho completo - Chimenea estilo pin-up, sin márgenes negros) */}
+                  {/* Becca 5 (Ancho completo) */}
                   <img src={becca5} alt="Becca 5" onClick={() => setOpenIdx(4)} className="w-full h-auto block cursor-pointer" />
 
-                  {/* 5. Becca 6 y Becca 7 (2 columnas: Pez en velo & Busto rosa) */}
-                  <div className="flex w-full justify-center">
-                    <img src={becca6} alt="Becca 6" onClick={() => setOpenIdx(5)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
-                    <img src={becca7} alt="Becca 7" onClick={() => setOpenIdx(6)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
-                  </div>
+                  {/* Becca 6 (Ancho completo — Pez velo y busto rosa) */}
+                  <img src={becca6} alt="Becca 6" onClick={() => setOpenIdx(5)} className="w-full h-auto block cursor-pointer" />
 
-                  {/* 6. Becca 8, Becca 9 y Becca 10 (3 columnas — Yoga) */}
+                  {/* Becca 7, 8, 9 (3 columnas — Yoga) */}
                   <div className="flex w-full justify-center">
+                    <img src={becca7} alt="Becca 7" onClick={() => setOpenIdx(6)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                     <img src={becca8} alt="Becca 8" onClick={() => setOpenIdx(7)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                     <img src={becca9} alt="Becca 9" onClick={() => setOpenIdx(8)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
-                    <img src={becca10} alt="Becca 10" onClick={() => setOpenIdx(9)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                   </div>
 
-                  {/* 7. Becca 11 (Ancho completo) */}
-                  <img src={becca11} alt="Becca 11" onClick={() => setOpenIdx(10)} className="w-full h-auto block cursor-pointer" />
+                  {/* Becca 10 y 11 (2 columnas — Ventana portátil y Ventana taza) */}
+                  <div className="flex w-full justify-center">
+                    <img src={becca10} alt="Becca 10" onClick={() => setOpenIdx(9)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={becca11} alt="Becca 11" onClick={() => setOpenIdx(10)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                  </div>
                 </div>
               </div>
 
@@ -190,23 +190,34 @@ const IAProject = () => {
                   02 — Burt
                 </h2>
                 <div className="hard-block w-full overflow-hidden flex flex-col bg-[#1a1a1c]">
+                  {/* Burt 12 (Ancho completo) */}
                   <img src={burt12} alt="Burt 12" onClick={() => setOpenIdx(11)} className="w-full h-auto block cursor-pointer" />
-                  <img src={burt13} alt="Burt 13" onClick={() => setOpenIdx(12)} className="w-full h-auto block cursor-pointer" />
-                  <img src={burt14} alt="Burt 14" onClick={() => setOpenIdx(13)} className="w-full h-auto block cursor-pointer" />
 
+                  {/* Burt 13 y 14 (2 columnas — Cuello alto & Sillón) */}
+                  <div className="flex w-full justify-center">
+                    <img src={burt13} alt="Burt 13" onClick={() => setOpenIdx(12)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={burt14} alt="Burt 14" onClick={() => setOpenIdx(13)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                  </div>
+
+                  {/* Burt 15 y 16 (2 columnas — Gafas naranja & Chaqueta chándal) */}
                   <div className="flex w-full justify-center">
                     <img src={burt15} alt="Burt 15" onClick={() => setOpenIdx(14)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                     <img src={burt16} alt="Burt 16" onClick={() => setOpenIdx(15)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                   </div>
 
+                  {/* Burt 17 (Ancho completo — Busto mármol) */}
                   <img src={burt17} alt="Burt 17" onClick={() => setOpenIdx(16)} className="w-full h-auto block cursor-pointer" />
+
+                  {/* Burt 18 (Ancho completo — Capa seda verde) */}
                   <img src={burt18} alt="Burt 18" onClick={() => setOpenIdx(17)} className="w-full h-auto block cursor-pointer" />
 
+                  {/* Burt 19 y 20 (2 columnas — Camiseta tirantes & Playa atardecer) */}
                   <div className="flex w-full justify-center">
                     <img src={burt19} alt="Burt 19" onClick={() => setOpenIdx(18)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                     <img src={burt20} alt="Burt 20" onClick={() => setOpenIdx(19)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                   </div>
 
+                  {/* Burt 21 y 22 (2 columnas — Bosque gorra & Banco jardín) */}
                   <div className="flex w-full justify-center">
                     <img src={burt21} alt="Burt 21" onClick={() => setOpenIdx(20)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                     <img src={burt22} alt="Burt 22" onClick={() => setOpenIdx(21)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
@@ -220,44 +231,44 @@ const IAProject = () => {
                   03 — Claudia
                 </h2>
                 <div className="hard-block w-full overflow-hidden flex flex-col bg-[#1a1a1c]">
-                  {/* Claudia 23 (Ancho completo - Orquídea roja) */}
+                  {/* Claudia 23 (Ancho completo — Orquídea roja) */}
                   <img src={claudia23} alt="Claudia 23" onClick={() => setOpenIdx(22)} className="w-full h-auto block cursor-pointer" />
 
-                  {/* Claudia 24 y 25 (2 columnas: Sombras ventana & Desierto) */}
+                  {/* Claudia 24 y 25 (2 columnas — Sombras & Desierto) */}
                   <div className="flex w-full justify-center">
                     <img src={claudia24} alt="Claudia 24" onClick={() => setOpenIdx(23)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                     <img src={claudia25} alt="Claudia 25" onClick={() => setOpenIdx(24)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                   </div>
 
-                  {/* Claudia 26 y 27 (2 columnas: Chaqueta neón & Sombrero paja) */}
+                  {/* Claudia 26 y 27 (2 columnas — Chaqueta neón & Sombrero paja) */}
                   <div className="flex w-full justify-center">
                     <img src={claudia26} alt="Claudia 26" onClick={() => setOpenIdx(25)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                     <img src={claudia27} alt="Claudia 27" onClick={() => setOpenIdx(26)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                   </div>
 
-                  {/* Claudia 28 (Ancho completo - Auriculares perfil) */}
+                  {/* Claudia 28 (Ancho completo — Auriculares) */}
                   <img src={claudia28} alt="Claudia 28" onClick={() => setOpenIdx(27)} className="w-full h-auto block cursor-pointer" />
 
-                  {/* Claudia 29, 30 y 31 (3 COLUMNAS EN PARALELO — Pop Art, Forma roja & Glitch RGB) */}
+                  {/* Claudia 29, 30 y 31 (3 COLUMNAS EN PARALELO — Pop Art, Silueta roja & Glitch RGB) */}
                   <div className="flex w-full justify-center">
                     <img src={claudia29} alt="Claudia 29" onClick={() => setOpenIdx(28)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                     <img src={claudia30} alt="Claudia 30" onClick={() => setOpenIdx(29)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                     <img src={claudia31} alt="Claudia 31" onClick={() => setOpenIdx(30)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                   </div>
 
-                  {/* Claudia 32 y 33 (2 columnas: Blazer blanco & Bajo el agua) */}
+                  {/* Claudia 32 y 33 (2 columnas — Blazer blanco & Bajo el agua) */}
                   <div className="flex w-full justify-center">
                     <img src={claudia32} alt="Claudia 32" onClick={() => setOpenIdx(31)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                     <img src={claudia33} alt="Claudia 33" onClick={() => setOpenIdx(32)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                   </div>
 
-                  {/* Claudia 34 y 35 (2 columnas: Piscina bata roja & Cocina manzana verde) */}
+                  {/* Claudia 34 y 35 (2 columnas — Piscina bata roja & Cocina manzana verde) */}
                   <div className="flex w-full justify-center">
                     <img src={claudia34} alt="Claudia 34" onClick={() => setOpenIdx(33)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                     <img src={claudia35} alt="Claudia 35" onClick={() => setOpenIdx(34)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                   </div>
 
-                  {/* Claudia 36 y 37 (2 columnas: Azotea luces & Playa atardecer) */}
+                  {/* Claudia 36 y 37 (2 columnas — Azotea luces & Playa atardecer) */}
                   <div className="flex w-full justify-center">
                     <img src={claudia36} alt="Claudia 36" onClick={() => setOpenIdx(35)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                     <img src={claudia37} alt="Claudia 37" onClick={() => setOpenIdx(36)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
