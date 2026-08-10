@@ -27,7 +27,6 @@ export const Navbar = () => {
       projects: [
         { label: t.nav.aiPhotography, to: "/ia/fotografia-publicitaria" },
         { label: t.nav.aiIdentity, to: "/ia/identidad-consistente" },
-        { label: t.nav.aiSketch, to: "/ia/del-boceto-a-la-realidad" },
       ],
     },
     {

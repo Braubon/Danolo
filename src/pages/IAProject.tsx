@@ -107,7 +107,6 @@ const IAProject = () => {
   const projectMap: Record<string, { title: string; tagline: string }> = {
     "fotografia-publicitaria": { title: t.ia.projects.photo.title, tagline: t.ia.projects.photo.tagline },
     "identidad-consistente": { title: t.ia.projects.identity.title, tagline: t.ia.projects.identity.tagline },
-    "del-boceto-a-la-realidad": { title: t.ia.projects.sketch.title, tagline: t.ia.projects.sketch.tagline },
   };
   const project = projectMap[slug];
 
@@ -256,39 +255,37 @@ const IAProject = () => {
 
                   {/* Claudia 29, 30 y 31 (3 COLUMNAS EN PARALELO — Pop Art, Silueta roja & Glitch RGB) */}
                   <div className="flex w-full justify-center">
-                    <img src={claudia29} alt="Claudia 29" onClick={() => setOpenIdx(29)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
-                    <img src={claudia30} alt="Claudia 30" onClick={() => setOpenIdx(30)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
-                    <img src={claudia31} alt="Claudia 31" onClick={() => setOpenIdx(31)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={claudia29} alt="Claudia 29" onClick={() => setOpenIdx(28)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={claudia30} alt="Claudia 30" onClick={() => setOpenIdx(29)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={claudia31} alt="Claudia 31" onClick={() => setOpenIdx(30)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                   </div>
 
                   {/* Claudia 32 y 33 (2 columnas — Blazer blanco & Bajo el agua) */}
                   <div className="flex w-full justify-center">
-                    <img src={claudia32} alt="Claudia 32" onClick={() => setOpenIdx(32)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
-                    <img src={claudia33} alt="Claudia 33" onClick={() => setOpenIdx(33)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={claudia32} alt="Claudia 32" onClick={() => setOpenIdx(31)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={claudia33} alt="Claudia 33" onClick={() => setOpenIdx(32)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                   </div>
 
                   {/* Claudia 34 y 35 (2 columnas — Piscina bata roja & Cocina manzana verde) */}
                   <div className="flex w-full justify-center">
-                    <img src={claudia34} alt="Claudia 34" onClick={() => setOpenIdx(34)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
-                    <img src={claudia35} alt="Claudia 35" onClick={() => setOpenIdx(35)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={claudia34} alt="Claudia 34" onClick={() => setOpenIdx(33)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={claudia35} alt="Claudia 35" onClick={() => setOpenIdx(34)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                   </div>
 
                   {/* Claudia 36 y 37 (2 columnas — Azotea luces & Playa atardecer) */}
                   <div className="flex w-full justify-center">
-                    <img src={claudia36} alt="Claudia 36" onClick={() => setOpenIdx(36)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
-                    <img src={claudia37} alt="Claudia 37" onClick={() => setOpenIdx(37)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={claudia36} alt="Claudia 36" onClick={() => setOpenIdx(35)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={claudia37} alt="Claudia 37" onClick={() => setOpenIdx(36)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                   </div>
                 </div>
               </div>
             </div>
           ) : (
-            /* Grid genérico */
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-              {currentGallery.map((p, i) => (
-                <button key={p.src} type="button" onClick={() => setOpenIdx(i)} className="hard-block-sm squish-sm overflow-hidden block w-full p-0 group" aria-label={`${t.common.enlarge}: ${p.alt}`}>
-                  <img src={p.src} alt={p.alt} loading="lazy" className="w-full h-full object-cover aspect-[3/4] transition-transform duration-500 group-hover:scale-[1.02]" />
-                </button>
-              ))}
+            /* Fotografía publicitaria (Fresli) — Bloque único continuo en 1 columna */
+            <div className="hard-block w-full overflow-hidden flex flex-col mb-14 bg-[#1a1a1c]">
+              <img src={fresli01} alt={t.ia.altFresli1} onClick={() => setOpenIdx(0)} className="w-full h-auto block cursor-pointer" />
+              <img src={fresli02} alt={t.ia.altFresli2} onClick={() => setOpenIdx(1)} className="w-full h-auto block cursor-pointer" />
+              <img src={fresli03} alt={t.ia.altFresli3} onClick={() => setOpenIdx(2)} className="w-full h-auto block cursor-pointer" />
             </div>
           )}
 

@@ -31,6 +31,7 @@ const App = () => (
           <Route path="/diseno/arsenal" element={<DisenoArsenal />} />
           <Route path="/diseno/:slug" element={<DisenoProject />} />
           <Route path="/ia" element={<IA />} />
+          <Route path="/ia/del-boceto-a-la-realidad" element={<Navigate to="/ia" replace />} />
           <Route path="/ia/:slug" element={<IAProject />} />
           <Route path="/3d" element={<ThreeD />} />
           <Route path="/3d/producto" element={<Navigate to="/3d" replace />} />

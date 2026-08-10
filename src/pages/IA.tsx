@@ -7,7 +7,6 @@ import { ProjectsShowcase, ShowcaseProject } from "@/components/ProjectsShowcase
 import { useT } from "@/i18n/LanguageContext";
 import fotografiaCover from "@/assets/fresli/cartel-01.png";
 import identidadCover from "@/assets/identidad-consistente/becca/becca-3.jpg";
-import bocetoCover from "@/assets/fresli/cartel-03.png";
 
 const IA = () => {
   const t = useT();
@@ -15,7 +14,6 @@ const IA = () => {
   const projects: ShowcaseProject[] = [
     { slug: "fotografia-publicitaria", title: p.photo.title, blurb: p.photo.blurb, description: [...p.photo.description], image: fotografiaCover },
     { slug: "identidad-consistente", title: p.identity.title, blurb: p.identity.blurb, description: [...p.identity.description], image: identidadCover },
-    { slug: "del-boceto-a-la-realidad", title: p.sketch.title, blurb: p.sketch.blurb, description: [...p.sketch.description], image: bocetoCover },
   ];
 
   return (
