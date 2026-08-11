@@ -27,7 +27,6 @@ export const translations = {
       oshun: "Oshun",
       aiPhotography: "Fotografía publicitaria",
       aiIdentity: "Identidad consistente",
-      aiSketch: "Del boceto a la realidad",
       product: "Producto",
       arch: "Visualización arquitectónica",
     },
@@ -230,17 +229,6 @@ export const translations = {
           tagline:
             "Mismo personaje, mismo escenario, mismo ADN visual. La IA bien dirigida no rompe la marca.",
         },
-        sketch: {
-          title: "Del boceto a la realidad",
-          blurb:
-            "Convierto bocetos a lápiz, wireframes o garabatos en imágenes finales con luz, materiales y atmósfera.",
-          description: [
-            "Una forma rápida de validar ideas con cliente antes de invertir tiempo en producción real.",
-            "El control creativo siempre parte del boceto: la IA solo le pone piel.",
-          ],
-          tagline:
-            "Bocetos a lápiz convertidos en imágenes finales con luz, materiales y atmósfera.",
-        },
       },
       altFresli1: "Fresli · Mora y mango. Cartelería publicitaria",
       altFresli2: "Fresli · Piña, plátano y canela. Cartelería publicitaria",
@@ -409,7 +397,6 @@ export const translations = {
       oshun: "Oshun",
       aiPhotography: "Virtual photography",
       aiIdentity: "Consistent identity",
-      aiSketch: "From sketch to reality",
       product: "Product",
       arch: "Architectural visualization",
     },
@@ -611,17 +598,6 @@ export const translations = {
           ],
           tagline:
             "Same character, same scene, same visual DNA. Well-directed AI doesn't break the brand.",
-        },
-        sketch: {
-          title: "From sketch to reality",
-          blurb:
-            "I turn pencil sketches, wireframes or scribbles into final images with light, materials and atmosphere.",
-          description: [
-            "A fast way to validate ideas with clients before investing time in real production.",
-            "Creative control always starts from the sketch: AI just gives it skin.",
-          ],
-          tagline:
-            "Pencil sketches turned into final images with light, materials and atmosphere.",
         },
       },
       altFresli1: "Fresli · Blackberry & mango. Advertising poster",
