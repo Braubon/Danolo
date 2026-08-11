@@ -13,13 +13,10 @@ import bolsa from "@/assets/oshun/bolsa.webp";
 
 const DisenoOshun = () => {
   const t = useT();
-  const revistas = [
-    { src: revistaOI, alt: t.oshunPage.altOI },
-    { src: revistaPV, alt: t.oshunPage.altPV },
-  ];
   const gallery = [
     { src: revistaAbierta, alt: t.oshunPage.altOpen },
-    ...revistas,
+    { src: revistaOI, alt: t.oshunPage.altOI },
+    { src: revistaPV, alt: t.oshunPage.altPV },
     { src: etiquetas, alt: t.oshunPage.altLabels },
     { src: bolsa, alt: t.oshunPage.altBag },
   ];
@@ -58,38 +55,22 @@ const DisenoOshun = () => {
         </section>
 
         <section className="container pb-12">
-          <button type="button" onClick={() => openImage(revistaAbierta)} className="hard-block-sm squish-sm overflow-hidden block w-full p-0 group" aria-label={`${t.common.enlarge}: ${t.oshunPage.altOpen}`}>
-            <img src={revistaAbierta} alt={t.oshunPage.altOpen} className="w-full h-full object-cover aspect-[16/10] transition-transform duration-500 group-hover:scale-[1.02]" />
-          </button>
+          {/* Bloque continuo de presentación estilo Behance */}
+          <div className="hard-block w-full overflow-hidden flex flex-col mb-14 bg-[#1a1a1c]">
+            {/* 1. Portada revista abierta (Ancho completo) */}
+            <img src={revistaAbierta} alt={t.oshunPage.altOpen} onClick={() => openImage(revistaAbierta)} className="w-full h-auto block cursor-pointer" />
 
-          <div className="max-w-2xl mt-6 md:mt-8 mb-10 md:mb-14">
-            <h3 className="font-display font-bold text-xl md:text-2xl text-accent mb-2">{t.oshunPage.coverTitle}</h3>
-            <p className="font-sans text-foreground/85 leading-relaxed">{t.oshunPage.coverText}</p>
-          </div>
+            {/* 2. Catálogos Otoño/Invierno y Primavera/Verano (2 columnas) */}
+            <div className="flex w-full justify-center">
+              <img src={revistaOI} alt={t.oshunPage.altOI} onClick={() => openImage(revistaOI)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+              <img src={revistaPV} alt={t.oshunPage.altPV} onClick={() => openImage(revistaPV)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+            </div>
 
-          <div className="mb-4">
-            <h3 className="font-display font-bold text-xl md:text-2xl text-accent mb-2">{t.oshunPage.catalogsTitle}</h3>
-            <p className="font-sans text-foreground/85 leading-relaxed max-w-2xl">{t.oshunPage.catalogsText}</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-10 md:mb-14">
-            {revistas.map((p) => (
-              <button key={p.src} type="button" onClick={() => openImage(p.src)} className="hard-block-sm squish-sm overflow-hidden block w-full p-0 group" aria-label={`${t.common.enlarge}: ${p.alt}`}>
-                <img src={p.src} alt={p.alt} loading="lazy" className="w-full h-full object-cover aspect-[4/3] transition-transform duration-500 group-hover:scale-[1.02]" />
-              </button>
-            ))}
-          </div>
-
-          <div className="mb-4">
-            <h3 className="font-display font-bold text-xl md:text-2xl text-accent mb-2">{t.oshunPage.labelsTitle}</h3>
-            <p className="font-sans text-foreground/85 leading-relaxed max-w-2xl">{t.oshunPage.labelsText}</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-            <button type="button" onClick={() => openImage(etiquetas)} className="hard-block-sm squish-sm overflow-hidden block w-full p-0 group" aria-label={`${t.common.enlarge}: ${t.oshunPage.altLabels}`}>
-              <img src={etiquetas} alt={t.oshunPage.altLabels} loading="lazy" className="w-full h-full object-cover aspect-[4/3] transition-transform duration-500 group-hover:scale-[1.02]" />
-            </button>
-            <button type="button" onClick={() => openImage(bolsa)} className="hard-block-sm squish-sm overflow-hidden block w-full p-0 group" aria-label={`${t.common.enlarge}: ${t.oshunPage.altBag}`}>
-              <img src={bolsa} alt={t.oshunPage.altBag} loading="lazy" className="w-full h-full object-cover aspect-[4/3] transition-transform duration-500 group-hover:scale-[1.02]" />
-            </button>
+            {/* 3. Etiquetas y Bolsa (2 columnas) */}
+            <div className="flex w-full justify-center">
+              <img src={etiquetas} alt={t.oshunPage.altLabels} onClick={() => openImage(etiquetas)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+              <img src={bolsa} alt={t.oshunPage.altBag} onClick={() => openImage(bolsa)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+            </div>
           </div>
 
           <div className="mt-14 flex justify-center">

@@ -14,16 +14,14 @@ import tubo from "@/assets/dew/tubo.webp";
 
 const DisenoDEW = () => {
   const t = useT();
-  const carteles = [
+  const gallery = [
+    { src: portada, alt: t.dewPage.altCover },
     { src: cartelFibra, alt: t.dewPage.altFibra },
     { src: cartelMonigotes, alt: t.dewPage.altMoni },
     { src: cartelMilitar, alt: t.dewPage.altMilitar },
-  ];
-  const packaging = [
     { src: bolsa, alt: t.dewPage.altBolsa },
     { src: tubo, alt: t.dewPage.altTubo },
   ];
-  const gallery = [{ src: portada, alt: t.dewPage.altCover }, ...carteles, ...packaging];
 
   const [openIdx, setOpenIdx] = useState<number | null>(null);
   const close = useCallback(() => setOpenIdx(null), []);
@@ -59,37 +57,23 @@ const DisenoDEW = () => {
         </section>
 
         <section className="container pb-12">
-          <button type="button" onClick={() => openImage(portada)} className="hard-block-sm squish-sm overflow-hidden block w-full p-0 group" aria-label={`${t.common.enlarge}: ${t.dewPage.altCover}`}>
-            <img src={portada} alt={t.dewPage.altCover} className="w-full h-full object-cover aspect-[21/9] transition-transform duration-500 group-hover:scale-[1.02]" />
-          </button>
+          {/* Bloque continuo de presentación estilo Behance */}
+          <div className="hard-block w-full overflow-hidden flex flex-col mb-14 bg-[#1a1a1c]">
+            {/* 1. Portada (Ancho completo) */}
+            <img src={portada} alt={t.dewPage.altCover} onClick={() => openImage(portada)} className="w-full h-auto block cursor-pointer" />
 
-          <div className="max-w-2xl mt-6 md:mt-8 mb-10 md:mb-14">
-            <h3 className="font-display font-bold text-xl md:text-2xl text-accent mb-2">{t.dewPage.coverTitle}</h3>
-            <p className="font-sans text-foreground/85 leading-relaxed">{t.dewPage.coverText}</p>
-          </div>
+            {/* 2. Trío de carteles (3 columnas en paralelo) */}
+            <div className="flex w-full justify-center">
+              <img src={cartelFibra} alt={t.dewPage.altFibra} onClick={() => openImage(cartelFibra)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+              <img src={cartelMonigotes} alt={t.dewPage.altMoni} onClick={() => openImage(cartelMonigotes)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+              <img src={cartelMilitar} alt={t.dewPage.altMilitar} onClick={() => openImage(cartelMilitar)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+            </div>
 
-          <div className="mb-4">
-            <h3 className="font-display font-bold text-xl md:text-2xl text-accent mb-2">{t.dewPage.campaignTitle}</h3>
-            <p className="font-sans text-foreground/85 leading-relaxed max-w-2xl">{t.dewPage.campaignText}</p>
-          </div>
-          <div className="grid grid-cols-3 gap-3 md:gap-6 mb-10 md:mb-14">
-            {carteles.map((p) => (
-              <button key={p.src} type="button" onClick={() => openImage(p.src)} className="hard-block-sm squish-sm overflow-hidden block w-full p-0 group" aria-label={`${t.common.enlarge}: ${p.alt}`}>
-                <img src={p.src} alt={p.alt} loading="lazy" className="w-full h-full object-cover aspect-[3/4] transition-transform duration-500 group-hover:scale-[1.02]" />
-              </button>
-            ))}
-          </div>
-
-          <div className="mb-4">
-            <h3 className="font-display font-bold text-xl md:text-2xl text-accent mb-2">{t.dewPage.packagingTitle}</h3>
-            <p className="font-sans text-foreground/85 leading-relaxed max-w-2xl">{t.dewPage.packagingText}</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-            {packaging.map((p) => (
-              <button key={p.src} type="button" onClick={() => openImage(p.src)} className="hard-block-sm squish-sm overflow-hidden block w-full p-0 group" aria-label={`${t.common.enlarge}: ${p.alt}`}>
-                <img src={p.src} alt={p.alt} loading="lazy" className="w-full h-full object-cover aspect-square transition-transform duration-500 group-hover:scale-[1.02]" />
-              </button>
-            ))}
+            {/* 3. Packaging: Bolsa y Tubo (2 columnas en paralelo) */}
+            <div className="flex w-full justify-center">
+              <img src={bolsa} alt={t.dewPage.altBolsa} onClick={() => openImage(bolsa)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+              <img src={tubo} alt={t.dewPage.altTubo} onClick={() => openImage(tubo)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+            </div>
           </div>
 
           <div className="mt-14 flex justify-center">
