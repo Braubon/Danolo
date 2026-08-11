@@ -339,8 +339,8 @@ const IAProject = () => {
                 </h2>
                 <div className="hard-block w-full overflow-hidden flex flex-col bg-[#1a1a1c]">
                   <div className="flex w-full justify-center items-start">
-                    <img src={anubis4} alt="Anubis 4" onClick={() => setOpenIdx(6)} style={{ width: "79.94%" }} className="h-auto block cursor-pointer object-contain" />
-                    <div className="flex flex-col" style={{ width: "20.06%" }}>
+                    <img src={anubis4} alt="Anubis 4" onClick={() => setOpenIdx(6)} style={{ width: "50.086%" }} className="h-auto block cursor-pointer object-contain" />
+                    <div className="flex flex-col" style={{ width: "49.914%" }}>
                       <img src={anubis5} alt="Anubis 5" onClick={() => setOpenIdx(7)} className="w-full h-auto block cursor-pointer object-contain" />
                       <img src={anubis6} alt="Anubis 6" onClick={() => setOpenIdx(8)} className="w-full h-auto block cursor-pointer object-contain" />
                     </div>
