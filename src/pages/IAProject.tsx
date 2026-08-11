@@ -10,6 +10,18 @@ import fresli01 from "@/assets/fresli/cartel-01.png";
 import fresli02 from "@/assets/fresli/cartel-02.png";
 import fresli03 from "@/assets/fresli/cartel-03.png";
 
+import forseti1 from "@/assets/grafica-publicitaria/forseti-1.jpg";
+import forseti2 from "@/assets/grafica-publicitaria/forseti-2.jpg";
+import forseti3 from "@/assets/grafica-publicitaria/forseti-3.jpg";
+
+import anubis4 from "@/assets/grafica-publicitaria/anubis-4.jpg";
+import anubis5 from "@/assets/grafica-publicitaria/anubis-5.jpg";
+import anubis6 from "@/assets/grafica-publicitaria/anubis-6.jpg";
+
+import sneaker7 from "@/assets/grafica-publicitaria/sneaker-7.jpg";
+import sneaker8 from "@/assets/grafica-publicitaria/sneaker-8.jpg";
+import sneaker9 from "@/assets/grafica-publicitaria/sneaker-9.jpg";
+
 import becca1 from "@/assets/identidad-consistente/becca/becca-1.jpg";
 import becca2 from "@/assets/identidad-consistente/becca/becca-2.jpg";
 import becca3 from "@/assets/identidad-consistente/becca/becca-3.jpg";
@@ -55,10 +67,19 @@ const IAProject = () => {
   const t = useT();
   const { slug = "" } = useParams();
 
-  const fresliImages = [
+  const photoImages = [
     { src: fresli01, alt: t.ia.altFresli1 },
     { src: fresli02, alt: t.ia.altFresli2 },
     { src: fresli03, alt: t.ia.altFresli3 },
+    { src: forseti1, alt: "Fotografía Publicitaria — Forseti 1" },
+    { src: forseti2, alt: "Fotografía Publicitaria — Forseti 2" },
+    { src: forseti3, alt: "Fotografía Publicitaria — Forseti 3" },
+    { src: anubis4, alt: "Fotografía Publicitaria — Anubis 4" },
+    { src: anubis5, alt: "Fotografía Publicitaria — Anubis 5" },
+    { src: anubis6, alt: "Fotografía Publicitaria — Anubis 6" },
+    { src: sneaker7, alt: "Fotografía Publicitaria — Sneaker 7" },
+    { src: sneaker8, alt: "Fotografía Publicitaria — Sneaker 8" },
+    { src: sneaker9, alt: "Fotografía Publicitaria — Sneaker 9" },
   ];
 
   const allCharacterImages = [
@@ -102,7 +123,7 @@ const IAProject = () => {
     { src: claudia37, alt: "Identidad Consistente — Claudia 37" },
   ];
 
-  const currentGallery = slug === "identidad-consistente" ? allCharacterImages : fresliImages;
+  const currentGallery = slug === "identidad-consistente" ? allCharacterImages : photoImages;
 
   const projectMap: Record<string, { title: string; tagline: string }> = {
     "fotografia-publicitaria": { title: t.ia.projects.photo.title, tagline: t.ia.projects.photo.tagline },
@@ -281,12 +302,64 @@ const IAProject = () => {
               </div>
             </div>
           ) : (
-            /* Fotografía publicitaria (Fresli) — 3 imágenes en horizontal en paralelo (3 columnas) */
-            <div className="hard-block w-full overflow-hidden flex flex-col mb-14 bg-[#1a1a1c]">
-              <div className="flex w-full justify-center">
-                <img src={fresli01} alt={t.ia.altFresli1} onClick={() => setOpenIdx(0)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
-                <img src={fresli02} alt={t.ia.altFresli2} onClick={() => setOpenIdx(1)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
-                <img src={fresli03} alt={t.ia.altFresli3} onClick={() => setOpenIdx(2)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+            /* Fotografía publicitaria (Fresli, Forseti, Anubis, Sneaker) */
+            <div className="space-y-12 md:space-y-16">
+              {/* 01: Fresli */}
+              <div>
+                <h2 className="font-display font-bold text-2xl md:text-3xl text-accent mb-4 tracking-wider uppercase">
+                  01 — Fresli
+                </h2>
+                <div className="hard-block w-full overflow-hidden flex flex-col bg-[#1a1a1c]">
+                  <div className="flex w-full justify-center">
+                    <img src={fresli01} alt={t.ia.altFresli1} onClick={() => setOpenIdx(0)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={fresli02} alt={t.ia.altFresli2} onClick={() => setOpenIdx(1)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={fresli03} alt={t.ia.altFresli3} onClick={() => setOpenIdx(2)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                  </div>
+                </div>
+              </div>
+
+              {/* 02: Forseti */}
+              <div>
+                <h2 className="font-display font-bold text-2xl md:text-3xl text-accent mb-4 tracking-wider uppercase">
+                  02 — Forseti
+                </h2>
+                <div className="hard-block w-full overflow-hidden flex flex-col bg-[#1a1a1c]">
+                  <img src={forseti1} alt="Forseti 1" onClick={() => setOpenIdx(3)} className="w-full h-auto block cursor-pointer" />
+                  <div className="flex w-full justify-center">
+                    <img src={forseti2} alt="Forseti 2" onClick={() => setOpenIdx(4)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={forseti3} alt="Forseti 3" onClick={() => setOpenIdx(5)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                  </div>
+                </div>
+              </div>
+
+              {/* 03: Anubis */}
+              <div>
+                <h2 className="font-display font-bold text-2xl md:text-3xl text-accent mb-4 tracking-wider uppercase">
+                  03 — Anubis
+                </h2>
+                <div className="hard-block w-full overflow-hidden flex flex-col bg-[#1a1a1c]">
+                  <div className="flex w-full justify-center items-start">
+                    <img src={anubis4} alt="Anubis 4" onClick={() => setOpenIdx(6)} className="w-1/2 h-auto block cursor-pointer object-contain" />
+                    <div className="flex flex-col w-1/2">
+                      <img src={anubis5} alt="Anubis 5" onClick={() => setOpenIdx(7)} className="w-full h-auto block cursor-pointer object-contain" />
+                      <img src={anubis6} alt="Anubis 6" onClick={() => setOpenIdx(8)} className="w-full h-auto block cursor-pointer object-contain" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* 04: Sneaker */}
+              <div>
+                <h2 className="font-display font-bold text-2xl md:text-3xl text-accent mb-4 tracking-wider uppercase">
+                  04 — Sneaker
+                </h2>
+                <div className="hard-block w-full overflow-hidden flex flex-col bg-[#1a1a1c]">
+                  <div className="flex w-full justify-center">
+                    <img src={sneaker7} alt="Sneaker 7" onClick={() => setOpenIdx(9)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={sneaker8} alt="Sneaker 8" onClick={() => setOpenIdx(10)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                  </div>
+                  <img src={sneaker9} alt="Sneaker 9" onClick={() => setOpenIdx(11)} className="w-full h-auto block cursor-pointer" />
+                </div>
               </div>
             </div>
           )}
