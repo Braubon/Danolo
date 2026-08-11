@@ -281,11 +281,13 @@ const IAProject = () => {
               </div>
             </div>
           ) : (
-            /* Fotografía publicitaria (Fresli) — Bloque único continuo en 1 columna */
+            /* Fotografía publicitaria (Fresli) — 3 imágenes en horizontal en paralelo (3 columnas) */
             <div className="hard-block w-full overflow-hidden flex flex-col mb-14 bg-[#1a1a1c]">
-              <img src={fresli01} alt={t.ia.altFresli1} onClick={() => setOpenIdx(0)} className="w-full h-auto block cursor-pointer" />
-              <img src={fresli02} alt={t.ia.altFresli2} onClick={() => setOpenIdx(1)} className="w-full h-auto block cursor-pointer" />
-              <img src={fresli03} alt={t.ia.altFresli3} onClick={() => setOpenIdx(2)} className="w-full h-auto block cursor-pointer" />
+              <div className="flex w-full justify-center">
+                <img src={fresli01} alt={t.ia.altFresli1} onClick={() => setOpenIdx(0)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                <img src={fresli02} alt={t.ia.altFresli2} onClick={() => setOpenIdx(1)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                <img src={fresli03} alt={t.ia.altFresli3} onClick={() => setOpenIdx(2)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+              </div>
             </div>
           )}
 
