@@ -7,7 +7,7 @@ import { ContactSection } from "@/components/ContactSection";
 import { useT } from "@/i18n/LanguageContext";
 import { RichText } from "@/i18n/RichText";
 import designImg from "@/assets/service-design.jpg";
-import aiImg from "@/assets/service-ai.png";
+import aiImg from "@/assets/identidad-consistente/becca/becca-6b.jpg";
 import threeDImg from "@/assets/service-3d.jpg";
 
 const Index = () => {
