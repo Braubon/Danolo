@@ -9,7 +9,7 @@ import { RichText } from "@/i18n/RichText";
 import dewImg from "@/assets/service-design.jpg";
 import diceupCover from "@/assets/diceup/2-estuche-dados.jpg";
 import oshunCover from "@/assets/oshun/revista-abierta.webp";
-import arsenalCover from "@/assets/arsenal/Presentación Portfolio_2_store.webp";
+import arsenalCover from "@/assets/arsenal/Presentación Portfolio_2_padel photo.webp";
 
 const Diseno = () => {
   const t = useT();
