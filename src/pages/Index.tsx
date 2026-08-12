@@ -6,7 +6,7 @@ import { ServiceBlock } from "@/components/ServiceBlock";
 import { ContactSection } from "@/components/ContactSection";
 import { useT } from "@/i18n/LanguageContext";
 import { RichText } from "@/i18n/RichText";
-import designImg from "@/assets/service-design.jpg";
+import designImg from "@/assets/arsenal/Presentación Portfolio_2_RRSS.webp";
 import aiImg from "@/assets/identidad-consistente/becca/becca-6b.jpg";
 import threeDImg from "@/assets/service-3d.jpg";
 

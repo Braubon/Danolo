@@ -21,54 +21,55 @@ export const Hero = () => {
       </div>
 
       {/* === MOBILE LAYOUT (< md) === */}
-      <div className="md:hidden container pt-8 pb-10 flex flex-col">
-        <div className="text-foreground">
-          <Logo variant="vertical" className="w-44 h-auto mb-6" />
-          <h2 className="font-display font-bold text-4xl mb-4 leading-none">
+      <div className="md:hidden relative container min-h-[85vh] pt-6 pb-12 flex flex-col justify-between">
+        <div className="absolute inset-0 -z-10">
+          <img
+            src={portrait}
+            alt={t.hero.portraitAlt}
+            className="w-full h-full object-cover object-[75%_center]"
+            loading="eager"
+          />
+        </div>
+
+        <div className="text-foreground z-10 w-[55%] flex flex-col gap-2">
+          <Logo variant="vertical" className="w-36 h-auto mb-4" />
+          <h2 className="font-display font-bold text-3xl mb-1 leading-none">
             {t.hero.welcome}
           </h2>
-          <p className="font-sans text-base leading-relaxed max-w-md">
+          <p className="font-sans text-xs leading-relaxed text-foreground/90">
             {t.hero.intro}
           </p>
         </div>
 
-        <div className="relative mt-8 -mx-6">
-          <img
-            src={portrait}
-            alt={t.hero.portraitAlt}
-            className="w-full h-[60vh] object-cover object-center"
-            loading="eager"
-          />
-          <div className="absolute inset-x-0 bottom-0 p-6 flex flex-col items-start gap-3">
-            <a
-              href={PORTFOLIO_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block hard-block-sm squish-sm bg-cta text-cta-foreground px-6 py-3 font-display text-base"
-            >
-              {t.hero.cv}
-            </a>
-            <Link
-              to="/about"
-              className="inline-block hard-block-sm squish-sm bg-background text-foreground px-6 py-3 font-display text-base"
-            >
-              {t.hero.about}
-            </Link>
-          </div>
+        <div className="z-10 mt-6 flex flex-col items-start gap-2.5 w-[55%]">
+          <a
+            href={PORTFOLIO_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block hard-block-sm squish-sm bg-cta text-cta-foreground px-5 py-2 font-display text-sm"
+          >
+            {t.hero.cv}
+          </a>
+          <Link
+            to="/about"
+            className="inline-block hard-block-sm squish-sm bg-background text-foreground px-5 py-2 font-display text-sm"
+          >
+            {t.hero.about}
+          </Link>
+        </div>
 
-          {/* Flechas sobre la foto */}
-          <div className="absolute inset-x-0 bottom-0 translate-y-1/2 flex justify-center items-end gap-5 pointer-events-none">
-            {[0, 0.15, 0.3, 0.45, 0.6].map((d, i) => (
-              <span
-                key={i}
-                className="font-mono text-white text-5xl leading-none arrow-wave select-none drop-shadow-lg"
-                style={{ animationDelay: `${d}s` }}
-                aria-hidden="true"
-              >
-                ↓
-              </span>
-            ))}
-          </div>
+        {/* Flechas en la parte inferior */}
+        <div className="absolute inset-x-0 bottom-1 flex justify-center items-end gap-3 pointer-events-none">
+          {[0, 0.15, 0.3, 0.45, 0.6].map((d, i) => (
+            <span
+              key={i}
+              className="font-mono text-white text-3xl leading-none arrow-wave select-none drop-shadow"
+              style={{ animationDelay: `${d}s` }}
+              aria-hidden="true"
+            >
+              ↓
+            </span>
+          ))}
         </div>
       </div>
 

@@ -56,56 +56,62 @@ export const ProjectsShowcase = ({ projects, basePath }: ProjectsShowcaseProps) 
     >
       <div className="sticky top-0 h-screen flex items-center">
         <section className="container pb-8 w-full">
-          <div role="tablist" aria-label="Proyectos" className="flex flex-wrap items-end relative z-10">
-            {projects.map((p, i) => {
-              const isActive = i === activeIdx;
-              return (
-                <button
-                  key={p.slug}
-                  role="tab"
-                  aria-selected={isActive}
-                  onClick={() => goToTab(i)}
-                  className={`font-display font-bold uppercase tracking-wider px-6 sm:px-10 border-2 border-foreground border-b-0 transition-all duration-500 ease-out ${
-                    i > 0 ? "-ml-[2px]" : ""
-                  } ${
-                    isActive
-                      ? "bg-card text-cta text-base sm:text-lg py-3 translate-y-[2px]"
-                      : "bg-secondary text-foreground hover:bg-card text-sm sm:text-base py-[7px] sm:py-[9px]"
-                  }`}
-                >
-                  {p.title}
-                </button>
-              );
-            })}
-          </div>
-
-          <div className="hard-block bg-card p-4 sm:p-6 md:p-8 max-h-[calc(100vh-12rem)] overflow-auto">
+          <div className="flex items-stretch gap-0 relative">
+            {/* Lateral Tabs */}
             <div
-              key={current.slug}
-              className="animate-fade-in grid md:grid-cols-2 gap-6 md:gap-8 items-start"
+              role="tablist"
+              aria-label="Proyectos"
+              className="flex flex-col shrink-0 w-[35%] sm:w-[28%] md:w-[220px] relative z-20"
             >
-              <div className="aspect-[4/3] overflow-hidden bg-muted border-2 border-foreground">
-                <img src={current.image} alt={current.title} className="w-full h-full object-cover" />
-              </div>
+              {projects.map((p, i) => {
+                const isActive = i === activeIdx;
+                return (
+                  <button
+                    key={p.slug}
+                    role="tab"
+                    aria-selected={isActive}
+                    onClick={() => goToTab(i)}
+                    className={`font-display font-bold uppercase tracking-wider px-3 sm:px-5 py-2.5 sm:py-3.5 border-2 border-foreground border-b-0 last:border-b-2 transition-all duration-300 ease-out text-left text-xs sm:text-sm md:text-base relative ${
+                      isActive
+                        ? "bg-card text-cta border-r-0 translate-x-[2px] z-30"
+                        : "bg-secondary text-foreground hover:bg-card z-10"
+                    }`}
+                  >
+                    {p.title}
+                  </button>
+                );
+              })}
+            </div>
 
-              <div className="flex flex-col h-full">
-                <p className="font-display font-bold text-lg md:text-xl leading-snug">
-                  {current.blurb}
-                </p>
-
-                <div className="font-sans text-foreground/85 leading-relaxed mt-4 space-y-3 text-sm md:text-base">
-                  {current.description.map((t, i) => (
-                    <p key={i}>{t}</p>
-                  ))}
+            {/* Content Folder */}
+            <div className="hard-block flex-1 bg-card p-4 sm:p-6 md:p-8 max-h-[calc(100vh-12rem)] overflow-auto relative z-10 -ml-[2px]">
+              <div
+                key={current.slug}
+                className="animate-fade-in grid md:grid-cols-2 gap-6 md:gap-8 items-start"
+              >
+                <div className="aspect-[16/7] md:aspect-[4/3] overflow-hidden bg-muted border-2 border-foreground">
+                  <img src={current.image} alt={current.title} className="w-full h-full object-cover" />
                 </div>
 
-                <div className="mt-6 flex justify-end">
-                  <Link
-                    to={`${basePath}/${current.slug}`}
-                    className="inline-block hard-block-sm squish-sm bg-cta text-cta-foreground px-6 py-3 font-display text-base uppercase tracking-wider"
-                  >
-                    {t.common.seeProject}
-                  </Link>
+                <div className="flex flex-col h-full">
+                  <p className="font-display font-bold text-lg md:text-xl leading-snug">
+                    {current.blurb}
+                  </p>
+
+                  <div className="font-sans text-foreground/85 leading-relaxed mt-4 space-y-3 text-sm md:text-base">
+                    {current.description.map((t, i) => (
+                      <p key={i}>{t}</p>
+                    ))}
+                  </div>
+
+                  <div className="mt-6 flex justify-end">
+                    <Link
+                      to={`${basePath}/${current.slug}`}
+                      className="inline-block hard-block-sm squish-sm bg-cta text-cta-foreground px-6 py-3 font-display text-base uppercase tracking-wider"
+                    >
+                      {t.common.seeProject}
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>

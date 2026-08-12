@@ -20,14 +20,14 @@ const IA = () => {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-1">
-        <section className="container py-12 md:py-16">
+        <section className="container pt-6 pb-4 md:pt-8 md:pb-5">
           <Link to="/" className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wider hover:text-accent">
             <ArrowLeft className="w-3.5 h-3.5" /> {t.common.back}
           </Link>
-          <h1 className="font-display font-bold text-accent text-5xl md:text-6xl mt-6 leading-tight">
+          <h1 className="font-display font-bold text-accent text-5xl md:text-6xl mt-4 leading-tight">
             {t.ia.title}
           </h1>
-          <div className="max-w-2xl mt-6 font-sans text-foreground/85 leading-relaxed">
+          <div className="max-w-2xl mt-4 font-sans text-foreground/85 leading-relaxed">
             <p>{t.ia.lead}</p>
           </div>
         </section>

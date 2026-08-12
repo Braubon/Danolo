@@ -25,7 +25,7 @@ export const ServiceBlock = ({ title, body, image, imageAlt, to, reverse }: Serv
             <img
               src={image}
               alt={imageAlt}
-              className="w-full h-full object-cover aspect-[4/3]"
+              className="w-full h-full object-cover aspect-[8/3] md:aspect-[4/3]"
               loading="lazy"
             />
           </div>
