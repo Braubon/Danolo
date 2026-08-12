@@ -56,12 +56,12 @@ export const ProjectsShowcase = ({ projects, basePath }: ProjectsShowcaseProps) 
     >
       <div className="sticky top-0 h-screen flex items-center">
         <section className="container pb-8 w-full">
-          <div className="flex items-stretch gap-0 relative">
-            {/* Lateral Tabs */}
+          <div className="flex flex-row md:flex-col items-stretch gap-0 relative">
+            {/* Tabs List */}
             <div
               role="tablist"
               aria-label="Proyectos"
-              className="flex flex-col shrink-0 w-[35%] sm:w-[28%] md:w-[220px] relative z-20"
+              className="flex flex-col md:flex-row shrink-0 w-[45px] sm:w-[55px] md:w-full relative z-20 md:z-10"
             >
               {projects.map((p, i) => {
                 const isActive = i === activeIdx;
@@ -71,11 +71,18 @@ export const ProjectsShowcase = ({ projects, basePath }: ProjectsShowcaseProps) 
                     role="tab"
                     aria-selected={isActive}
                     onClick={() => goToTab(i)}
-                    className={`font-display font-bold uppercase tracking-wider px-3 sm:px-5 py-2.5 sm:py-3.5 border-2 border-foreground border-b-0 last:border-b-2 transition-all duration-300 ease-out text-left text-xs sm:text-sm md:text-base relative ${
-                      isActive
-                        ? "bg-card text-cta border-r-0 translate-x-[2px] z-30"
-                        : "bg-secondary text-foreground hover:bg-card z-10"
-                    }`}
+                    className={`font-display font-bold uppercase tracking-wider text-xs md:text-sm lg:text-base transition-all duration-300 ease-out text-center md:text-left whitespace-nowrap relative border-2 border-foreground flex items-center justify-center
+                      w-full h-auto py-6 px-1 sm:px-2 [writing-mode:vertical-lr] rotate-180 border-b-0 last:border-b-2
+                      ${isActive ? "bg-card text-cta border-r-0 translate-x-[2px] z-30" : "bg-secondary text-foreground hover:bg-card z-10"}
+                      
+                      md:w-auto md:h-auto md:py-3.5 md:px-10 md:[writing-mode:horizontal-tb] md:rotate-0
+                      md:border-b-0 md:last:border-b-0 md:border-r-2
+                      ${i > 0 ? "md:-ml-[2px]" : ""}
+                      ${isActive 
+                        ? "md:bg-card md:text-cta md:border-b-0 md:translate-x-0 md:translate-y-[2px] md:z-30" 
+                        : "md:bg-secondary md:text-foreground md:hover:bg-card md:z-10"
+                      }
+                    `}
                   >
                     {p.title}
                   </button>
@@ -84,7 +91,7 @@ export const ProjectsShowcase = ({ projects, basePath }: ProjectsShowcaseProps) 
             </div>
 
             {/* Content Folder */}
-            <div className="hard-block flex-1 bg-card p-4 sm:p-6 md:p-8 max-h-[calc(100vh-12rem)] overflow-auto relative z-10 -ml-[2px]">
+            <div className="hard-block flex-1 bg-card p-4 sm:p-6 md:p-8 max-h-[calc(100vh-12rem)] overflow-auto relative z-10 -ml-[2px] md:ml-0 md:-mt-[2px]">
               <div
                 key={current.slug}
                 className="animate-fade-in grid md:grid-cols-2 gap-6 md:gap-8 items-start"
