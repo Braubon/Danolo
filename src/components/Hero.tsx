@@ -43,9 +43,8 @@ export const Hero = () => {
 
         <div className="z-10 mt-6 flex flex-col items-start gap-2.5 w-[55%]">
           <a
-            href={PORTFOLIO_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/CV-Daniel-Sanchez.pdf"
+            download="CV-Daniel-Sanchez.pdf"
             className="inline-block hard-block-sm squish-sm bg-cta text-cta-foreground px-5 py-2 font-display text-sm"
           >
             {t.hero.cv}
@@ -93,9 +92,8 @@ export const Hero = () => {
 
         <div className="mt-auto pt-16 flex flex-wrap items-center gap-4">
           <a
-            href={PORTFOLIO_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/CV-Daniel-Sanchez.pdf"
+            download="CV-Daniel-Sanchez.pdf"
             className="inline-block hard-block-sm squish-sm bg-cta text-cta-foreground px-7 py-3 font-display text-lg"
           >
             {t.hero.cv}
