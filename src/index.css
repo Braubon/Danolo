@@ -69,8 +69,6 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    background-image: url('/src/assets/noise.jpg');
-    background-repeat: repeat;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -79,11 +77,9 @@
 }
 
 @layer components {
-  /* Bloque con borde + sombra dura */
+  /* Bloque con borde (recuadros limpios sin sombra dura) */
   .hard-block {
     @apply border-2 border-foreground bg-card;
-    box-shadow: var(--shadow-hard);
-    transition: transform 180ms ease, box-shadow 180ms ease;
   }
 
   .hard-block-sm {

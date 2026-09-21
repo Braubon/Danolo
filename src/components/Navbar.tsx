@@ -62,13 +62,6 @@ export const Navbar = () => {
 
   return (
     <header className="sticky top-0 z-50 border-b-2 border-foreground bg-background/90 backdrop-blur">
-      {/* Portfolio-in-progress banner */}
-      <div className="border-b-2 border-foreground bg-accent text-accent-foreground">
-        <p className="container py-1.5 text-center font-mono text-[11px] sm:text-xs uppercase tracking-[0.25em] animate-[pulse_3s_ease-in-out_infinite]">
-          {t.common.portfolioBanner}
-        </p>
-      </div>
-
       <nav className="container flex items-center justify-between py-4">
         <Link to="/" className="flex items-center gap-2 squish-sm" aria-label={t.nav.home}>
           <Logo className="w-12 h-auto" variant="icon" />

@@ -19,9 +19,9 @@ import promusic from "@/assets/marquee/promusic.svg";
 import sesderma from "@/assets/marquee/sesderma.svg";
 import squad from "@/assets/marquee/squad.svg";
 
-// Altura base para que todos los logos queden visualmente equilibrados.
-const BASE_HEIGHT = 48; // px
-const SPEED = 50; // px/segundo
+// Altura base reducida para 3 filas equilibradas
+const BASE_HEIGHT = 28; // px
+const SPEED = 38; // px/segundo
 
 type LogoKey =
   | "baccio" | "bullRider" | "capacitea" | "centro208" | "circusGlobal"
@@ -29,7 +29,14 @@ type LogoKey =
   | "naturnavia" | "nerdFitness" | "northernStrike" | "oshun" | "promusic"
   | "sesderma" | "squad";
 
-const logos: { src: string; alt: string; key: LogoKey; scale?: number }[] = [
+interface LogoItem {
+  src: string;
+  alt: string;
+  key: LogoKey;
+  scale?: number;
+}
+
+const logos: LogoItem[] = [
   { src: baccio, alt: "Baccio", key: "baccio", scale: 1.1 },
   { src: bullRider, alt: "Bull Rider", key: "bullRider", scale: 1.1 },
   { src: capacitea, alt: "Capacitea", key: "capacitea", scale: 0.95 },
@@ -49,13 +56,20 @@ const logos: { src: string; alt: string; key: LogoKey; scale?: number }[] = [
   { src: squad, alt: "Squad", key: "squad", scale: 0.95 },
 ];
 
-export const Marquee = () => {
+interface MarqueeRowProps {
+  items: LogoItem[];
+  speed: number;
+  baseHeight: number;
+}
+
+const MarqueeRow = ({ items, speed, baseHeight }: MarqueeRowProps) => {
   const t = useT();
-  const loop = [...logos, ...logos];
+  const loop = [...items, ...items];
   const scrollerRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
   const [paused, setPaused] = useState(false);
   const pausedRef = useRef(false);
+  const initializedRef = useRef(false);
   const draggingRef = useRef(false);
   const dragStartXRef = useRef(0);
   const dragStartScrollRef = useRef(0);
@@ -65,7 +79,6 @@ export const Marquee = () => {
     pausedRef.current = paused;
   }, [paused]);
 
-  // Auto-scroll loop infinito
   useEffect(() => {
     const scroller = scrollerRef.current;
     const track = trackRef.current;
@@ -74,21 +87,24 @@ export const Marquee = () => {
     let rafId = 0;
     let lastTime = performance.now();
 
-    const halfWidth = () => track.scrollWidth / 2;
-
     const tick = (now: number) => {
       const dt = (now - lastTime) / 1000;
       lastTime = now;
 
-      if (!pausedRef.current && !draggingRef.current) {
-        scroller.scrollLeft += SPEED * dt;
-      }
-      // Loop infinito en ambas direcciones
-      const half = halfWidth();
+      const half = track.scrollWidth / 2;
       if (half > 0) {
+        if (speed < 0 && !initializedRef.current) {
+          scroller.scrollLeft = half;
+          initializedRef.current = true;
+        }
+
+        if (!pausedRef.current && !draggingRef.current) {
+          scroller.scrollLeft += speed * dt;
+        }
+
         if (scroller.scrollLeft >= half) {
           scroller.scrollLeft -= half;
-        } else if (scroller.scrollLeft < 0) {
+        } else if (scroller.scrollLeft <= 0) {
           scroller.scrollLeft += half;
         }
       }
@@ -97,9 +113,8 @@ export const Marquee = () => {
 
     rafId = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(rafId);
-  }, []);
+  }, [speed]);
 
-  // Drag con ratón / touch
   const onPointerDown = (e: React.PointerEvent) => {
     const scroller = scrollerRef.current;
     if (!scroller) return;
@@ -129,66 +144,86 @@ export const Marquee = () => {
   };
 
   return (
-    <section className="bg-foreground text-background border-y-2 border-foreground">
-      <h2 className="text-center font-mono uppercase tracking-widest text-sm sm:text-base py-4 text-background/80">
+    <div
+      ref={scrollerRef}
+      className="overflow-x-auto overflow-y-visible py-1 scrollbar-none cursor-grab active:cursor-grabbing select-none touch-pan-x"
+      style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+      onPointerDown={onPointerDown}
+      onPointerMove={onPointerMove}
+      onPointerUp={onPointerUp}
+      onPointerCancel={onPointerUp}
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+    >
+      <div
+        ref={trackRef}
+        className="flex items-center"
+        style={{ width: "max-content" }}
+      >
+        {loop.map((logo, i) => {
+          const scale = logo.scale ?? 1;
+          return (
+            <Tooltip key={i}>
+              <TooltipTrigger asChild>
+                <button
+                  type="button"
+                  aria-label={logo.alt}
+                  onClick={(e) => {
+                    if (movedRef.current) {
+                      e.preventDefault();
+                      e.stopPropagation();
+                    }
+                  }}
+                  className="flex items-center justify-center px-12 md:px-16 shrink-0 bg-transparent border-0 outline-none"
+                  style={{ height: `${baseHeight * 1.5}px` }}
+                >
+                  <img
+                    src={logo.src}
+                    alt={logo.alt}
+                    draggable={false}
+                    style={{ height: `${baseHeight * scale}px` }}
+                    className="w-auto pointer-events-none select-none opacity-85 hover:opacity-100 transition-opacity"
+                    loading="lazy"
+                  />
+                </button>
+              </TooltipTrigger>
+              <TooltipContent
+                side="top"
+                sideOffset={8}
+                className="max-w-xs text-center whitespace-normal bg-background text-foreground border-2 border-foreground z-[100]"
+              >
+                <p className="font-bold mb-1">{logo.alt}</p>
+                <p className="text-xs leading-snug">{t.marqueeDesc[logo.key]}</p>
+              </TooltipContent>
+            </Tooltip>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
+export const Marquee = () => {
+  const t = useT();
+
+  // Distribuir los logos de manera escalonada en 3 filas
+  const row1 = logos;
+  const row2 = [...logos.slice(6), ...logos.slice(0, 6)];
+  const row3 = [...logos.slice(12), ...logos.slice(0, 12)];
+
+  return (
+    <section className="bg-foreground text-background border-y-2 border-foreground py-2">
+      <h2 className="text-center font-mono uppercase tracking-widest text-xs sm:text-sm py-3 text-background/80">
         {t.marquee.heading}
       </h2>
       <TooltipProvider delayDuration={150}>
-        <div
-          ref={scrollerRef}
-          className="overflow-x-auto overflow-y-visible pb-6 scrollbar-none cursor-grab active:cursor-grabbing select-none touch-pan-x"
-          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-          onPointerDown={onPointerDown}
-          onPointerMove={onPointerMove}
-          onPointerUp={onPointerUp}
-          onPointerCancel={onPointerUp}
-          onMouseEnter={() => setPaused(true)}
-          onMouseLeave={() => setPaused(false)}
-        >
-          <div
-            ref={trackRef}
-            className="flex items-center"
-            style={{ width: "max-content" }}
-          >
-            {loop.map((logo, i) => {
-              const scale = logo.scale ?? 1;
-              return (
-                <Tooltip key={i}>
-                  <TooltipTrigger asChild>
-                    <button
-                      type="button"
-                      aria-label={logo.alt}
-                      onClick={(e) => {
-                        if (movedRef.current) {
-                          e.preventDefault();
-                          e.stopPropagation();
-                        }
-                      }}
-                      className="flex items-center justify-center px-10 shrink-0 bg-transparent border-0 outline-none"
-                      style={{ height: `${BASE_HEIGHT * 1.3}px` }}
-                    >
-                      <img
-                        src={logo.src}
-                        alt={logo.alt}
-                        draggable={false}
-                        style={{ height: `${BASE_HEIGHT * scale}px` }}
-                        className="w-auto pointer-events-none select-none"
-                        loading="lazy"
-                      />
-                    </button>
-                  </TooltipTrigger>
-                  <TooltipContent
-                    side="top"
-                    sideOffset={8}
-                    className="max-w-xs text-center whitespace-normal bg-background text-foreground border-2 border-foreground z-[100]"
-                  >
-                    <p className="font-bold mb-1">{logo.alt}</p>
-                    <p className="text-xs leading-snug">{t.marqueeDesc[logo.key]}</p>
-                  </TooltipContent>
-                </Tooltip>
-              );
-            })}
-          </div>
+        <div className="space-y-1 pb-3">
+          {/* Fila 1: Dirección estándar (izquierda) */}
+          <MarqueeRow items={row1} speed={SPEED} baseHeight={BASE_HEIGHT} />
+          {/* Fila 2: Dirección contraria (derecha) */}
+          <MarqueeRow items={row2} speed={-SPEED} baseHeight={BASE_HEIGHT} />
+          {/* Fila 3: Dirección estándar (izquierda) */}
+          <MarqueeRow items={row3} speed={SPEED} baseHeight={BASE_HEIGHT} />
         </div>
       </TooltipProvider>
       <style>{`

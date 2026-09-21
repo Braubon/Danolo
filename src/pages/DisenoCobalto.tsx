@@ -199,7 +199,7 @@ const DisenoCobalto = () => {
           <div className="flex justify-center mt-10">
             <Link
               to="/diseno"
-              className="hard-block squish inline-flex items-center gap-3 bg-cta text-cta-foreground font-display font-bold uppercase tracking-wider px-8 py-4"
+              className="hard-block-sm squish-sm inline-flex items-center gap-3 bg-cta text-cta-foreground font-display font-bold uppercase tracking-wider px-8 py-4"
             >
               <ArrowLeft className="w-4 h-4" /> {t.diseno.backToProjects}
             </Link>

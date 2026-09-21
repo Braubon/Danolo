@@ -365,7 +365,7 @@ const IAProject = () => {
           )}
 
           <div className="mt-14 flex justify-center">
-            <Link to="/ia" className="hard-block squish inline-flex items-center gap-3 bg-cta text-cta-foreground font-display font-bold uppercase tracking-wider px-8 py-4">
+            <Link to="/ia" className="hard-block-sm squish-sm inline-flex items-center gap-3 bg-cta text-cta-foreground font-display font-bold uppercase tracking-wider px-8 py-4">
               <ArrowLeft className="w-4 h-4" /> {t.ia.backToProjects}
             </Link>
           </div>
