@@ -6,7 +6,7 @@ import { ContactSection } from "@/components/ContactSection";
 import { ProjectsShowcase, ShowcaseProject } from "@/components/ProjectsShowcase";
 import { useT } from "@/i18n/LanguageContext";
 import { RichText } from "@/i18n/RichText";
-import dewImg from "@/assets/service-design.jpg";
+import cobaltoCover from "@/assets/Cobalto/Presentación Portfolio Cobalto_Foto impacto.jpg";
 import diceupCover from "@/assets/diceup/2-estuche-dados.jpg";
 import oshunCover from "@/assets/oshun/revista-abierta.webp";
 import arsenalCover from "@/assets/arsenal/Presentación Portfolio_2_padel photo.webp";
@@ -16,7 +16,7 @@ const Diseno = () => {
   const p = t.diseno.projects;
   const projects: ShowcaseProject[] = [
     { slug: "arsenal", title: p.arsenal.title, blurb: p.arsenal.blurb, description: [...p.arsenal.description], image: arsenalCover },
-    { slug: "dew", title: p.dew.title, blurb: p.dew.blurb, description: [...p.dew.description], image: dewImg },
+    { slug: "cobalto", title: p.cobalto.title, blurb: p.cobalto.blurb, description: [...p.cobalto.description], image: cobaltoCover },
     { slug: "oshun", title: p.oshun.title, blurb: p.oshun.blurb, description: [...p.oshun.description], image: oshunCover },
     { slug: "diceup", title: p.diceup.title, blurb: p.diceup.blurb, description: [...p.diceup.description], image: diceupCover },
   ];

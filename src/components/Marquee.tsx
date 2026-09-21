@@ -6,7 +6,6 @@ import bullRider from "@/assets/marquee/bull-rider.svg";
 import capacitea from "@/assets/marquee/capacitea.svg";
 import centro208 from "@/assets/marquee/centro-208.svg";
 import circusGlobal from "@/assets/marquee/circus-global.svg";
-import dew from "@/assets/marquee/dew.svg";
 import diceup from "@/assets/marquee/diceup.svg";
 import femcolab from "@/assets/marquee/femcolab.svg";
 import heytax from "@/assets/marquee/heytax.svg";
@@ -26,7 +25,7 @@ const SPEED = 50; // px/segundo
 
 type LogoKey =
   | "baccio" | "bullRider" | "capacitea" | "centro208" | "circusGlobal"
-  | "dew" | "diceup" | "femcolab" | "heytax" | "iceHawk" | "mediderma"
+  | "diceup" | "femcolab" | "heytax" | "iceHawk" | "mediderma"
   | "naturnavia" | "nerdFitness" | "northernStrike" | "oshun" | "promusic"
   | "sesderma" | "squad";
 
@@ -36,7 +35,6 @@ const logos: { src: string; alt: string; key: LogoKey; scale?: number }[] = [
   { src: capacitea, alt: "Capacitea", key: "capacitea", scale: 0.95 },
   { src: centro208, alt: "Centro 208", key: "centro208", scale: 1.2 },
   { src: circusGlobal, alt: "Circus Global", key: "circusGlobal", scale: 1 },
-  { src: dew, alt: "DEW", key: "dew", scale: 1 },
   { src: diceup, alt: "DiceUp", key: "diceup", scale: 1 },
   { src: femcolab, alt: "FemCoLab", key: "femcolab", scale: 0.95 },
   { src: heytax, alt: "HeyTax", key: "heytax", scale: 0.7 },

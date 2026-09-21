@@ -16,7 +16,7 @@ export const Navbar = () => {
       to: "/diseno",
       projects: [
         { label: t.nav.arsenal, to: "/diseno/arsenal" },
-        { label: t.nav.dew, to: "/diseno/dew" },
+        { label: t.nav.cobalto, to: "/diseno/cobalto" },
         { label: t.nav.diceup, to: "/diseno/diceup" },
         { label: t.nav.oshun, to: "/diseno/oshun" },
       ],

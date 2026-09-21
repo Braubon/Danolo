@@ -22,7 +22,7 @@ export const translations = {
       openMenu: "Abrir menú",
       language: "Idioma",
       arsenal: "Arsenal",
-      dew: "DEW",
+      cobalto: "Cobalto",
       diceup: "DiceUp",
       oshun: "Oshun",
       aiPhotography: "Fotografía publicitaria",
@@ -56,7 +56,7 @@ export const translations = {
     home: {
       design: {
         title: "Diseño Gráfico\n& Retoque",
-        imageAlt: "Packaging de DEW: bolsa kraft y botella ilustrada",
+        imageAlt: "Diseño gráfico y packaging — Cobalto",
         body:
           "El origen de todo. Llevo **más de una década dándole al píxel**, trabajando principalmente para el sector cosmético (laboratorios BABÉ, Sesderma) y la moda. Me considero un diseñador de perfil técnico: **me obsesiona la eficiencia**, la precisión y la estructura gráfica. Si buscas un diseño sólido, funcional y donde cada elemento tiene un porqué, dale a la imagen para ver más.",
       },
@@ -91,13 +91,13 @@ export const translations = {
             "Llevé el sistema a campaña, vídeo y punto de venta: hormigón, niebla y producto en color saturado como hilo conductor de todo el universo visual.",
           ],
         },
-        dew: {
-          title: "DEW",
+        cobalto: {
+          title: "Cobalto",
           blurb:
-            "Botellas que cuidan el planeta y se adaptan a tu ritmo. Un diseño que cambia contigo sin perder nunca su esencia.",
+            "Identidad y packaging inspirados en la tradición cerámica mediterránea y el producto gourmet de alta gama.",
           description: [
-            "DEW nace de la idea de que llevar una botella reutilizable no tiene por qué ser aburrido. Creé una identidad flexible que cambia según el momento del día y el estilo de cada usuario.",
-            "Combiné materiales nobles como el papel kraft con acabados modernos para crear un sistema visual coherente, sostenible y con personalidad propia.",
+            "Cobalto es una marca gourmet que rinde homenaje a la herencia mediterránea a través de la cerámica tradicional y el azul cobalto como sello inconfundible.",
+            "Diseñé el sistema completo de identidad, packaging, diseño editorial y piezas de comunicación, aunando acabados cerámicos, tipografía de alta distinción e ilustraciones artesanales.",
           ],
         },
         oshun: {
@@ -141,25 +141,23 @@ export const translations = {
       altFootball: "Cartel Arsenal — casco de fútbol americano",
       altTennis: "Cartel Arsenal — raqueta de tenis",
     },
-    dewPage: {
-      title: "DEW.",
+    cobaltoPage: {
+      title: "Cobalto",
       tagline:
-        "Botellas reutilizables con identidad propia. Una marca que cambia de piel sin perder nunca su esencia.",
-      coverTitle: "Una marca, muchas pieles",
-      coverText:
-        "DEW nace de la idea de que una botella reutilizable también puede ser un objeto con personalidad. El logotipo se mantiene como ancla mientras el envase se transforma con cada colección.",
-      campaignTitle: "Campaña «Elige tu estilo»",
-      campaignText:
-        "Tres carteles para una misma campaña: fibra de carbono, monigotes ilustrados y camuflaje militar. Tres lenguajes visuales radicalmente distintos sobre una misma estructura tipográfica.",
-      packagingTitle: "Packaging",
-      packagingText:
-        "Bolsa de papel kraft y estuche cilíndrico: dos formatos pensados para que la experiencia de unboxing sea tan cuidada como el propio producto.",
-      altCover: "DEW. Identidad de marca",
-      altFibra: "Cartel DEW edición fibra de carbono",
-      altMoni: "Cartel DEW edición monigotes",
-      altMilitar: "Cartel DEW edición militar",
-      altBolsa: "Bolsa de papel kraft DEW",
-      altTubo: "Packaging cilíndrico DEW",
+        "Herencia mediterránea, cerámica tradicional y alta gastronomía en una identidad visual atemporal.",
+      altLogo: "Cobalto — Logotipo e identidad de marca",
+      altFotoImpacto: "Cobalto — Bodegón de producto y packaging cerámico",
+      altColor: "Cobalto — Paleta de color Pantone 2175 C",
+      altTipografias: "Cobalto — Tipografías Voyage y Jost",
+      altBonito: "Cobalto — Packaging de bonito del norte en red marinera",
+      altRevista: "Cobalto — Diseño editorial y revista corporativa",
+      altAceite: "Cobalto — Botella de Aceite de Oliva Virgen Extra",
+      altVideo: "Cobalto — Vídeo de redes sociales y catálogo visual",
+      altCartel9: "Cobalto — Cartel ilustrado con azulejería azul",
+      altCartel10: "Cobalto — Cartel promocional Bonito del Norte",
+      altCartel11: "Cobalto — Cartel promocional gama de productos",
+      altCajaEnvios: "Cobalto — Embalaje de madera y caja de envíos",
+      altBodegonCierre: "Cobalto — Bodegón de cierre con envases cerámicos",
     },
     diceupPage: {
       title: "DiceUp",
@@ -355,7 +353,6 @@ export const translations = {
       capacitea: "Asociación de ayuda a personas con TEA (Trastorno del Espectro Autista) y sus familiares.",
       centro208: "Centro multicultural para el alquiler de espacios de creación: estudios de fotografía, salas de ensayo de teatro, espacios de arte y más.",
       circusGlobal: "Red social que busca promover el contacto entre distintos artistas circenses.",
-      dew: "Marca de botellas ecológicas de aluminio con diseños que buscan adaptarse a la personalidad de todo tipo de público.",
       diceup: "Tienda especializada en juegos de mesa, rol y coleccionismo.",
       femcolab: "Female Code Lab: asociación que crea un espacio seguro para mujeres programadoras y las acompaña frente al acoso laboral.",
       heytax: "Despacho de abogados con servicios fiscales, laborales y legales.",
@@ -392,7 +389,7 @@ export const translations = {
       openMenu: "Open menu",
       language: "Language",
       arsenal: "Arsenal",
-      dew: "DEW",
+      cobalto: "Cobalto",
       diceup: "DiceUp",
       oshun: "Oshun",
       aiPhotography: "Virtual photography",
@@ -426,7 +423,7 @@ export const translations = {
     home: {
       design: {
         title: "Graphic Design\n& Retouching",
-        imageAlt: "DEW packaging: kraft bag and illustrated bottle",
+        imageAlt: "Graphic design and packaging — Cobalto",
         body:
           "Where it all started. I've spent **more than a decade pushing pixels**, mostly for cosmetics (BABÉ Laboratories, Sesderma) and fashion. I'm a designer with a technical mindset: **obsessed with efficiency**, precision and visual structure. If you're after solid, functional design where every element has a reason to be there, click the image to see more.",
       },
@@ -461,13 +458,13 @@ export const translations = {
             "I extended the system to campaign, video and point of sale: concrete, fog and saturated product colour as the thread running through the whole visual universe.",
           ],
         },
-        dew: {
-          title: "DEW",
+        cobalto: {
+          title: "Cobalto",
           blurb:
-            "Bottles that care for the planet and keep up with your pace. A design that changes with you without ever losing its essence.",
+            "Identity and packaging inspired by Mediterranean ceramic tradition and premium gourmet goods.",
           description: [
-            "DEW was born from the idea that carrying a reusable bottle doesn't have to be boring. I built a flexible identity that shifts with the moment and with each user's style.",
-            "I combined honest materials like kraft paper with modern finishes to create a coherent, sustainable visual system with a personality of its own.",
+            "Cobalto is a gourmet brand paying tribute to Mediterranean heritage through traditional ceramics and unmistakable cobalt blue.",
+            "I designed the complete system spanning identity, packaging, editorial design, and communications, bringing together ceramic finishes, high-contrast typography, and handcrafted illustrations.",
           ],
         },
         oshun: {
@@ -511,25 +508,23 @@ export const translations = {
       altFootball: "Arsenal poster — American football helmet",
       altTennis: "Arsenal poster — tennis racquet",
     },
-    dewPage: {
-      title: "DEW.",
+    cobaltoPage: {
+      title: "Cobalto",
       tagline:
-        "Reusable bottles with a personality of their own. A brand that changes its skin without ever losing its essence.",
-      coverTitle: "One brand, many skins",
-      coverText:
-        "DEW was born from the idea that a reusable bottle can also be an object with personality. The logo stays as an anchor while the bottle transforms with every collection.",
-      campaignTitle: "«Pick your style» campaign",
-      campaignText:
-        "Three posters, one campaign: carbon fibre, illustrated doodles and military camo. Three radically different visual languages over a single typographic structure.",
-      packagingTitle: "Packaging",
-      packagingText:
-        "Kraft paper bag and cylindrical case: two formats designed to make the unboxing experience as crafted as the product itself.",
-      altCover: "DEW. Brand identity",
-      altFibra: "DEW poster — carbon fibre edition",
-      altMoni: "DEW poster — doodle edition",
-      altMilitar: "DEW poster — military edition",
-      altBolsa: "DEW kraft paper bag",
-      altTubo: "DEW cylindrical packaging",
+        "Mediterranean heritage, traditional ceramics, and fine gastronomy in a timeless visual identity.",
+      altLogo: "Cobalto — Brand logo and identity",
+      altFotoImpacto: "Cobalto — Hero still life and ceramic packaging",
+      altColor: "Cobalto — Color palette Pantone 2175 C",
+      altTipografias: "Cobalto — Voyage and Jost typography",
+      altBonito: "Cobalto — Bonito del norte packaging in fishing net",
+      altRevista: "Cobalto — Editorial design and brand magazine",
+      altAceite: "Cobalto — Extra Virgin Olive Oil bottle",
+      altVideo: "Cobalto — Social media video and visual catalog",
+      altCartel9: "Cobalto — Promotional poster with tile illustration",
+      altCartel10: "Cobalto — Promotional poster Bonito del Norte",
+      altCartel11: "Cobalto — Promotional poster complete product range",
+      altCajaEnvios: "Cobalto — Wooden shipping crate and packaging",
+      altBodegonCierre: "Cobalto — Closing still life with ceramic containers",
     },
     diceupPage: {
       title: "DiceUp",
@@ -725,7 +720,6 @@ export const translations = {
       capacitea: "Association supporting people with ASD (Autism Spectrum Disorder) and their families.",
       centro208: "Multicultural centre for renting creative spaces: photo studios, theatre rehearsal rooms, art spaces and more.",
       circusGlobal: "Social network that aims to connect different circus artists.",
-      dew: "Brand of eco-friendly aluminium bottles designed to adapt to every kind of personality.",
       diceup: "Shop specialised in board games, role-playing and collectibles.",
       femcolab: "Female Code Lab: an association creating a safe space for women coders and supporting them against workplace harassment.",
       heytax: "Law firm offering tax, labour and legal services.",

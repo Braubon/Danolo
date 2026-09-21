@@ -7,7 +7,7 @@ import NotFound from "./pages/NotFound.tsx";
 import Diseno from "./pages/Diseno.tsx";
 import DisenoProject from "./pages/DisenoProject.tsx";
 import DisenoDiceUp from "./pages/DisenoDiceUp.tsx";
-import DisenoDEW from "./pages/DisenoDEW.tsx";
+import DisenoCobalto from "./pages/DisenoCobalto.tsx";
 import DisenoOshun from "./pages/DisenoOshun.tsx";
 import DisenoArsenal from "./pages/DisenoArsenal.tsx";
 import IA from "./pages/IA.tsx";
@@ -26,7 +26,8 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/diseno" element={<Diseno />} />
           <Route path="/diseno/diceup" element={<DisenoDiceUp />} />
-          <Route path="/diseno/dew" element={<DisenoDEW />} />
+          <Route path="/diseno/cobalto" element={<DisenoCobalto />} />
+          <Route path="/diseno/dew" element={<Navigate to="/diseno/cobalto" replace />} />
           <Route path="/diseno/oshun" element={<DisenoOshun />} />
           <Route path="/diseno/arsenal" element={<DisenoArsenal />} />
           <Route path="/diseno/:slug" element={<DisenoProject />} />
