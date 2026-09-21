@@ -1,6 +1,6 @@
 import { useParams, Navigate } from "react-router-dom";
 import { ProjectPage } from "@/components/ProjectPage";
-import cobaltoImg from "@/assets/Cobalto/Presentación Portfolio Cobalto_Foto impacto.jpg";
+import cobaltoImg from "@/assets/Cobalto/foto-impacto.jpg";
 import defaultImg from "@/assets/service-design.jpg";
 
 const projects: Record<string, React.ComponentProps<typeof ProjectPage>> = {

@@ -6,7 +6,7 @@ import { ContactSection } from "@/components/ContactSection";
 import { ProjectsShowcase, ShowcaseProject } from "@/components/ProjectsShowcase";
 import { useT } from "@/i18n/LanguageContext";
 import { RichText } from "@/i18n/RichText";
-import cobaltoCover from "@/assets/Cobalto/Presentación Portfolio Cobalto_Foto impacto.jpg";
+import cobaltoCover from "@/assets/Cobalto/foto-impacto.jpg";
 import diceupCover from "@/assets/diceup/2-estuche-dados.jpg";
 import oshunCover from "@/assets/oshun/revista-abierta.webp";
 import arsenalCover from "@/assets/arsenal/Presentación Portfolio_2_padel photo.webp";

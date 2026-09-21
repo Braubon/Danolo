@@ -6,19 +6,19 @@ import { Footer } from "@/components/Footer";
 import { ContactSection } from "@/components/ContactSection";
 import { useT } from "@/i18n/LanguageContext";
 
-import logo from "@/assets/Cobalto/Presentación Portfolio Cobalto_logo.jpg";
-import fotoImpacto from "@/assets/Cobalto/Presentación Portfolio Cobalto_Foto impacto.jpg";
-import color from "@/assets/Cobalto/Presentación Portfolio Cobalto_color.jpg";
-import tipografias from "@/assets/Cobalto/Presentación Portfolio Cobalto_tipografías.jpg";
-import bonito from "@/assets/Cobalto/Presentación Portfolio Cobalto_Bonito.jpg";
-import revista from "@/assets/Cobalto/Presentación Portfolio Cobalto_revista.jpg";
-import aceite from "@/assets/Cobalto/Presentación Portfolio Cobalto_aceite.jpg";
-import videoRRSS from "@/assets/Cobalto/Presentación Portfolio Cobalto_Vídeo RRSS.mp4";
-import cartel9 from "@/assets/Cobalto/Presentación Portfolio Cobalto_Carteles 9.jpg";
-import cartel10 from "@/assets/Cobalto/Presentación Portfolio Cobalto_Carteles 10.jpg";
-import cartel11 from "@/assets/Cobalto/Presentación Portfolio Cobalto_Carteles 11.jpg";
-import cajaEnvios from "@/assets/Cobalto/Presentación Portfolio Cobalto_caja de envíos.jpg";
-import bodegonCierre from "@/assets/Cobalto/Presentación Portfolio Cobalto_Bodegón de cierre.jpg";
+import logo from "@/assets/Cobalto/logo.jpg";
+import fotoImpacto from "@/assets/Cobalto/foto-impacto.jpg";
+import color from "@/assets/Cobalto/color.jpg";
+import tipografias from "@/assets/Cobalto/tipografias.jpg";
+import bonito from "@/assets/Cobalto/bonito.jpg";
+import revista from "@/assets/Cobalto/revista.jpg";
+import aceite from "@/assets/Cobalto/aceite.jpg";
+import videoRRSS from "@/assets/Cobalto/video-rrss.mp4";
+import cartel9 from "@/assets/Cobalto/carteles-9.jpg";
+import cartel10 from "@/assets/Cobalto/carteles-10.jpg";
+import cartel11 from "@/assets/Cobalto/carteles-11.jpg";
+import cajaEnvios from "@/assets/Cobalto/caja-envios.jpg";
+import bodegonCierre from "@/assets/Cobalto/bodegon-cierre.jpg";
 
 const DisenoCobalto = () => {
   const t = useT();
