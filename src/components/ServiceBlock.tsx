@@ -14,10 +14,8 @@ export const ServiceBlock = ({ title, body, image, imageAlt, to, reverse }: Serv
   const t = useT();
   return (
     <article className="container py-8 md:py-10">
-      <Link
-        to={to}
-        aria-label={`${t.common.seeMore} — ${typeof title === "string" ? title : ""}`}
-        className="hard-block block overflow-hidden bg-card group"
+      <div
+        className="hard-block block overflow-hidden bg-card"
       >
         <div className={`grid md:grid-cols-2 items-stretch ${reverse ? "md:[direction:rtl]" : ""}`}>
           <div className="overflow-hidden [direction:ltr]">
@@ -37,13 +35,17 @@ export const ServiceBlock = ({ title, body, image, imageAlt, to, reverse }: Serv
               {body}
             </div>
             <div className="mt-6 flex justify-end">
-              <span className="inline-block hard-block-sm squish-sm bg-cta text-cta-foreground px-6 py-3 font-display text-base uppercase tracking-wider">
+              <Link
+                to={to}
+                aria-label={`${t.common.seeMore} — ${typeof title === "string" ? title : ""}`}
+                className="inline-block hard-block-sm squish-sm bg-cta text-cta-foreground px-6 py-3 font-display text-base uppercase tracking-wider"
+              >
                 {t.common.seeMore}
-              </span>
+              </Link>
             </div>
           </div>
         </div>
-      </Link>
+      </div>
     </article>
   );
 };

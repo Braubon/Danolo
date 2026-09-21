@@ -25,7 +25,7 @@ const Diseno = () => {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-1">
-        <section className="container pt-6 pb-4 md:pt-8 md:pb-5">
+        <section className="container pt-6 pb-2 md:pt-8 md:pb-3">
           <Link to="/" className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wider hover:text-accent">
             <ArrowLeft className="w-3.5 h-3.5" /> {t.common.back}
           </Link>
