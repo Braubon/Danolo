@@ -27,7 +27,7 @@ export const ServiceBlock = ({ title, body, image, imageAlt, to, reverse }: Serv
             />
           </div>
 
-          <div className={`p-6 md:p-8 flex flex-col [direction:ltr] border-t-2 md:border-t-0 border-foreground ${reverse ? "md:border-r-2" : "md:border-l-2"}`}>
+          <div className={`p-6 md:p-8 flex flex-col [direction:ltr] border-t md:border-t-0 border-foreground ${reverse ? "md:border-r" : "md:border-l"}`}>
             <h3 className="font-display font-bold text-accent text-3xl md:text-4xl leading-tight">
               {title}
             </h3>

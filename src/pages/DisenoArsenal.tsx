@@ -72,7 +72,7 @@ const DisenoArsenal = () => {
 
         <section className="container pb-12">
           {/* Bloque continuo de presentación */}
-          <div className="hard-block w-full overflow-hidden flex flex-col mb-14 bg-[#1a1a1c]">
+          <div className="hard-block w-full overflow-hidden flex flex-col mb-14 bg-[#2b373a]">
             <img src={logo} alt="Arsenal Logo" onClick={() => openImage(logo)} className="w-full h-auto block cursor-pointer" />
             <img src={padelPhoto} alt="Arsenal Padel" onClick={() => openImage(padelPhoto)} className="w-full h-auto block cursor-pointer" />
             

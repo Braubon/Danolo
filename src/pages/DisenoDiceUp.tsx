@@ -76,7 +76,7 @@ const DisenoDiceUp = () => {
 
         <section className="container pb-12">
           {/* Bloque continuo de presentación */}
-          <div className="hard-block w-full overflow-hidden flex flex-col mb-14 bg-[#1a1a1c]">
+          <div className="hard-block w-full overflow-hidden flex flex-col mb-14 bg-[#2b373a]">
             <video src={videoSrc} controls autoPlay muted loop playsInline preload="metadata" className="w-full h-auto block bg-black" />
             
             <img src={estuche} alt="DiceUp Estuche" onClick={() => openImage(estuche)} className="w-full h-auto block cursor-pointer" />

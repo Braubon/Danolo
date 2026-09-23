@@ -26,7 +26,7 @@ export const ContactSection = () => {
             </a>
             <a
               href={`mailto:${email}`}
-              className="contact-submit inline-block mt-6 bg-accent text-accent-foreground border-2 border-foreground px-8 py-2.5 font-display"
+              className="contact-submit inline-block mt-6 bg-accent text-accent-foreground border border-foreground px-8 py-2.5 font-display"
             >
               {t.contact.openEmail}
             </a>

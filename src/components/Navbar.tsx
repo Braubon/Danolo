@@ -42,7 +42,7 @@ export const Navbar = () => {
     <div
       role="group"
       aria-label={t.nav.language}
-      className={`inline-flex items-center border-2 border-foreground bg-card font-mono text-xs uppercase tracking-wider ${className}`}
+      className={`inline-flex items-center border border-foreground bg-card font-mono text-xs uppercase tracking-wider ${className}`}
     >
       {(["es", "en"] as const).map((code, i) => (
         <button
@@ -52,7 +52,7 @@ export const Navbar = () => {
           aria-pressed={lang === code}
           className={`px-2.5 py-1 transition-colors ${
             lang === code ? "bg-accent text-accent-foreground" : "hover:text-accent"
-          } ${i === 0 ? "border-r-2 border-foreground" : ""}`}
+          } ${i === 0 ? "border-r border-foreground" : ""}`}
         >
           {code.toUpperCase()}
         </button>
@@ -120,7 +120,7 @@ export const Navbar = () => {
         </ul>
 
         <button
-          className="md:hidden p-2 border-2 border-foreground bg-card"
+          className="md:hidden p-2 border border-foreground bg-card"
           onClick={() => setOpen((v) => !v)}
           aria-label={t.nav.openMenu}
           aria-expanded={open}
@@ -132,7 +132,7 @@ export const Navbar = () => {
 
 
       {open && (
-        <div className="md:hidden border-t-2 border-foreground bg-card">
+        <div className="md:hidden border-t border-border bg-card">
           <ul className="container flex flex-col py-4 gap-3 font-display">
             {links.map((l) => {
               const isHash = l.to.startsWith("#");
@@ -166,7 +166,7 @@ export const Navbar = () => {
                 </li>
               );
             })}
-            <li className="pt-2 border-t-2 border-foreground/20">
+            <li className="pt-2 border-t border-foreground/20">
               <LangToggle />
             </li>
           </ul>

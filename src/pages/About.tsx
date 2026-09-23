@@ -20,10 +20,10 @@ import iconJs from "@/assets/tools/javascript.svg";
 type TimelineItem = { range: string; title: string; place?: string };
 
 const Timeline = ({ items }: { items: TimelineItem[] }) => (
-  <ol className="relative ml-3 border-l-2 border-foreground space-y-6">
+  <ol className="relative ml-3 border-l border-foreground space-y-6">
     {items.map((it) => (
       <li key={it.range + it.title} className="pl-6 relative">
-        <span className="absolute -left-[9px] top-1.5 w-4 h-4 bg-accent border-2 border-foreground" aria-hidden="true" />
+        <span className="absolute -left-[9px] top-1.5 w-4 h-4 bg-accent border border-foreground" aria-hidden="true" />
         <p className="font-mono text-xs uppercase tracking-wider text-muted-foreground">{it.range}</p>
         <p className="font-display font-bold text-lg leading-tight mt-1">{it.title}</p>
         {it.place && <p className="font-sans text-sm text-foreground/80 mt-0.5">{it.place}</p>}
@@ -38,7 +38,7 @@ const Bar = ({ label, value, suffix, highlight = false }: { label: string; value
       <span className="font-display text-sm">{label}</span>
       {suffix && <span className="font-mono text-xs uppercase tracking-wider text-muted-foreground">{suffix}</span>}
     </div>
-    <div className="h-3 border-2 border-foreground bg-background overflow-hidden">
+    <div className="h-3 border border-foreground bg-background overflow-hidden">
       <div className={`h-full ${highlight ? "bg-cta" : "bg-accent"}`} style={{ width: `${value}%` }} role="progressbar" aria-valuenow={value} aria-valuemin={0} aria-valuemax={100} />
     </div>
   </div>

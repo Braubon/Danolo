@@ -11,52 +11,51 @@
   :root {
     color-scheme: dark;
 
-    --background: 240 4% 11%;
-    --foreground: 0 0% 88%;
+    --background: 192 15% 20%;
+    --foreground: 0 0% 93%;
 
-    --card: 240 4% 15%;
-    --card-foreground: 0 0% 88%;
+    --card: 192 14% 24%;
+    --card-foreground: 0 0% 93%;
 
-    --popover: 240 4% 15%;
-    --popover-foreground: 0 0% 88%;
+    --popover: 192 14% 24%;
+    --popover-foreground: 0 0% 93%;
 
-    --primary: 0 0% 88%;
-    --primary-foreground: 240 4% 11%;
+    --primary: 0 0% 93%;
+    --primary-foreground: 192 15% 20%;
 
-    --secondary: 240 4% 18%;
-    --secondary-foreground: 0 0% 88%;
+    --secondary: 192 13% 27%;
+    --secondary-foreground: 0 0% 93%;
 
-    --muted: 240 4% 20%;
-    --muted-foreground: 0 0% 65%;
+    --muted: 192 13% 27%;
+    --muted-foreground: 192 10% 70%;
 
-    --accent: 289 100% 50%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 163 100% 50%;
+    --accent-foreground: 192 15% 20%;
 
-    --cta: 13 100% 55%;
-    --cta-foreground: 0 0% 100%;
+    --cta: 34 100% 69%;
+    --cta-foreground: 192 15% 20%;
 
     --destructive: 0 84% 55%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 86%;
-    --input: 240 4% 22%;
-    --ring: 289 100% 50%;
+    --border: 0 0% 93%;
+    --input: 192 13% 27%;
+    --ring: 163 100% 50%;
 
     --radius: 0.25rem;
 
-    /* Sombra dura para el efecto squish */
-    --shadow-hard: 8px 8px 0 0 hsl(var(--foreground));
-    --shadow-hard-sm: 5px 5px 0 0 hsl(var(--foreground));
-    --shadow-hard-accent: 8px 8px 0 0 hsl(var(--accent));
+    --shadow-hard: none;
+    --shadow-hard-sm: none;
+    --shadow-hard-accent: none;
 
-    --sidebar-background: 240 4% 11%;
-    --sidebar-foreground: 0 0% 88%;
-    --sidebar-primary: 289 100% 50%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 4% 18%;
-    --sidebar-accent-foreground: 0 0% 88%;
-    --sidebar-border: 0 0% 86%;
-    --sidebar-ring: 289 100% 50%;
+    --sidebar-background: 192 15% 20%;
+    --sidebar-foreground: 0 0% 93%;
+    --sidebar-primary: 163 100% 50%;
+    --sidebar-primary-foreground: 192 15% 20%;
+    --sidebar-accent: 192 14% 24%;
+    --sidebar-accent-foreground: 0 0% 93%;
+    --sidebar-border: 0 0% 93%;
+    --sidebar-ring: 163 100% 50%;
   }
 }
 
@@ -79,39 +78,37 @@
 }
 
 @layer components {
-  /* Bloque con borde (recuadros limpios sin sombra dura) */
+  /* Bloque con borde limpio de 1px */
   .hard-block {
-    @apply border-2 border-foreground bg-card;
+    @apply border border-foreground bg-card;
   }
 
   .hard-block-sm {
-    @apply border-2 border-foreground bg-card;
-    box-shadow: var(--shadow-hard-sm);
-    transition: transform 180ms ease, box-shadow 180ms ease;
+    @apply border border-foreground bg-card transition-opacity;
+  }
+  .hard-block-sm:hover,
+  .hard-block-sm:focus-visible {
+    opacity: 0.9;
   }
 
-  /* Efecto squish: el elemento se desplaza hacia su sombra */
+  /* Squish desactivado: limpio y sin desplazamiento */
   .squish:hover,
   .squish:focus-visible {
-    transform: translate(8px, 8px);
-    box-shadow: 0 0 0 0 hsl(var(--foreground));
+    opacity: 0.9;
   }
 
   .squish-sm:hover,
   .squish-sm:focus-visible {
-    transform: translate(5px, 5px);
-    box-shadow: 0 0 0 0 hsl(var(--foreground));
+    opacity: 0.9;
   }
 
-  /* Botón enviar del formulario */
+  /* Botón enviar del formulario sin sombra ni animación */
   .contact-submit {
-    box-shadow: 5px 5px 0 0 hsl(var(--foreground));
-    transition: transform 180ms ease, box-shadow 180ms ease;
+    @apply border border-foreground transition-opacity;
   }
   .contact-submit:hover,
   .contact-submit:focus-visible {
-    transform: translate(5px, 5px);
-    box-shadow: 0 0 0 0 hsl(var(--foreground));
+    opacity: 0.9;
   }
 }
 

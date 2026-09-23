@@ -38,15 +38,15 @@ export const ProjectsShowcase = ({ projects, basePath }: ProjectsShowcaseProps) 
                 role="tab"
                 aria-selected={isActive}
                 onClick={() => setActiveIdx(i)}
-                className={`font-display font-bold uppercase tracking-wider text-xs md:text-sm lg:text-base transition-all duration-300 ease-out text-center md:text-left whitespace-nowrap relative border-2 border-foreground flex items-center justify-center
-                  w-full h-auto py-6 px-1 sm:px-2 [writing-mode:vertical-lr] rotate-180 border-b-0 last:border-b-2
-                  ${isActive ? "bg-card text-cta border-r-0 translate-x-[2px] z-30" : "bg-secondary text-foreground hover:bg-card z-10"}
+                className={`font-display font-bold uppercase tracking-wider text-xs md:text-sm lg:text-base transition-all duration-300 ease-out text-center md:text-left whitespace-nowrap relative border border-foreground flex items-center justify-center
+                  w-full h-auto py-6 px-1 sm:px-2 [writing-mode:vertical-lr] rotate-180 border-b-0 last:border-b
+                  ${isActive ? "bg-card text-cta border-r-0 translate-x-[1px] z-30" : "bg-secondary text-foreground hover:bg-card z-10"}
                   
                   md:w-auto md:h-auto md:py-3.5 md:px-10 md:[writing-mode:horizontal-tb] md:rotate-0
-                  md:border-b-0 md:last:border-b-0 md:border-r-2
-                  ${i > 0 ? "md:-ml-[2px]" : ""}
+                  md:border-b-0 md:last:border-b-0 md:border-r
+                  ${i > 0 ? "md:-ml-[1px]" : ""}
                   ${isActive 
-                    ? "md:bg-card md:text-cta md:border-b-0 md:translate-x-0 md:translate-y-[2px] md:z-30" 
+                    ? "md:bg-card md:text-cta md:border-b-0 md:translate-x-0 md:translate-y-[1px] md:z-30" 
                     : "md:bg-secondary md:text-foreground md:hover:bg-card md:z-10"
                   }
                 `}
@@ -58,12 +58,12 @@ export const ProjectsShowcase = ({ projects, basePath }: ProjectsShowcaseProps) 
         </div>
 
         {/* Content Folder */}
-        <div className="hard-block flex-1 bg-card p-4 sm:p-6 md:p-8 relative z-10 -ml-[2px] md:ml-0 md:-mt-[2px]">
+        <div className="hard-block flex-1 bg-card p-4 sm:p-6 md:p-8 relative z-10 -ml-[1px] md:ml-0 md:-mt-[1px]">
           <div
             key={current.slug}
             className="animate-fade-in grid md:grid-cols-2 gap-6 md:gap-8 items-start"
           >
-            <div className="aspect-[16/7] md:aspect-[4/3] overflow-hidden bg-muted border-2 border-foreground">
+            <div className="aspect-[16/7] md:aspect-[4/3] overflow-hidden bg-muted border border-foreground">
               <img src={current.image} alt={current.title} className="w-full h-full object-cover" />
             </div>
 

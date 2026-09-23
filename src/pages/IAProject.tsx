@@ -172,7 +172,7 @@ const IAProject = () => {
                 <h2 className="font-display font-bold text-2xl md:text-3xl text-accent mb-4 tracking-wider uppercase">
                   01 — Becca
                 </h2>
-                <div className="hard-block w-full overflow-hidden flex flex-col bg-[#1a1a1c]">
+                <div className="hard-block w-full overflow-hidden flex flex-col bg-[#2b373a]">
                   {/* Becca 1 (Ancho completo) */}
                   <img src={becca1} alt="Becca 1" onClick={() => setOpenIdx(0)} className="w-full h-auto block cursor-pointer" />
                   
@@ -214,7 +214,7 @@ const IAProject = () => {
                 <h2 className="font-display font-bold text-2xl md:text-3xl text-accent mb-4 tracking-wider uppercase">
                   02 — Burt
                 </h2>
-                <div className="hard-block w-full overflow-hidden flex flex-col bg-[#1a1a1c]">
+                <div className="hard-block w-full overflow-hidden flex flex-col bg-[#2b373a]">
                   {/* Burt 12 (Ancho completo) */}
                   <img src={burt12} alt="Burt 12" onClick={() => setOpenIdx(12)} className="w-full h-auto block cursor-pointer" />
 
@@ -255,7 +255,7 @@ const IAProject = () => {
                 <h2 className="font-display font-bold text-2xl md:text-3xl text-accent mb-4 tracking-wider uppercase">
                   03 — Claudia
                 </h2>
-                <div className="hard-block w-full overflow-hidden flex flex-col bg-[#1a1a1c]">
+                <div className="hard-block w-full overflow-hidden flex flex-col bg-[#2b373a]">
                   {/* Claudia 23 (Ancho completo — Orquídea roja) */}
                   <img src={claudia23} alt="Claudia 23" onClick={() => setOpenIdx(23)} className="w-full h-auto block cursor-pointer" />
 
@@ -309,7 +309,7 @@ const IAProject = () => {
                 <h2 className="font-display font-bold text-2xl md:text-3xl text-accent mb-4 tracking-wider uppercase">
                   01 — Fresli
                 </h2>
-                <div className="hard-block w-full overflow-hidden flex flex-col bg-[#1a1a1c]">
+                <div className="hard-block w-full overflow-hidden flex flex-col bg-[#2b373a]">
                   <div className="flex w-full justify-center">
                     <img src={fresli01} alt={t.ia.altFresli1} onClick={() => setOpenIdx(0)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                     <img src={fresli02} alt={t.ia.altFresli2} onClick={() => setOpenIdx(1)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
@@ -323,7 +323,7 @@ const IAProject = () => {
                 <h2 className="font-display font-bold text-2xl md:text-3xl text-accent mb-4 tracking-wider uppercase">
                   02 — Forseti
                 </h2>
-                <div className="hard-block w-full overflow-hidden flex flex-col bg-[#1a1a1c]">
+                <div className="hard-block w-full overflow-hidden flex flex-col bg-[#2b373a]">
                   <img src={forseti1} alt="Forseti 1" onClick={() => setOpenIdx(3)} className="w-full h-auto block cursor-pointer" />
                   <div className="flex w-full justify-center">
                     <img src={forseti2} alt="Forseti 2" onClick={() => setOpenIdx(4)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
@@ -337,7 +337,7 @@ const IAProject = () => {
                 <h2 className="font-display font-bold text-2xl md:text-3xl text-accent mb-4 tracking-wider uppercase">
                   03 — Anubis
                 </h2>
-                <div className="hard-block w-full overflow-hidden flex flex-col bg-[#1a1a1c]">
+                <div className="hard-block w-full overflow-hidden flex flex-col bg-[#2b373a]">
                   <div className="flex w-full justify-center items-start">
                     <img src={anubis4} alt="Anubis 4" onClick={() => setOpenIdx(6)} style={{ width: "60.95%" }} className="h-auto block cursor-pointer object-contain" />
                     <div className="flex flex-col" style={{ width: "39.05%" }}>
@@ -353,7 +353,7 @@ const IAProject = () => {
                 <h2 className="font-display font-bold text-2xl md:text-3xl text-accent mb-4 tracking-wider uppercase">
                   04 — Sneaker
                 </h2>
-                <div className="hard-block w-full overflow-hidden flex flex-col bg-[#1a1a1c]">
+                <div className="hard-block w-full overflow-hidden flex flex-col bg-[#2b373a]">
                   <div className="flex w-full justify-center">
                     <img src={sneaker7} alt="Sneaker 7" onClick={() => setOpenIdx(9)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                     <img src={sneaker8} alt="Sneaker 8" onClick={() => setOpenIdx(10)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
