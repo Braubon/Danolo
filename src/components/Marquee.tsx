@@ -190,7 +190,7 @@ const MarqueeRow = ({ items, speed, baseHeight }: MarqueeRowProps) => {
               <TooltipContent
                 side="top"
                 sideOffset={8}
-                className="max-w-xs text-center whitespace-normal bg-background text-foreground border-2 border-foreground z-[100]"
+                className="max-w-xs text-center whitespace-normal bg-card text-foreground border border-border z-[100]"
               >
                 <p className="font-bold mb-1">{logo.alt}</p>
                 <p className="text-xs leading-snug">{t.marqueeDesc[logo.key]}</p>
@@ -212,8 +212,8 @@ export const Marquee = () => {
   const row3 = [...logos.slice(12), ...logos.slice(0, 12)];
 
   return (
-    <section className="bg-foreground text-background border-y-2 border-foreground py-2">
-      <h2 className="text-center font-mono uppercase tracking-widest text-xs sm:text-sm py-3 text-background/80">
+    <section className="bg-background text-foreground border-y border-border py-2">
+      <h2 className="text-center font-mono uppercase tracking-widest text-xs sm:text-sm py-3 text-foreground/80">
         {t.marquee.heading}
       </h2>
       <TooltipProvider delayDuration={150}>

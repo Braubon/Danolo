@@ -1,122 +1,56 @@
 import { Link } from "react-router-dom";
-import portrait from "@/assets/hero-portrait.webp";
+import portrait from "@/assets/hero-portrait-crop.webp";
 import { Logo } from "./Logo";
 import { useT } from "@/i18n/LanguageContext";
 
-const PORTFOLIO_URL =
-  "https://drive.google.com/drive/folders/1PwmEx9HLqzmsIkZ56DhRUzJ1nYYKWrMM?usp=drive_link";
-
 export const Hero = () => {
   const t = useT();
+
   return (
-    <section className="relative overflow-hidden">
-      {/* Background portrait — solo visible desde md hacia arriba como fondo completo */}
-      <div className="absolute inset-0 -z-10 hidden md:block">
-        <img
-          src={portrait}
-          alt={t.hero.portraitAlt}
-          className="w-full h-full object-cover object-center"
-          loading="eager"
-        />
-      </div>
-
-      {/* === MOBILE LAYOUT (< md) === */}
-      <div className="md:hidden relative container min-h-[85vh] pt-6 pb-12 flex flex-col justify-between">
-        <div className="absolute inset-0 -z-10">
-          <img
-            src={portrait}
-            alt={t.hero.portraitAlt}
-            className="w-full h-full object-cover object-[75%_center]"
-            loading="eager"
-          />
-        </div>
-
-        <div className="text-foreground z-10 w-[55%] flex flex-col gap-2">
-          <Logo variant="vertical" className="w-36 h-auto mb-4" />
-          <h2 className="font-display font-bold text-3xl mb-1 leading-none">
-            {t.hero.welcome}
-          </h2>
-          <p className="font-sans text-xs leading-relaxed text-foreground/90">
-            {t.hero.intro}
-          </p>
-        </div>
-
-        <div className="z-10 mt-6 flex flex-col items-start gap-2.5 w-[55%]">
-          <a
-            href="/CV-Daniel-Sanchez.pdf"
-            download="CV-Daniel-Sanchez.pdf"
-            className="inline-block hard-block-sm squish-sm bg-cta text-cta-foreground px-5 py-2 font-display text-sm"
-          >
-            {t.hero.cv}
-          </a>
-          <Link
-            to="/about"
-            className="inline-block hard-block-sm squish-sm bg-background text-foreground px-5 py-2 font-display text-sm"
-          >
-            {t.hero.about}
-          </Link>
-        </div>
-
-        {/* Flechas en la parte inferior */}
-        <div className="absolute inset-x-0 bottom-1 flex justify-center items-end gap-3 pointer-events-none">
-          {[0, 0.15, 0.3, 0.45, 0.6].map((d, i) => (
-            <span
-              key={i}
-              className="font-mono text-white text-3xl leading-none arrow-wave select-none drop-shadow"
-              style={{ animationDelay: `${d}s` }}
-              aria-hidden="true"
-            >
-              ↓
-            </span>
-          ))}
-        </div>
-      </div>
-
-      {/* === TABLET / DESKTOP LAYOUT (>= md) === */}
-      <div className="hidden md:flex container pt-14 pb-20 min-h-[85vh] flex-col">
-        <div className="max-w-md lg:max-w-2xl text-foreground">
-          <Logo
-            variant="vertical"
-            className="w-56 lg:w-72 h-auto mb-8"
-          />
-
-          <div className="mt-4 max-w-sm lg:max-w-md">
-            <h2 className="font-display font-bold text-4xl lg:text-5xl mb-4 leading-none">
-              {t.hero.welcome}
-            </h2>
-            <p className="font-sans text-base leading-relaxed">
-              {t.hero.intro}
-            </p>
+    <section className="relative overflow-hidden py-8 sm:py-10 md:py-14 lg:py-16">
+      <div className="container grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-10 lg:gap-14">
+        {/* Mitad Izquierda: Foto */}
+        <div className="flex items-center justify-center order-1">
+          <div className="relative w-full max-w-[340px] sm:max-w-[400px] md:max-w-[460px] lg:max-w-[500px]">
+            <img
+              src={portrait}
+              alt={t.hero.portraitAlt}
+              className="w-full h-auto object-contain block drop-shadow-2xl"
+              loading="eager"
+            />
           </div>
         </div>
 
-        <div className="mt-auto pt-16 flex flex-wrap items-center gap-4">
-          <a
-            href="/CV-Daniel-Sanchez.pdf"
-            download="CV-Daniel-Sanchez.pdf"
-            className="inline-block hard-block-sm squish-sm bg-cta text-cta-foreground px-7 py-3 font-display text-lg"
-          >
-            {t.hero.cv}
-          </a>
-          <Link
-            to="/about"
-            className="inline-block hard-block-sm squish-sm bg-background text-foreground px-6 py-3 font-display text-base"
-          >
-            {t.hero.about}
-          </Link>
-        </div>
+        {/* Mitad Derecha: Información */}
+        <div className="flex flex-col items-start justify-center order-2 text-foreground">
+          <Logo
+            variant="vertical"
+            className="w-44 sm:w-52 md:w-56 lg:w-64 h-auto mb-4 md:mb-6"
+          />
 
-        <div className="pt-10 flex justify-center items-end gap-6 md:gap-8">
-          {[0, 0.15, 0.3, 0.45, 0.6].map((d, i) => (
-            <span
-              key={i}
-              className="font-mono text-white text-5xl md:text-6xl leading-none arrow-wave select-none"
-              style={{ animationDelay: `${d}s` }}
-              aria-hidden="true"
+          <h1 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl leading-tight tracking-tight text-foreground">
+            {t.hero.welcome}
+          </h1>
+
+          <p className="font-sans text-sm sm:text-base leading-relaxed text-foreground/85 max-w-lg mt-3 md:mt-4">
+            {t.hero.intro}
+          </p>
+
+          <div className="mt-6 md:mt-8 flex flex-wrap items-center gap-3 sm:gap-4">
+            <a
+              href="/CV-Daniel-Sanchez.pdf"
+              download="CV-Daniel-Sanchez.pdf"
+              className="inline-block hard-block-sm squish-sm bg-cta text-cta-foreground px-6 sm:px-7 py-2.5 sm:py-3 font-display text-sm sm:text-base tracking-wide"
             >
-              ↓
-            </span>
-          ))}
+              {t.hero.cv}
+            </a>
+            <Link
+              to="/about"
+              className="inline-block hard-block-sm squish-sm bg-card text-foreground px-6 sm:px-7 py-2.5 sm:py-3 font-display text-sm sm:text-base tracking-wide"
+            >
+              {t.hero.about}
+            </Link>
+          </div>
         </div>
       </div>
     </section>

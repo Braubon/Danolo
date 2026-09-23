@@ -6,7 +6,7 @@ export const ContactSection = () => {
   const t = useT();
 
   return (
-    <section id="contacto" className="border-t-2 border-foreground bg-foreground text-background">
+    <section id="contacto" className="border-t border-border bg-background text-foreground">
       <div className="container py-16 md:py-20">
         <p className="font-mono text-xs uppercase tracking-wider opacity-70">{t.contact.eyebrow}</p>
         <h2 className="font-display font-bold text-5xl md:text-7xl mt-2 leading-none">
@@ -26,7 +26,7 @@ export const ContactSection = () => {
             </a>
             <a
               href={`mailto:${email}`}
-              className="contact-submit inline-block mt-6 bg-accent text-accent-foreground border-2 border-background px-8 py-2.5 font-display"
+              className="contact-submit inline-block mt-6 bg-accent text-accent-foreground border-2 border-foreground px-8 py-2.5 font-display"
             >
               {t.contact.openEmail}
             </a>
