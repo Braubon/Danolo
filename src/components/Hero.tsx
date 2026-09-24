@@ -9,16 +9,14 @@ export const Hero = () => {
   return (
     <section className="relative overflow-hidden w-full border-b border-border bg-background">
       <div className="flex flex-col md:flex-row items-stretch min-h-[380px] md:min-h-[440px] lg:min-h-[480px]">
-        {/* Mitad Izquierda: Retrato centrado y con dimensiones más contenidas */}
-        <div className="w-full md:w-1/2 relative flex items-center justify-center p-6 sm:p-8 md:p-10 lg:p-12 overflow-hidden min-h-[260px] sm:min-h-[320px] md:min-h-full">
-          <div className="relative w-full max-w-[300px] sm:max-w-[360px] md:max-w-[400px] lg:max-w-[440px] flex items-center justify-center">
-            <img
-              src={portrait}
-              alt={t.hero.portraitAlt}
-              className="w-full h-auto max-h-[260px] sm:max-h-[320px] md:max-h-[380px] lg:max-h-[420px] object-contain object-center block select-none pointer-events-none"
-              loading="eager"
-            />
-          </div>
+        {/* Mitad Izquierda: Retrato ocupando todo el alto y centrado horizontalmente */}
+        <div className="w-full md:w-1/2 relative flex items-stretch justify-center overflow-hidden min-h-[300px] sm:min-h-[360px] md:min-h-full">
+          <img
+            src={portrait}
+            alt={t.hero.portraitAlt}
+            className="w-full h-full object-cover object-center block select-none pointer-events-none"
+            loading="eager"
+          />
         </div>
 
         {/* Mitad Derecha: Información */}
