@@ -15,10 +15,10 @@ const Diseno = () => {
   const t = useT();
   const p = t.diseno.projects;
   const projects: ShowcaseProject[] = [
-    { slug: "arsenal", title: p.arsenal.title, blurb: p.arsenal.blurb, description: [...p.arsenal.description], image: arsenalCover },
     { slug: "cobalto", title: p.cobalto.title, blurb: p.cobalto.blurb, description: [...p.cobalto.description], image: cobaltoCover },
-    { slug: "oshun", title: p.oshun.title, blurb: p.oshun.blurb, description: [...p.oshun.description], image: oshunCover },
     { slug: "diceup", title: p.diceup.title, blurb: p.diceup.blurb, description: [...p.diceup.description], image: diceupCover },
+    { slug: "arsenal", title: p.arsenal.title, blurb: p.arsenal.blurb, description: [...p.arsenal.description], image: arsenalCover },
+    { slug: "oshun", title: p.oshun.title, blurb: p.oshun.blurb, description: [...p.oshun.description], image: oshunCover },
   ];
 
   return (

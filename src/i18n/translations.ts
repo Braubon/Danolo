@@ -26,7 +26,7 @@ export const translations = {
       diceup: "DiceUp",
       oshun: "Oshun",
       aiPhotography: "Fotografía publicitaria",
-      aiIdentity: "Identidad consistente",
+      aiIdentity: "Consistencia en la imagen",
       product: "Producto",
       arch: "Visualización arquitectónica",
     },
@@ -217,7 +217,7 @@ export const translations = {
             "Producción de imagen publicitaria sin set ni atrezzo: bodegones, salpicaduras y composiciones al milímetro.",
         },
         identity: {
-          title: "Identidad consistente",
+          title: "Consistencia en la imagen",
           blurb:
             "Mismo personaje, mismo escenario, mismo ADN visual en decenas de piezas. La IA bien dirigida no rompe la marca.",
           description: [

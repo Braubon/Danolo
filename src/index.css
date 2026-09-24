@@ -80,35 +80,57 @@
 @layer components {
   /* Bloque con borde limpio de 1px */
   .hard-block {
-    @apply border border-foreground bg-card;
+    @apply border border-foreground;
+    background-color: hsl(var(--card));
   }
 
   .hard-block-sm {
-    @apply border border-foreground bg-card transition-opacity;
-  }
-  .hard-block-sm:hover,
-  .hard-block-sm:focus-visible {
-    opacity: 0.9;
+    @apply border border-foreground;
+    background-color: hsl(var(--card));
   }
 
-  /* Squish desactivado: limpio y sin desplazamiento */
-  .squish:hover,
-  .squish:focus-visible {
-    opacity: 0.9;
-  }
-
-  .squish-sm:hover,
-  .squish-sm:focus-visible {
-    opacity: 0.9;
-  }
-
-  /* Botón enviar del formulario sin sombra ni animación */
+  /* Inversión de fondo y texto al hacer hover en botones y enlaces interactivos */
+  a.hard-block-sm,
+  button.hard-block-sm,
   .contact-submit {
-    @apply border border-foreground transition-opacity;
+    transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease;
   }
+
+  a.hard-block-sm:hover,
+  button.hard-block-sm:hover,
+  a.hard-block-sm:focus-visible,
+  button.hard-block-sm:focus-visible {
+    background-color: hsl(var(--foreground));
+    color: hsl(var(--background));
+    border-color: hsl(var(--foreground));
+  }
+
+  /* Botones CTA (Naranja / Melocotón #ffbb61) */
+  a.hard-block-sm.bg-cta:hover,
+  button.hard-block-sm.bg-cta:hover,
+  a.hard-block-sm.bg-cta:focus-visible,
+  button.hard-block-sm.bg-cta:focus-visible {
+    background-color: hsl(var(--cta-foreground));
+    color: hsl(var(--cta));
+    border-color: hsl(var(--cta));
+  }
+
+  /* Botones sobre fondo de tarjeta */
+  a.hard-block-sm.bg-card:hover,
+  button.hard-block-sm.bg-card:hover,
+  a.hard-block-sm.bg-card:focus-visible,
+  button.hard-block-sm.bg-card:focus-visible {
+    background-color: hsl(var(--foreground));
+    color: hsl(var(--background));
+    border-color: hsl(var(--foreground));
+  }
+
+  /* Botón de contacto (Verde #00ffb6) */
   .contact-submit:hover,
   .contact-submit:focus-visible {
-    opacity: 0.9;
+    background-color: hsl(var(--accent-foreground));
+    color: hsl(var(--accent));
+    border-color: hsl(var(--accent));
   }
 }
 
