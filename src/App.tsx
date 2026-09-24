@@ -5,7 +5,6 @@ import { LanguageProvider } from "./i18n/LanguageContext.tsx";
 import Index from "./pages/Index.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import Diseno from "./pages/Diseno.tsx";
-import DisenoProject from "./pages/DisenoProject.tsx";
 import DisenoDiceUp from "./pages/DisenoDiceUp.tsx";
 import DisenoCobalto from "./pages/DisenoCobalto.tsx";
 import DisenoOshun from "./pages/DisenoOshun.tsx";
@@ -30,7 +29,7 @@ const App = () => (
           <Route path="/diseno/dew" element={<Navigate to="/diseno/cobalto" replace />} />
           <Route path="/diseno/oshun" element={<DisenoOshun />} />
           <Route path="/diseno/arsenal" element={<DisenoArsenal />} />
-          <Route path="/diseno/:slug" element={<DisenoProject />} />
+          <Route path="/diseno/:slug" element={<Navigate to="/diseno" replace />} />
           <Route path="/ia" element={<IA />} />
           <Route path="/ia/del-boceto-a-la-realidad" element={<Navigate to="/ia" replace />} />
           <Route path="/ia/:slug" element={<IAProject />} />

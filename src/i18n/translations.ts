@@ -50,9 +50,6 @@ export const translations = {
       about: "Sobre mí",
       portraitAlt: "Retrato de Daniel con efecto de luz",
     },
-    marquee: {
-      heading: "Algunas de mis creaciones",
-    },
     home: {
       design: {
         title: "Diseño Gráfico\n& Retoque",
@@ -416,9 +413,6 @@ export const translations = {
       cv: "Download CV",
       about: "About me",
       portraitAlt: "Portrait of Daniel with light effect",
-    },
-    marquee: {
-      heading: "Some of my work",
     },
     home: {
       design: {
