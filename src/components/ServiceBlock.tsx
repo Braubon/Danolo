@@ -13,7 +13,7 @@ interface ServiceBlockProps {
 export const ServiceBlock = ({ title, body, image, imageAlt, to, reverse }: ServiceBlockProps) => {
   const t = useT();
   return (
-    <article className="container py-8 md:py-10">
+    <article className="container py-4 md:py-5">
       <div
         className="hard-block block overflow-hidden bg-card"
       >
@@ -22,23 +22,25 @@ export const ServiceBlock = ({ title, body, image, imageAlt, to, reverse }: Serv
             <img
               src={image}
               alt={imageAlt}
-              className="w-full h-full object-cover aspect-[8/3] md:aspect-[4/3]"
+              className="w-full h-full object-cover aspect-[16/7] md:aspect-[16/9]"
               loading="lazy"
             />
           </div>
 
-          <div className={`p-6 md:p-8 flex flex-col [direction:ltr] border-t md:border-t-0 border-foreground ${reverse ? "md:border-r" : "md:border-l"}`}>
-            <h3 className="font-display font-bold text-accent text-3xl md:text-4xl leading-tight">
-              {title}
-            </h3>
-            <div className="mt-4 font-sans text-foreground/85 text-[0.95rem] leading-relaxed flex-1">
-              {body}
+          <div className={`p-5 md:py-6 md:px-7 flex flex-col justify-between [direction:ltr] border-t md:border-t-0 border-foreground ${reverse ? "md:border-r" : "md:border-l"}`}>
+            <div>
+              <h3 className="font-display font-bold text-accent text-2xl md:text-3xl leading-tight">
+                {title}
+              </h3>
+              <div className="mt-3 font-sans text-foreground/85 text-[0.92rem] leading-relaxed">
+                {body}
+              </div>
             </div>
-            <div className="mt-6 flex justify-end">
+            <div className="mt-4 flex justify-end">
               <Link
                 to={to}
                 aria-label={`${t.common.seeMore} — ${typeof title === "string" ? title : ""}`}
-                className="inline-block hard-block-sm squish-sm bg-cta text-cta-foreground px-6 py-3 font-display text-base uppercase tracking-wider"
+                className="inline-block hard-block-sm squish-sm bg-cta text-cta-foreground px-5 py-2.5 font-display text-sm md:text-base uppercase tracking-wider"
               >
                 {t.common.seeMore}
               </Link>

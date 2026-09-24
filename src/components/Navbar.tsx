@@ -61,7 +61,7 @@ export const Navbar = () => {
   );
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-border bg-[#1c2b2d]/90 backdrop-blur">
       <nav className="container flex items-center justify-between py-4">
         <Link to="/" className="flex items-center gap-2 squish-sm" aria-label={t.nav.home}>
           <Logo className="w-12 h-auto" variant="icon" />

@@ -4,7 +4,7 @@ import { useT } from "@/i18n/LanguageContext";
 export const Footer = () => {
   const t = useT();
   return (
-    <footer className="border-t border-border bg-background mt-0">
+    <footer className="border-t border-border bg-[#1c2b2d] mt-0">
       <div className="container py-6 flex flex-col md:flex-row items-center justify-between gap-3 font-mono text-xs uppercase tracking-wider">
         <span>2026 Danolo Designs</span>
         <span className="text-muted-foreground">{t.footer.city}</span>

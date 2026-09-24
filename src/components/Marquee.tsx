@@ -212,7 +212,7 @@ export const Marquee = () => {
   const row3 = [...logos.slice(12), ...logos.slice(0, 12)];
 
   return (
-    <section className="bg-background text-foreground border-y border-border py-2">
+    <section className="bg-[#1c2b2d] text-foreground border-y border-border py-2">
       <h2 className="text-center font-mono uppercase tracking-widest text-xs sm:text-sm py-3 text-foreground/80">
         {t.marquee.heading}
       </h2>

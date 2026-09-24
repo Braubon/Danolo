@@ -23,8 +23,8 @@ export const Hero = () => {
         <div className="w-full md:w-1/2 flex flex-col justify-center py-8 sm:py-10 md:py-12 px-6 sm:px-10 md:px-12 lg:px-16 text-foreground">
           <div className="max-w-lg">
             <Logo
-              variant="vertical"
-              className="w-40 sm:w-48 md:w-52 lg:w-60 h-auto mb-4 md:mb-5"
+              variant="horizontal"
+              className="w-52 sm:w-60 md:w-64 lg:w-72 h-auto mb-4 md:mb-5"
             />
 
             <h1 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl leading-tight tracking-tight text-foreground">

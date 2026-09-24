@@ -19,7 +19,7 @@ const Index = () => {
         <Hero />
         <Marquee />
 
-        <div className="space-y-2 py-6 md:py-10">
+        <div className="space-y-0 py-3 md:py-5">
           <ServiceBlock
             to="/diseno"
             title={<RichText text={t.home.design.title} />}

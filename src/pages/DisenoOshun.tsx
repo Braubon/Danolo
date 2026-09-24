@@ -56,7 +56,7 @@ const DisenoOshun = () => {
 
         <section className="container pb-12">
           {/* Bloque continuo de presentación estilo Behance */}
-          <div className="hard-block w-full overflow-hidden flex flex-col mb-14 bg-[#2b373a]">
+          <div className="hard-block w-full overflow-hidden flex flex-col mb-14 bg-[#1c2b2d]">
             {/* 1. Portada revista abierta (Ancho completo) */}
             <img src={revistaAbierta} alt={t.oshunPage.altOpen} onClick={() => openImage(revistaAbierta)} className="w-full h-auto block cursor-pointer" />
 
