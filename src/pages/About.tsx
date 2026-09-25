@@ -24,9 +24,9 @@ const Timeline = ({ items }: { items: TimelineItem[] }) => (
     {items.map((it) => (
       <li key={it.range + it.title} className="pl-6 relative">
         <span className="absolute -left-[9px] top-1.5 w-4 h-4 bg-accent border border-foreground" aria-hidden="true" />
-        <p className="font-mono text-xs uppercase tracking-wider text-muted-foreground">{it.range}</p>
-        <p className="font-display font-bold text-lg leading-tight mt-1">{it.title}</p>
-        {it.place && <p className="font-sans text-sm text-foreground/80 mt-0.5">{it.place}</p>}
+        <p className="font-mono text-sm uppercase tracking-wider text-muted-foreground">{it.range}</p>
+        <p className="font-display font-bold text-lg md:text-xl leading-tight mt-1">{it.title}</p>
+        {it.place && <p className="font-sans text-base text-foreground/80 mt-0.5">{it.place}</p>}
       </li>
     ))}
   </ol>
@@ -35,10 +35,10 @@ const Timeline = ({ items }: { items: TimelineItem[] }) => (
 const Bar = ({ label, value, suffix, highlight = false }: { label: string; value: number; suffix?: string; highlight?: boolean }) => (
   <div>
     <div className="flex items-baseline justify-between mb-1.5">
-      <span className="font-display text-sm">{label}</span>
-      {suffix && <span className="font-mono text-xs uppercase tracking-wider text-muted-foreground">{suffix}</span>}
+      <span className="font-display font-bold text-base">{label}</span>
+      {suffix && <span className="font-mono text-sm uppercase tracking-wider text-muted-foreground">{suffix}</span>}
     </div>
-    <div className="h-3 border border-foreground bg-background overflow-hidden">
+    <div className="h-3.5 border border-foreground bg-background overflow-hidden">
       <div className={`h-full ${highlight ? "bg-cta" : "bg-accent"}`} style={{ width: `${value}%` }} role="progressbar" aria-valuenow={value} aria-valuemin={0} aria-valuemax={100} />
     </div>
   </div>
@@ -75,8 +75,8 @@ const CircleStat = ({ icon, label, sub, value }: { icon: string; label: string; 
         </div>
       </div>
       <div className="leading-tight">
-        <p className="font-display font-bold text-sm">{label}</p>
-        {sub && <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground italic">{sub}</p>}
+        <p className="font-display font-bold text-base">{label}</p>
+        {sub && <p className="font-mono text-xs uppercase tracking-wider text-muted-foreground italic">{sub}</p>}
       </div>
     </div>
   );
@@ -111,10 +111,10 @@ const About = () => {
           <div className="hard-block bg-card mt-8 flex flex-col-reverse md:flex-row items-stretch overflow-hidden">
             <div className="p-8 md:p-12 lg:p-16 md:w-[65%] lg:w-[70%] flex flex-col justify-center relative z-10 pointer-events-none">
               <div className="pointer-events-auto">
-                <p className="font-mono text-xs uppercase tracking-wider text-muted-foreground">{t.about.eyebrow}</p>
+                <p className="font-mono text-sm uppercase tracking-wider text-muted-foreground">{t.about.eyebrow}</p>
                 <h1 className="font-display font-bold text-accent text-6xl lg:text-[5.5rem] leading-none mt-2 tracking-tight">Daniel Sánchez</h1>
-                <p className="font-mono text-sm uppercase tracking-wider text-foreground/70 mt-3">{t.about.role}</p>
-                <div className="mt-8 font-sans text-foreground/85 leading-relaxed space-y-4 max-w-2xl">
+                <p className="font-mono text-base uppercase tracking-wider text-foreground/70 mt-3">{t.about.role}</p>
+                <div className="mt-8 font-sans text-foreground/85 leading-relaxed space-y-4 max-w-2xl text-base md:text-lg">
                   <p><RichText text={t.about.bio1} /></p>
                   <p><RichText text={t.about.bio2} /></p>
                 </div>
@@ -128,13 +128,13 @@ const About = () => {
 
         <section className="container pb-16 grid md:grid-cols-2 gap-10 md:gap-12">
           <div className="hard-block bg-card p-6 md:p-8">
-            <p className="font-mono text-xs uppercase tracking-wider text-muted-foreground">{t.about.formationEyebrow}</p>
+            <p className="font-mono text-sm uppercase tracking-wider text-muted-foreground">{t.about.formationEyebrow}</p>
             <h2 className="font-display font-bold text-3xl md:text-4xl mt-1 mb-6">{t.about.formationTitle}</h2>
             <Timeline items={[...t.about.formacion]} />
           </div>
 
           <div className="hard-block bg-card p-6 md:p-8">
-            <p className="font-mono text-xs uppercase tracking-wider text-muted-foreground">{t.about.experienceEyebrow}</p>
+            <p className="font-mono text-sm uppercase tracking-wider text-muted-foreground">{t.about.experienceEyebrow}</p>
             <h2 className="font-display font-bold text-3xl md:text-4xl mt-1 mb-6">{t.about.experienceTitle}</h2>
             <Timeline items={[...t.about.experiencia]} />
           </div>
@@ -142,7 +142,7 @@ const About = () => {
 
         <section className="container pb-16 grid md:grid-cols-2 gap-10 md:gap-12">
           <div className="hard-block bg-card p-6 md:p-8">
-            <p className="font-mono text-xs uppercase tracking-wider text-muted-foreground">{t.about.skillsEyebrow}</p>
+            <p className="font-mono text-sm uppercase tracking-wider text-muted-foreground">{t.about.skillsEyebrow}</p>
             <h2 className="font-display font-bold text-3xl md:text-4xl mt-1 mb-6">{t.about.skillsTitle}</h2>
             <div className="space-y-4">
               {t.about.competencias.map((c, idx) => (
@@ -152,7 +152,7 @@ const About = () => {
           </div>
 
           <div className="hard-block bg-card p-6 md:p-8">
-            <p className="font-mono text-xs uppercase tracking-wider text-muted-foreground">{t.about.languagesEyebrow}</p>
+            <p className="font-mono text-sm uppercase tracking-wider text-muted-foreground">{t.about.languagesEyebrow}</p>
             <h2 className="font-display font-bold text-3xl md:text-4xl mt-1 mb-6">{t.about.languagesTitle}</h2>
             <div className="space-y-4">
               {t.about.idiomas.map((i, idx) => (
@@ -164,7 +164,7 @@ const About = () => {
 
         <section className="container pb-20">
           <div className="hard-block bg-card p-6 md:p-8">
-            <p className="font-mono text-xs uppercase tracking-wider text-muted-foreground">{t.about.stackEyebrow}</p>
+            <p className="font-mono text-sm uppercase tracking-wider text-muted-foreground">{t.about.stackEyebrow}</p>
             <h2 className="font-display font-bold text-3xl md:text-4xl mt-1 mb-6">{t.about.stackTitle}</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-8 sm:gap-y-6">
               {herramientas.map((h) => (

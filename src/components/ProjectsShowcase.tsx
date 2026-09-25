@@ -73,7 +73,7 @@ export const ProjectsShowcase = ({ projects, basePath }: ProjectsShowcaseProps) 
                   {current.blurb}
                 </p>
 
-                <div className="font-sans text-foreground/85 leading-relaxed mt-4 space-y-3 text-sm md:text-base">
+                <div className="font-sans text-foreground/85 leading-relaxed mt-4 space-y-3 text-base md:text-lg">
                   {current.description.map((t, i) => (
                     <p key={i}>{t}</p>
                   ))}
@@ -83,7 +83,7 @@ export const ProjectsShowcase = ({ projects, basePath }: ProjectsShowcaseProps) 
               <div className="mt-6 flex justify-end">
                 <Link
                   to={`${basePath}/${current.slug}`}
-                  className="inline-block hard-block-sm squish-sm bg-cta text-cta-foreground px-6 py-3 font-display text-base uppercase tracking-wider"
+                  className="inline-block hard-block-sm squish-sm bg-cta text-cta-foreground px-6 py-3 font-display font-bold text-base uppercase tracking-wider"
                 >
                   {t.common.seeProject}
                 </Link>

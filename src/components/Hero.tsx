@@ -31,7 +31,7 @@ export const Hero = () => {
               {t.hero.welcome}
             </h1>
 
-            <p className="font-sans text-sm sm:text-base leading-relaxed text-foreground/85 mt-3 md:mt-4">
+            <p className="font-sans text-base sm:text-lg leading-relaxed text-foreground/85 mt-3 md:mt-4">
               {t.hero.intro}
             </p>
 
@@ -45,7 +45,7 @@ export const Hero = () => {
               </a>
               <Link
                 to="/about"
-                className="inline-block hard-block-sm bg-card text-foreground px-6 sm:px-7 py-2.5 sm:py-3 font-display text-sm sm:text-base tracking-wide"
+                className="inline-block hard-block-sm bg-card text-foreground px-6 sm:px-7 py-2.5 sm:py-3 font-display font-bold text-sm sm:text-base tracking-wide"
               >
                 {t.hero.about}
               </Link>

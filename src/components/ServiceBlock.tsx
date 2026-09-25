@@ -32,7 +32,7 @@ export const ServiceBlock = ({ title, body, image, imageAlt, to, reverse }: Serv
               <h3 className="font-display font-bold text-accent text-2xl md:text-3xl leading-tight">
                 {title}
               </h3>
-              <div className="mt-3 font-sans text-foreground/85 text-[0.92rem] leading-relaxed">
+              <div className="mt-3 font-sans text-foreground/85 text-base md:text-[1.05rem] leading-relaxed">
                 {body}
               </div>
             </div>
@@ -40,7 +40,7 @@ export const ServiceBlock = ({ title, body, image, imageAlt, to, reverse }: Serv
               <Link
                 to={to}
                 aria-label={`${t.common.seeMore} — ${typeof title === "string" ? title : ""}`}
-                className="inline-block hard-block-sm squish-sm bg-cta text-cta-foreground px-5 py-2.5 font-display text-sm md:text-base uppercase tracking-wider"
+                className="inline-block hard-block-sm squish-sm bg-cta text-cta-foreground px-5 py-2.5 font-display font-bold text-sm md:text-base uppercase tracking-wider"
               >
                 {t.common.seeMore}
               </Link>

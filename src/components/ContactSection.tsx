@@ -8,14 +8,14 @@ export const ContactSection = () => {
   return (
     <section id="contacto" className="border-t border-border bg-background text-foreground">
       <div className="container py-16 md:py-20">
-        <p className="font-mono text-xs uppercase tracking-wider opacity-70">{t.contact.eyebrow}</p>
+        <p className="font-mono text-sm uppercase tracking-wider opacity-70">{t.contact.eyebrow}</p>
         <h2 className="font-display font-bold text-5xl md:text-7xl mt-2 leading-none">
           {t.contact.title}<span className="text-accent blink-dot">.</span>
         </h2>
 
         <div className="grid md:grid-cols-2 gap-10 md:gap-16 mt-12">
           <div>
-            <p className="font-mono text-xs uppercase tracking-wider opacity-70">
+            <p className="font-mono text-sm uppercase tracking-wider opacity-70">
               {t.contact.writeMe}
             </p>
             <a
@@ -26,15 +26,15 @@ export const ContactSection = () => {
             </a>
             <a
               href={`mailto:${email}`}
-              className="contact-submit inline-block mt-6 bg-accent text-accent-foreground border border-foreground px-8 py-2.5 font-display"
+              className="contact-submit inline-block mt-6 bg-accent text-accent-foreground border border-foreground px-8 py-2.5 font-display font-bold text-base"
             >
               {t.contact.openEmail}
             </a>
           </div>
 
           <div className="md:text-right">
-            <p className="font-mono text-xs uppercase tracking-wider opacity-70">{t.contact.preferCall}</p>
-            <p className="font-mono text-xs uppercase tracking-wider opacity-70 mt-1">
+            <p className="font-mono text-sm uppercase tracking-wider opacity-70">{t.contact.preferCall}</p>
+            <p className="font-mono text-sm uppercase tracking-wider opacity-70 mt-1">
               {t.contact.hereNumber}
             </p>
             <a

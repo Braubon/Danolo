@@ -74,14 +74,14 @@ const ThreeD = () => {
       <Navbar />
       <main className="flex-1">
         <section className="container py-10 md:py-14">
-          <Link to="/" className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wider hover:text-accent">
+          <Link to="/" className="inline-flex items-center gap-2 font-mono text-sm uppercase tracking-wider hover:text-accent">
             <ArrowLeft className="w-3.5 h-3.5" /> {t.common.back}
           </Link>
           <div className="mt-6 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
             <h1 className="font-display font-bold text-accent text-5xl md:text-7xl leading-tight">
               {t.threed.title}
             </h1>
-            <p className="max-w-md font-sans text-base md:text-lg text-foreground/85">
+            <p className="max-w-md font-sans text-lg md:text-xl text-foreground/85">
               {t.threed.lead}
             </p>
           </div>

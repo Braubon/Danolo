@@ -70,7 +70,7 @@ const DisenoCobalto = () => {
         <section className="container py-10 md:py-14">
           <Link
             to="/diseno"
-            className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wider hover:text-accent"
+            className="inline-flex items-center gap-2 font-mono text-sm uppercase tracking-wider hover:text-accent"
           >
             <ArrowLeft className="w-3.5 h-3.5" /> {t.diseno.backLabel}
           </Link>
@@ -78,7 +78,7 @@ const DisenoCobalto = () => {
             <h1 className="font-display font-bold text-accent text-5xl md:text-7xl leading-tight">
               {t.cobaltoPage.title}
             </h1>
-            <p className="max-w-md font-sans text-base md:text-lg text-foreground/85">
+            <p className="max-w-md font-sans text-lg md:text-xl text-foreground/85">
               {t.cobaltoPage.tagline}
             </p>
           </div>

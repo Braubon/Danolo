@@ -67,7 +67,7 @@ export const Navbar = () => {
           <Logo className="w-12 h-auto" variant="icon" />
         </Link>
 
-        <ul className="hidden md:flex items-center gap-8 font-display text-base">
+        <ul className="hidden md:flex items-center gap-8 font-display font-bold text-base">
           {links.map((l) => {
             const active = l.to === pathname;
             const isHash = l.to.startsWith("#");
@@ -102,7 +102,7 @@ export const Navbar = () => {
                         <li key={p.label}>
                           <Link
                             to={p.to}
-                            className="block px-4 py-1.5 text-sm hover:text-accent hover:bg-muted/50"
+                            className="block px-4 py-1.5 text-base font-medium hover:text-accent hover:bg-muted/50"
                           >
                             {p.label}
                           </Link>
@@ -133,7 +133,7 @@ export const Navbar = () => {
 
       {open && (
         <div className="md:hidden border-t border-border bg-card">
-          <ul className="container flex flex-col py-4 gap-3 font-display">
+          <ul className="container flex flex-col py-4 gap-3 font-display font-bold text-base">
             {links.map((l) => {
               const isHash = l.to.startsWith("#");
               return (
@@ -153,7 +153,7 @@ export const Navbar = () => {
                     {l.label}
                   </Link>
                   {l.projects && (
-                    <ul className="pl-4 mt-1 space-y-1 text-sm opacity-80">
+                    <ul className="pl-4 mt-1 space-y-1 text-sm font-medium opacity-85">
                       {l.projects.map((p) => (
                         <li key={p.label}>
                           <Link to={p.to} onClick={() => setOpen(false)} className="block py-0.5">

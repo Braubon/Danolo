@@ -182,7 +182,7 @@ export const Marquee = () => {
                     className="max-w-xs text-center whitespace-normal bg-card text-foreground border border-border z-[100]"
                   >
                     <p className="font-bold mb-1">{logo.alt}</p>
-                    <p className="text-xs leading-snug">{t.marqueeDesc[logo.key]}</p>
+                    <p className="text-sm leading-snug">{t.marqueeDesc[logo.key]}</p>
                   </TooltipContent>
                 </Tooltip>
               );

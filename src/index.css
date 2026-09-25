@@ -66,14 +66,21 @@
 
   html {
     scroll-behavior: smooth;
+    font-size: 17px;
   }
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    font-weight: 500;
+  }
+
+  b, strong {
+    font-weight: 700;
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-display;
+    font-weight: 700;
   }
 }
 
