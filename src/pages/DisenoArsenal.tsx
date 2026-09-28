@@ -6,16 +6,16 @@ import { Footer } from "@/components/Footer";
 import { ContactSection } from "@/components/ContactSection";
 import { useT } from "@/i18n/LanguageContext";
 
-import logo from "@/assets/arsenal/Presentación Portfolio_2_logo.webp";
-import padelPhoto from "@/assets/arsenal/Presentación Portfolio_2_padel photo.webp";
-import fonts from "@/assets/arsenal/Presentación Portfolio_2_Fonts.webp";
-import colors from "@/assets/arsenal/Presentación Portfolio_2_colors.webp";
-import builtForTheSiege from "@/assets/arsenal/Presentación Portfolio_2_built for the siege.webp";
-import rrss from "@/assets/arsenal/Presentación Portfolio_2_RRSS.webp";
-import racketReveal from "@/assets/arsenal/Presentación Portfolio_2_racket reveal.webp";
-import store from "@/assets/arsenal/Presentación Portfolio_2_store.webp";
-import end from "@/assets/arsenal/Presentación Portfolio_2_end.webp";
-import videoSrc from "@/assets/arsenal/Presentación Portfolio_2_vídeo.mp4";
+import logo from "@/assets/diseno/arsenal/Presentación Portfolio_2_logo.webp";
+import padelPhoto from "@/assets/diseno/arsenal/Presentación Portfolio_2_padel photo.webp";
+import fonts from "@/assets/diseno/arsenal/Presentación Portfolio_2_Fonts.webp";
+import colors from "@/assets/diseno/arsenal/Presentación Portfolio_2_colors.webp";
+import builtForTheSiege from "@/assets/diseno/arsenal/Presentación Portfolio_2_built for the siege.webp";
+import rrss from "@/assets/diseno/arsenal/Presentación Portfolio_2_RRSS.webp";
+import racketReveal from "@/assets/diseno/arsenal/Presentación Portfolio_2_racket reveal.webp";
+import store from "@/assets/diseno/arsenal/Presentación Portfolio_2_store.webp";
+import end from "@/assets/diseno/arsenal/Presentación Portfolio_2_end.webp";
+import videoSrc from "@/assets/diseno/arsenal/Presentación Portfolio_2_vídeo.mp4";
 
 const DisenoArsenal = () => {
   const t = useT();
@@ -57,22 +57,29 @@ const DisenoArsenal = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-[#faf8f5] text-stone-900 font-jakarta selection:bg-[#b24b74] selection:text-white">
       <Navbar />
       <main className="flex-1">
-        <section className="container py-10 md:py-14">
-          <Link to="/diseno" className="inline-flex items-center gap-2 font-mono text-sm uppercase tracking-wider hover:text-accent">
+        <section className="container py-8 md:py-12">
+          <Link
+            to="/diseno"
+            className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-stone-500 hover:text-stone-950 transition-colors"
+          >
             <ArrowLeft className="w-3.5 h-3.5" /> {t.diseno.backLabel}
           </Link>
-          <div className="mt-6 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
-            <h1 className="font-display font-bold text-accent text-5xl md:text-7xl leading-tight">Arsenal</h1>
-            <p className="max-w-md font-sans text-lg md:text-xl text-foreground/85">{t.arsenal.tagline}</p>
+          <div className="mt-4 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+            <h1 className="font-editorial italic font-normal text-5xl sm:text-6xl md:text-7xl leading-tight text-stone-950">
+              Arsenal
+            </h1>
+            <p className="max-w-md font-jakarta text-base md:text-lg text-stone-600 font-normal">
+              {t.arsenal.tagline}
+            </p>
           </div>
         </section>
 
-        <section className="container pb-12">
-          {/* Bloque continuo de presentación */}
-          <div className="hard-block w-full overflow-hidden flex flex-col mb-14 bg-[#1c2b2d]">
+        <section className="container pb-16">
+          {/* Bloque continuo de presentación estilo Studio Magazine */}
+          <div className="bg-white border border-stone-200/90 rounded-3xl shadow-sm overflow-hidden flex flex-col mb-14">
             <img src={logo} alt="Arsenal Logo" onClick={() => openImage(logo)} className="w-full h-auto block cursor-pointer" />
             <img src={padelPhoto} alt="Arsenal Padel" onClick={() => openImage(padelPhoto)} className="w-full h-auto block cursor-pointer" />
             
@@ -92,7 +99,10 @@ const DisenoArsenal = () => {
           </div>
 
           <div className="flex justify-center mt-10">
-            <Link to="/diseno" className="hard-block-sm squish-sm inline-flex items-center gap-3 bg-cta text-cta-foreground font-display font-bold uppercase tracking-wider px-8 py-4">
+            <Link
+              to="/diseno"
+              className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full bg-stone-950 text-white font-jakarta font-semibold text-xs uppercase tracking-wider hover:bg-[#b24b74] transition-all shadow-sm"
+            >
               <ArrowLeft className="w-4 h-4" /> {t.diseno.backToProjects}
             </Link>
           </div>
@@ -103,10 +113,10 @@ const DisenoArsenal = () => {
       <Footer />
 
       {openIdx !== null && (
-        <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4 animate-in fade-in" onClick={close} role="dialog" aria-modal="true">
+        <div className="fixed inset-0 z-50 bg-stone-950/85 backdrop-blur-md flex items-center justify-center p-4 animate-in fade-in" onClick={close} role="dialog" aria-modal="true">
           <button type="button" onClick={(e) => { e.stopPropagation(); close(); }} className="absolute top-4 right-4 text-white/90 hover:text-white p-2" aria-label={t.common.close}><X className="w-6 h-6" /></button>
           <button type="button" onClick={(e) => { e.stopPropagation(); prev(); }} className="absolute left-2 md:left-6 text-white/90 hover:text-white p-2" aria-label={t.common.prev}><ArrowLeft className="w-7 h-7" /></button>
-          <img src={gallery[openIdx].src} alt={gallery[openIdx].alt} onClick={(e) => e.stopPropagation()} className="max-h-[88vh] max-w-[90vw] object-contain select-none" />
+          <img src={gallery[openIdx].src} alt={gallery[openIdx].alt} onClick={(e) => e.stopPropagation()} className="max-h-[88vh] max-w-[90vw] object-contain select-none rounded-xl" />
           <button type="button" onClick={(e) => { e.stopPropagation(); next(); }} className="absolute right-2 md:right-6 text-white/90 hover:text-white p-2" aria-label={t.common.next}><ArrowRight className="w-7 h-7" /></button>
           <div className="absolute bottom-4 left-0 right-0 text-center font-mono text-xs text-white/70">{openIdx + 1} / {gallery.length}</div>
         </div>

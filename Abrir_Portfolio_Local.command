@@ -12,4 +12,4 @@ echo " Iniciando servidor local del Portfolio"
 echo "========================================"
 
 # Lanza Vite y abre automáticamente el navegador en la sección de Cobalto
-npm run dev -- --open /diseno/cobalto
+npm run dev -- --open

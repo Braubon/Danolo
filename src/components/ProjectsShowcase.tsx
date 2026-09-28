@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 import { useT } from "@/i18n/LanguageContext";
 
 export interface ShowcaseProject {
@@ -17,80 +18,114 @@ interface ProjectsShowcaseProps {
 
 export const ProjectsShowcase = ({ projects, basePath }: ProjectsShowcaseProps) => {
   const t = useT();
-  const [activeIdx, setActiveIdx] = useState(0);
-  const current = projects[activeIdx];
+  const [activeIdx, setActiveIdx] = useState<number>(0);
 
   return (
-    <section className="container pt-1 pb-10 md:pt-2 md:pb-12 w-full">
-      <div className="flex flex-row md:flex-col items-stretch gap-0 relative">
-        {/* Tabs List */}
-        <div
-          role="tablist"
-          aria-label="Proyectos"
-          className="flex flex-col md:flex-row shrink-0 w-[45px] sm:w-[55px] md:w-full relative z-20 md:z-10"
-        >
-          {projects.map((p, i) => {
-            const isActive = i === activeIdx;
-            return (
-              <button
-                key={p.slug}
-                type="button"
-                role="tab"
-                aria-selected={isActive}
-                onClick={() => setActiveIdx(i)}
-                className={`font-display font-bold uppercase tracking-wider text-xs md:text-sm lg:text-base transition-all duration-300 ease-out text-center md:text-left whitespace-nowrap relative border border-foreground flex items-center justify-center
-                  w-full h-auto py-6 px-1 sm:px-2 [writing-mode:vertical-lr] rotate-180 border-b-0 last:border-b
-                  ${isActive ? "bg-card text-cta border-r-0 translate-x-[1px] z-30" : "bg-secondary text-foreground hover:bg-card z-10"}
-                  
-                  md:w-auto md:h-auto md:py-3.5 md:px-10 md:[writing-mode:horizontal-tb] md:rotate-0
-                  md:border-b-0 md:last:border-b-0 md:border-r
-                  ${i > 0 ? "md:-ml-[1px]" : ""}
-                  ${isActive 
-                    ? "md:bg-card md:text-cta md:border-b-0 md:translate-x-0 md:translate-y-[1px] md:z-30" 
-                    : "md:bg-secondary md:text-foreground md:hover:bg-card md:z-10"
-                  }
-                `}
-              >
-                {p.title}
-              </button>
-            );
-          })}
-        </div>
+    <section className="container pt-4 pb-14 md:pt-6 md:pb-20 w-full">
+      {/* Desktop Fluid Horizontal Accordion — Aligned with Home Pillars */}
+      <div className="hidden md:flex gap-4 h-[580px] w-full">
+        {projects.map((p, i) => {
+          const isActive = activeIdx === i;
+          return (
+            <div
+              key={p.slug}
+              onMouseEnter={() => setActiveIdx(i)}
+              onClick={() => setActiveIdx(i)}
+              className={`relative rounded-3xl overflow-hidden border border-stone-200/90 bg-white transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] cursor-pointer flex flex-col justify-end ${
+                isActive
+                  ? "flex-[3.5] shadow-2xl"
+                  : "flex-[1.1] hover:flex-[1.4] opacity-85 hover:opacity-100"
+              }`}
+            >
+              {/* Background Project Cover */}
+              <img
+                src={p.image}
+                alt={p.title}
+                className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ${
+                  isActive ? "scale-105 filter-none" : "scale-100 brightness-[0.88]"
+                }`}
+              />
 
-        {/* Content Folder */}
-        <div className="hard-block flex-1 bg-card p-4 sm:p-6 md:p-8 relative z-10 -ml-[1px] md:ml-0 md:-mt-[1px]">
-          <div
-            key={current.slug}
-            className="animate-fade-in grid md:grid-cols-2 gap-6 md:gap-8 items-start"
-          >
-            <div className="aspect-[16/7] md:aspect-[4/3] overflow-hidden bg-muted border border-foreground">
-              <img src={current.image} alt={current.title} className="w-full h-full object-cover" />
-            </div>
+              {/* Gradient Overlay for Editorial Typography Readability */}
+              <div className="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/40 to-transparent" />
 
-            <div className="flex flex-col h-full justify-between">
-              <div>
-                <p className="font-display font-bold text-lg md:text-xl leading-snug">
-                  {current.blurb}
+              {/* Panel Content */}
+              <div className="relative z-10 p-6 lg:p-8 text-white">
+                <span className="inline-block px-2.5 py-0.5 rounded-full bg-white/20 backdrop-blur-md text-[10px] font-mono uppercase tracking-wider mb-2">
+                  {`0${i + 1} · CASO DE ESTUDIO`}
+                </span>
+
+                <h3 className="text-2xl lg:text-3xl font-bold font-editorial text-white tracking-wide">
+                  {p.title}
+                </h3>
+
+                <p className="text-xs text-stone-300 font-mono mt-0.5 line-clamp-1">
+                  {p.blurb}
                 </p>
 
-                <div className="font-sans text-foreground/85 leading-relaxed mt-4 space-y-3 text-base md:text-lg">
-                  {current.description.map((t, i) => (
-                    <p key={i}>{t}</p>
-                  ))}
+                {/* Expandable Content Area */}
+                <div
+                  className={`transition-all duration-500 overflow-hidden ${
+                    isActive ? "max-h-60 opacity-100 mt-4" : "max-h-0 opacity-0"
+                  }`}
+                >
+                  <div className="text-sm text-stone-200 font-normal leading-relaxed line-clamp-3 mb-4 space-y-1.5 font-jakarta">
+                    {p.description.map((para, pIdx) => (
+                      <p key={pIdx}>{para}</p>
+                    ))}
+                  </div>
+
+                  <Link
+                    to={`${basePath}/${p.slug}`}
+                    onClick={(e) => e.stopPropagation()}
+                    className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white text-stone-950 font-jakarta font-semibold text-xs uppercase tracking-wider hover:bg-[#b24b74] hover:text-white transition-all shadow-md group/btn"
+                  >
+                    <span>{t.common.seeProject}</span>
+                    <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 transition-transform" />
+                  </Link>
                 </div>
               </div>
+            </div>
+          );
+        })}
+      </div>
 
-              <div className="mt-6 flex justify-end">
+      {/* Mobile Vertical Accordion / Cards */}
+      <div className="md:hidden space-y-4">
+        {projects.map((p, i) => (
+          <div
+            key={p.slug}
+            className="rounded-2xl overflow-hidden border border-stone-200 bg-white shadow-sm"
+          >
+            <div className="aspect-[16/10] relative">
+              <img src={p.image} alt={p.title} className="w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-stone-950/85 via-stone-950/30 to-transparent" />
+              <div className="absolute bottom-3 left-4 right-4 text-white">
+                <span className="text-[10px] font-mono bg-white/20 backdrop-blur-md px-2 py-0.5 rounded">
+                  {`0${i + 1} · CASO DE ESTUDIO`}
+                </span>
+                <h3 className="text-2xl font-bold font-editorial mt-1">{p.title}</h3>
+                <p className="text-xs text-stone-300 font-mono mt-0.5">{p.blurb}</p>
+              </div>
+            </div>
+            <div className="p-5">
+              <div className="text-sm text-stone-600 font-normal leading-relaxed space-y-2">
+                {p.description.map((para, pIdx) => (
+                  <p key={pIdx}>{para}</p>
+                ))}
+              </div>
+              <div className="mt-4 pt-3 border-t border-stone-100 flex justify-end">
                 <Link
-                  to={`${basePath}/${current.slug}`}
-                  className="inline-block hard-block-sm squish-sm bg-cta text-cta-foreground px-6 py-3 font-display font-bold text-base uppercase tracking-wider"
+                  to={`${basePath}/${p.slug}`}
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#b24b74] uppercase tracking-wider hover:underline"
                 >
-                  {t.common.seeProject}
+                  <span>{t.common.seeProject}</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>
             </div>
           </div>
-        </div>
+        ))}
       </div>
     </section>
   );

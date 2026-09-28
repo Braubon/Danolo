@@ -35,12 +35,15 @@ export const translations = {
       backTop: "Volver arriba",
     },
     contact: {
-      eyebrow: "¿trabajamos juntos?",
-      title: "¿Trabajamos juntos? Hablemos",
+      eyebrow: "Trabajemos juntos",
+      title: "Trabajemos juntos",
       writeMe: "Cuéntame tu idea por email:",
       openEmail: "Abrir email",
       preferCall: "¿Prefieres un trato más directo? Llámame:",
-      hereNumber: "claro, te dejo aquí mi número:",
+      callDirect: "Llamar directamente",
+    },
+    marquee: {
+      title: "Marcas, colaboraciones e identidades visuales",
     },
     hero: {
       welcome: "¡Bienvenido!",
@@ -199,6 +202,8 @@ export const translations = {
       title: "IA bajo control",
       lead:
         "Integro la IA en mi flujo de trabajo para multiplicar las posibilidades visuales, siempre desde un entorno local con ComfyUI. Sin sacrificar privacidad ni control creativo.",
+      body:
+        "Ni magia ni azar: pura técnica. Trabajo con flujos nodales privados para escalar producción sin perder coherencia ni arriesgar datos de marca.",
       backLabel: "IA bajo control",
       backToProjects: "Volver a proyectos de IA",
       projects: {
@@ -299,23 +304,23 @@ export const translations = {
       },
     },
     about: {
-      eyebrow: "Sobre mí",
-      role: "Diseñador gráfico · 3D · IA",
+      eyebrow: "Daniel Sánchez",
+      role: "Graphic design · AI Control · 3D render",
       portraitAlt: "Retrato de Daniel Sánchez",
       bio1:
         "Llevo más de una década moviendo píxeles y construyendo identidades visuales para referentes del sector cosmético y moda, como **Laboratorios BABÉ** y **Sesderma**.",
       bio2:
         "Soy un diseñador de perfil técnico. Me obsesiona la eficiencia, el orden y que cada elemento tenga un porqué. Hoy, ese rigor tradicional convive con flujos de **IA en local** (ComfyUI) y **modelado 3D** para llevar cualquier idea a la realidad.",
-      formationEyebrow: "01 / Formación",
+      formationEyebrow: "01 · Formación",
       formationTitle: "Estudios",
-      experienceEyebrow: "02 / Trayectoria",
+      experienceEyebrow: "02 · Trayectoria",
       experienceTitle: "Experiencia",
-      skillsEyebrow: "03 / Competencias",
+      skillsEyebrow: "03 · Competencias",
       skillsTitle: "Habilidades",
-      languagesEyebrow: "04 / Idiomas",
+      languagesEyebrow: "04 · Idiomas",
       languagesTitle: "Idiomas",
-      stackEyebrow: "05 / Stack",
-      stackTitle: "Herramientas",
+      stackEyebrow: "05 · Herramientas",
+      stackTitle: "Stack de trabajo",
       formacion: [
         { range: "2010 — 2015", title: "Grado en Diseño Gráfico", place: "EASD · Escola d'Art i Superior de Disseny, Valencia" },
         { range: "2018 — 2019", title: "Modelado Hard Surface", place: "blendtuts.com · Curso online" },
@@ -399,12 +404,15 @@ export const translations = {
       backTop: "Back to top",
     },
     contact: {
-      eyebrow: "shall we work together?",
-      title: "Shall we work together? Let's talk",
+      eyebrow: "Let's work together",
+      title: "Let's work together",
       writeMe: "Tell me your idea via email:",
       openEmail: "Open email",
-      preferCall: "Prefer a more direct approach? Call me:",
-      hereNumber: "sure, here's my number:",
+      preferCall: "Prefer a more direct conversation? Call me:",
+      callDirect: "Call directly",
+    },
+    marquee: {
+      title: "Brands, collaborations & visual identities",
     },
     hero: {
       welcome: "Welcome!",
@@ -563,6 +571,8 @@ export const translations = {
       title: "AI under control",
       lead:
         "I integrate AI into my workflow to multiply visual possibilities, always from a local environment with ComfyUI. Without sacrificing privacy or creative control.",
+      body:
+        "Neither magic nor chance: pure craft. I work with private node workflows to scale production without losing coherence or compromising brand data.",
       backLabel: "AI under control",
       backToProjects: "Back to AI projects",
       projects: {
@@ -663,23 +673,23 @@ export const translations = {
       },
     },
     about: {
-      eyebrow: "About me",
-      role: "Graphic designer · 3D · AI",
+      eyebrow: "Daniel Sánchez",
+      role: "Graphic design · AI Control · 3D render",
       portraitAlt: "Portrait of Daniel Sánchez",
       bio1:
         "I've spent over a decade pushing pixels and building visual identities for leaders in the cosmetics and fashion sectors, such as **BABÉ Laboratories** and **Sesderma**.",
       bio2:
         "I'm a designer with a technical profile. I'm obsessed with efficiency, order, and ensuring every element serves a purpose. Today, that traditional rigor coexists with **local AI** workflows (ComfyUI) and **3D modeling** to bring any idea to reality.",
-      formationEyebrow: "01 / Education",
+      formationEyebrow: "01 · Education",
       formationTitle: "Studies",
-      experienceEyebrow: "02 / Career",
+      experienceEyebrow: "02 · Career",
       experienceTitle: "Experience",
-      skillsEyebrow: "03 / Skills",
+      skillsEyebrow: "03 · Skills",
       skillsTitle: "Skills",
-      languagesEyebrow: "04 / Languages",
+      languagesEyebrow: "04 · Languages",
       languagesTitle: "Languages",
-      stackEyebrow: "05 / Stack",
-      stackTitle: "Tools",
+      stackEyebrow: "05 · Tools",
+      stackTitle: "Working stack",
       formacion: [
         { range: "2010 — 2015", title: "Graphic Design Degree", place: "EASD · Escola d'Art i Superior de Disseny, Valencia" },
         { range: "2018 — 2019", title: "Hard Surface Modeling", place: "blendtuts.com · Online course" },

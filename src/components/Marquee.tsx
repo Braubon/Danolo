@@ -19,7 +19,7 @@ import promusic from "@/assets/marquee/promusic.svg";
 import sesderma from "@/assets/marquee/sesderma.svg";
 import squad from "@/assets/marquee/squad.svg";
 
-const BASE_HEIGHT = 36; // px
+const BASE_HEIGHT = 32; // px
 const SPEED = 40; // px/segundo
 
 type LogoKey =
@@ -43,7 +43,7 @@ const logos: LogoItem[] = [
   { src: circusGlobal, alt: "Circus Global", key: "circusGlobal", scale: 1 },
   { src: diceup, alt: "DiceUp", key: "diceup", scale: 1 },
   { src: femcolab, alt: "FemCoLab", key: "femcolab", scale: 0.95 },
-  { src: heytax, alt: "HeyTax", key: "heytax", scale: 0.7 },
+  { src: heytax, alt: "HeyTax", key: "heytax", scale: 0.75 },
   { src: iceHawk, alt: "Ice Hawk", key: "iceHawk", scale: 1.2 },
   { src: mediderma, alt: "Medi+derma News", key: "mediderma", scale: 0.9 },
   { src: naturnavia, alt: "Naturnavia", key: "naturnavia", scale: 0.9 },
@@ -131,11 +131,17 @@ export const Marquee = () => {
   };
 
   return (
-    <section className="bg-[#1c2b2d] text-foreground border-y border-border py-4">
-      <TooltipProvider delayDuration={150}>
+    <section className="relative overflow-hidden transition-colors bg-[#f5f3ef] border-y border-stone-200 text-stone-900 py-6">
+      <div className="container mb-4 flex items-center justify-center text-center text-xs tracking-widest uppercase opacity-70">
+        <span className="font-mono font-medium">
+          {t.marquee?.title || "Marcas, colaboraciones e identidades visuales"}
+        </span>
+      </div>
+
+      <TooltipProvider delayDuration={100}>
         <div
           ref={scrollerRef}
-          className="overflow-x-auto overflow-y-visible py-1 scrollbar-none cursor-grab active:cursor-grabbing select-none touch-pan-x"
+          className="overflow-x-auto overflow-y-visible py-2 scrollbar-none cursor-grab active:cursor-grabbing select-none touch-pan-x"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           onPointerDown={onPointerDown}
           onPointerMove={onPointerMove}
@@ -163,26 +169,29 @@ export const Marquee = () => {
                           e.stopPropagation();
                         }
                       }}
-                      className="flex items-center justify-center px-10 md:px-14 shrink-0 bg-transparent border-0 outline-none"
-                      style={{ height: `${BASE_HEIGHT * 1.4}px` }}
+                      className="group flex items-center justify-center px-8 md:px-12 shrink-0 bg-transparent border-0 outline-none transition-transform hover:scale-105"
+                      style={{ height: `${BASE_HEIGHT * 1.5}px` }}
                     >
                       <img
                         src={logo.src}
                         alt={logo.alt}
                         draggable={false}
-                        style={{ height: `${BASE_HEIGHT * scale}px` }}
-                        className="w-auto pointer-events-none select-none opacity-85 hover:opacity-100 transition-opacity"
+                        style={{
+                          height: `${BASE_HEIGHT * scale}px`,
+                          filter: "invert(1) brightness(0.2) contrast(1.1)",
+                        }}
+                        className="w-auto pointer-events-none select-none opacity-65 group-hover:opacity-100 transition-all duration-300"
                         loading="lazy"
                       />
                     </button>
                   </TooltipTrigger>
                   <TooltipContent
                     side="top"
-                    sideOffset={8}
-                    className="max-w-xs text-center whitespace-normal bg-card text-foreground border border-border z-[100]"
+                    sideOffset={10}
+                    className="max-w-xs text-center whitespace-normal bg-white text-stone-900 border border-stone-200 shadow-xl rounded-xl p-3 z-[100]"
                   >
-                    <p className="font-bold mb-1">{logo.alt}</p>
-                    <p className="text-sm leading-snug">{t.marqueeDesc[logo.key]}</p>
+                    <p className="font-bold text-sm text-stone-950 mb-1">{logo.alt}</p>
+                    <p className="text-xs text-stone-600 leading-snug">{t.marqueeDesc[logo.key]}</p>
                   </TooltipContent>
                 </Tooltip>
               );
@@ -190,9 +199,6 @@ export const Marquee = () => {
           </div>
         </div>
       </TooltipProvider>
-      <style>{`
-        .scrollbar-none::-webkit-scrollbar { display: none; }
-      `}</style>
     </section>
   );
 };

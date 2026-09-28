@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ChevronDown } from "lucide-react";
-import { Logo } from "./Logo";
+import { Menu, X, ChevronDown, Download } from "lucide-react";
 import { useLang, useT } from "@/i18n/LanguageContext";
 
 export const Navbar = () => {
@@ -10,7 +9,7 @@ export const Navbar = () => {
   const { lang, setLang } = useLang();
   const t = useT();
 
-  const links = [
+  const rawLinks = [
     {
       label: t.nav.design,
       to: "/diseno",
@@ -34,40 +33,54 @@ export const Navbar = () => {
       to: "/3d",
       projects: undefined as undefined | { label: string; to: string }[],
     },
-    { label: t.nav.about, to: "/about", projects: undefined as undefined | { label: string; to: string }[] },
+    { label: t.nav.about, to: "/about", projects: undefined },
     { label: t.nav.contact, to: "#contacto", projects: undefined },
   ];
 
-  const LangToggle = ({ className = "" }: { className?: string }) => (
+  const links = rawLinks;
+
+  const LangToggle = ({ isMobile = false }: { isMobile?: boolean }) => (
     <div
       role="group"
       aria-label={t.nav.language}
-      className={`inline-flex items-center border border-foreground bg-card font-mono text-xs uppercase tracking-wider ${className}`}
+      className="inline-flex items-center rounded-full p-0.5 border border-stone-200 bg-stone-100/80 text-xs"
     >
-      {(["es", "en"] as const).map((code, i) => (
-        <button
-          key={code}
-          type="button"
-          onClick={() => setLang(code)}
-          aria-pressed={lang === code}
-          className={`px-2.5 py-1 transition-colors ${
-            lang === code ? "bg-accent text-accent-foreground" : "hover:text-accent"
-          } ${i === 0 ? "border-r border-foreground" : ""}`}
-        >
-          {code.toUpperCase()}
-        </button>
-      ))}
+      {(["es", "en"] as const).map((code) => {
+        const isActive = lang === code;
+        return (
+          <button
+            key={code}
+            type="button"
+            onClick={() => setLang(code)}
+            aria-pressed={isActive}
+            className={`px-2.5 py-1 text-xs font-mono font-semibold transition-all ${
+              isActive
+                ? "bg-white text-stone-950 shadow-sm rounded-full"
+                : "text-stone-500 hover:text-stone-900"
+            }`}
+          >
+            {code.toUpperCase()}
+          </button>
+        );
+      })}
     </div>
   );
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-[#1c2b2d]/90 backdrop-blur">
-      <nav className="container flex items-center justify-between py-4">
-        <Link to="/" className="flex items-center gap-2 squish-sm" aria-label={t.nav.home}>
-          <Logo className="w-12 h-auto" variant="icon" />
+    <header className="sticky top-0 z-40 transition-colors bg-[#faf8f5]/90 border-b border-stone-200 text-stone-900 backdrop-blur-md">
+      <nav className="container flex items-center justify-between py-2 sm:py-2.5">
+        {/* Brand Typographic Identity */}
+        <Link to="/" className="group flex flex-col items-start gap-0.5" aria-label="Daniel Sánchez — Portfolio">
+          <span className="text-2xl sm:text-3xl font-editorial italic font-normal tracking-tight text-stone-950 group-hover:text-[#b24b74] transition-colors">
+            Daniel Sánchez
+          </span>
+          <span className="text-[10px] sm:text-xs font-mono tracking-wider text-stone-500 uppercase flex items-center">
+            Graphic design · AI Control · 3D render
+          </span>
         </Link>
 
-        <ul className="hidden md:flex items-center gap-8 font-display font-bold text-base">
+        {/* Desktop Links */}
+        <ul className="hidden md:flex items-center gap-7 lg:gap-8 text-sm font-medium font-jakarta">
           {links.map((l) => {
             const active = l.to === pathname;
             const isHash = l.to.startsWith("#");
@@ -78,31 +91,30 @@ export const Navbar = () => {
               const el = document.getElementById(id);
               if (el) el.scrollIntoView({ behavior: "smooth" });
             };
+
             return (
               <li key={l.label} className="relative group">
                 <Link
                   to={isHash ? pathname + l.to : l.to}
                   onClick={handleHash}
-                  className={`inline-flex items-center gap-1 transition-colors hover:text-accent ${
-                    active ? "text-accent" : ""
+                  className={`inline-flex items-center gap-1 py-1 transition-colors ${
+                    active ? "text-[#b24b74] font-semibold" : "text-stone-700 hover:text-stone-950"
                   }`}
                 >
-                  {l.label}
+                  <span>{l.label}</span>
                   {l.projects && (
-                    <ChevronDown
-                      className="w-3.5 h-3.5 transition-transform group-hover:rotate-180"
-                      strokeWidth={2.5}
-                    />
+                    <ChevronDown className="w-3.5 h-3.5 transition-transform group-hover:rotate-180 opacity-60 group-hover:opacity-100" />
                   )}
                 </Link>
+
                 {l.projects && (
-                  <div className="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
-                    <ul className="hard-block-sm bg-card min-w-[180px] py-2">
+                  <div className="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                    <ul className="min-w-[210px] py-2 bg-white text-stone-900 border border-stone-200 shadow-xl rounded-2xl">
                       {l.projects.map((p) => (
                         <li key={p.label}>
                           <Link
                             to={p.to}
-                            className="block px-4 py-1.5 text-base font-medium hover:text-accent hover:bg-muted/50"
+                            className="block px-4 py-2 text-xs font-medium hover:bg-stone-50 hover:text-[#b24b74] transition-colors"
                           >
                             {p.label}
                           </Link>
@@ -114,49 +126,65 @@ export const Navbar = () => {
               </li>
             );
           })}
-          <li>
-            <LangToggle />
-          </li>
         </ul>
 
-        <button
-          className="md:hidden p-2 border border-foreground bg-card"
-          onClick={() => setOpen((v) => !v)}
-          aria-label={t.nav.openMenu}
-          aria-expanded={open}
-        >
-          {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-        </button>
+        {/* Right Actions: Lang + CV */}
+        <div className="hidden md:flex items-center gap-4">
+          <LangToggle />
+          <a
+            href="/CV-Daniel-Sanchez.pdf"
+            download="CV-Daniel-Sanchez.pdf"
+            className="inline-flex items-center gap-1.5 px-4 py-1.5 text-xs font-semibold font-jakarta tracking-wide transition-all bg-stone-950 text-white rounded-full hover:bg-[#b24b74] shadow-sm"
+          >
+            <Download className="w-3.5 h-3.5" />
+            <span>CV</span>
+          </a>
+        </div>
+
+        {/* Mobile Toggle */}
+        <div className="flex md:hidden items-center gap-3">
+          <LangToggle isMobile />
+          <button
+            className="p-2 border border-stone-200 bg-white rounded-xl shadow-sm text-stone-900"
+            onClick={() => setOpen((v) => !v)}
+            aria-label={t.nav.openMenu}
+          >
+            {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </button>
+        </div>
       </nav>
 
-
-
+      {/* Mobile Drawer */}
       {open && (
-        <div className="md:hidden border-t border-border bg-card">
-          <ul className="container flex flex-col py-4 gap-3 font-display font-bold text-base">
+        <div className="md:hidden border-t border-stone-200 bg-[#faf8f5]/95 backdrop-blur-md px-6 py-6 shadow-xl animate-fade-in font-jakarta">
+          <ul className="flex flex-col gap-4 text-base font-medium text-stone-900">
             {links.map((l) => {
               const isHash = l.to.startsWith("#");
               return (
                 <li key={l.label}>
                   <Link
                     to={isHash ? pathname + l.to : l.to}
-                    onClick={(e) => {
+                    onClick={() => {
                       setOpen(false);
                       if (isHash) {
-                        e.preventDefault();
-                        const el = document.getElementById(l.to.slice(1));
-                        if (el) setTimeout(() => el.scrollIntoView({ behavior: "smooth" }), 50);
+                        const id = l.to.slice(1);
+                        const el = document.getElementById(id);
+                        if (el) setTimeout(() => el.scrollIntoView({ behavior: "smooth" }), 60);
                       }
                     }}
-                    className="block py-1"
+                    className="block py-1 text-lg font-semibold"
                   >
                     {l.label}
                   </Link>
                   {l.projects && (
-                    <ul className="pl-4 mt-1 space-y-1 text-sm font-medium opacity-85">
+                    <ul className="pl-4 mt-1 space-y-1.5 border-l-2 border-stone-300">
                       {l.projects.map((p) => (
                         <li key={p.label}>
-                          <Link to={p.to} onClick={() => setOpen(false)} className="block py-0.5">
+                          <Link
+                            to={p.to}
+                            onClick={() => setOpen(false)}
+                            className="block py-0.5 text-sm text-stone-600 hover:text-[#b24b74]"
+                          >
                             → {p.label}
                           </Link>
                         </li>
@@ -166,8 +194,16 @@ export const Navbar = () => {
                 </li>
               );
             })}
-            <li className="pt-2 border-t border-foreground/20">
-              <LangToggle />
+            <li className="pt-4 border-t border-stone-200 flex items-center justify-between">
+              <span className="text-xs font-mono text-stone-500 uppercase">Curriculum Vitae</span>
+              <a
+                href="/CV-Daniel-Sanchez.pdf"
+                download="CV-Daniel-Sanchez.pdf"
+                className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold bg-stone-950 text-white rounded-full"
+              >
+                <Download className="w-3.5 h-3.5" />
+                Descargar CV
+              </a>
             </li>
           </ul>
         </div>

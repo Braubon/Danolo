@@ -6,19 +6,19 @@ import { Footer } from "@/components/Footer";
 import { ContactSection } from "@/components/ContactSection";
 import { useT } from "@/i18n/LanguageContext";
 
-import logo from "@/assets/Cobalto/logo.jpg";
-import fotoImpacto from "@/assets/Cobalto/foto-impacto.jpg";
-import color from "@/assets/Cobalto/color.jpg";
-import tipografias from "@/assets/Cobalto/tipografias.jpg";
-import bonito from "@/assets/Cobalto/bonito.jpg";
-import revista from "@/assets/Cobalto/revista.jpg";
-import aceite from "@/assets/Cobalto/aceite.jpg";
-import videoRRSS from "@/assets/Cobalto/video-rrss.mp4";
-import cartel9 from "@/assets/Cobalto/carteles-9.jpg";
-import cartel10 from "@/assets/Cobalto/carteles-10.jpg";
-import cartel11 from "@/assets/Cobalto/carteles-11.jpg";
-import cajaEnvios from "@/assets/Cobalto/caja-envios.jpg";
-import bodegonCierre from "@/assets/Cobalto/bodegon-cierre.jpg";
+import logo from "@/assets/diseno/cobalto/logo.jpg";
+import fotoImpacto from "@/assets/diseno/cobalto/foto-impacto.jpg";
+import color from "@/assets/diseno/cobalto/color.jpg";
+import tipografias from "@/assets/diseno/cobalto/tipografias.jpg";
+import bonito from "@/assets/diseno/cobalto/bonito.jpg";
+import revista from "@/assets/diseno/cobalto/revista.jpg";
+import aceite from "@/assets/diseno/cobalto/aceite.jpg";
+import videoRRSS from "@/assets/diseno/cobalto/video-rrss.mp4";
+import cartel9 from "@/assets/diseno/cobalto/carteles-9.jpg";
+import cartel10 from "@/assets/diseno/cobalto/carteles-10.jpg";
+import cartel11 from "@/assets/diseno/cobalto/carteles-11.jpg";
+import cajaEnvios from "@/assets/diseno/cobalto/caja-envios.jpg";
+import bodegonCierre from "@/assets/diseno/cobalto/bodegon-cierre.jpg";
 
 const DisenoCobalto = () => {
   const t = useT();
@@ -64,29 +64,29 @@ const DisenoCobalto = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-[#faf8f5] text-stone-900 font-jakarta selection:bg-[#b24b74] selection:text-white">
       <Navbar />
       <main className="flex-1">
-        <section className="container py-10 md:py-14">
+        <section className="container py-8 md:py-12">
           <Link
             to="/diseno"
-            className="inline-flex items-center gap-2 font-mono text-sm uppercase tracking-wider hover:text-accent"
+            className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-stone-500 hover:text-stone-950 transition-colors"
           >
             <ArrowLeft className="w-3.5 h-3.5" /> {t.diseno.backLabel}
           </Link>
-          <div className="mt-6 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
-            <h1 className="font-display font-bold text-accent text-5xl md:text-7xl leading-tight">
+          <div className="mt-4 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+            <h1 className="font-editorial italic font-normal text-5xl sm:text-6xl md:text-7xl leading-tight text-stone-950">
               {t.cobaltoPage.title}
             </h1>
-            <p className="max-w-md font-sans text-lg md:text-xl text-foreground/85">
+            <p className="max-w-md font-jakarta text-base md:text-lg text-stone-600 font-normal">
               {t.cobaltoPage.tagline}
             </p>
           </div>
         </section>
 
-        <section className="container pb-12">
-          {/* Bloque continuo de presentación estilo Behance */}
-          <div className="hard-block w-full overflow-hidden flex flex-col mb-14 bg-white">
+        <section className="container pb-16">
+          {/* Bloque continuo de presentación */}
+          <div className="bg-white border border-stone-200/90 rounded-3xl shadow-sm overflow-hidden flex flex-col mb-14">
             {/* 1. Logo */}
             <img
               src={logo}
@@ -157,25 +157,25 @@ const DisenoCobalto = () => {
               className="w-full h-auto block bg-black"
             />
 
-            {/* 8. Fila única: Trío de carteles en paralelo */}
+            {/* 8. Fila única con los 3 carteles */}
             <div className="flex flex-row flex-nowrap w-full">
               <img
                 src={cartel9}
                 alt={t.cobaltoPage.altCartel9}
                 onClick={() => openImage(cartel9)}
-                className="w-1/3 h-auto block cursor-pointer shrink-0"
+                className="w-1/3 h-auto block cursor-pointer"
               />
               <img
                 src={cartel10}
                 alt={t.cobaltoPage.altCartel10}
                 onClick={() => openImage(cartel10)}
-                className="w-1/3 h-auto block cursor-pointer shrink-0"
+                className="w-1/3 h-auto block cursor-pointer"
               />
               <img
                 src={cartel11}
                 alt={t.cobaltoPage.altCartel11}
                 onClick={() => openImage(cartel11)}
-                className="w-1/3 h-auto block cursor-pointer shrink-0"
+                className="w-1/3 h-auto block cursor-pointer"
               />
             </div>
 
@@ -187,7 +187,7 @@ const DisenoCobalto = () => {
               className="w-full h-auto block cursor-pointer"
             />
 
-            {/* 10. Bodegón de cierre */}
+            {/* 10. Bodegón cierre */}
             <img
               src={bodegonCierre}
               alt={t.cobaltoPage.altBodegonCierre}
@@ -199,7 +199,7 @@ const DisenoCobalto = () => {
           <div className="flex justify-center mt-10">
             <Link
               to="/diseno"
-              className="hard-block-sm squish-sm inline-flex items-center gap-3 bg-cta text-cta-foreground font-display font-bold uppercase tracking-wider px-8 py-4"
+              className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full bg-stone-950 text-white font-jakarta font-semibold text-xs uppercase tracking-wider hover:bg-[#b24b74] transition-all shadow-sm"
             >
               <ArrowLeft className="w-4 h-4" /> {t.diseno.backToProjects}
             </Link>
@@ -212,7 +212,7 @@ const DisenoCobalto = () => {
 
       {openIdx !== null && (
         <div
-          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4 animate-in fade-in"
+          className="fixed inset-0 z-50 bg-stone-950/85 backdrop-blur-md flex items-center justify-center p-4 animate-in fade-in"
           onClick={close}
           role="dialog"
           aria-modal="true"
@@ -243,7 +243,7 @@ const DisenoCobalto = () => {
             src={gallery[openIdx].src}
             alt={gallery[openIdx].alt}
             onClick={(e) => e.stopPropagation()}
-            className="max-h-[88vh] max-w-[90vw] object-contain select-none"
+            className="max-h-[88vh] max-w-[90vw] object-contain select-none rounded-xl"
           />
           <button
             type="button"

@@ -12,11 +12,23 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['"Funnel Display"', "system-ui", "sans-serif"],
+        sans: ['"Plus Jakarta Sans"', '"Funnel Display"', "system-ui", "sans-serif"],
         display: ['"Space Mono"', "ui-monospace", "monospace"],
         mono: ['"Space Mono"', "ui-monospace", "monospace"],
+        jakarta: ['"Plus Jakarta Sans"', "sans-serif"],
+        grotesk: ['"Space Grotesk"', "sans-serif"],
+        outfit: ['"Outfit"', "sans-serif"],
+        syne: ['"Syne"', "sans-serif"],
+        editorial: ['"Instrument Serif"', "Georgia", "serif"],
+        inter: ['"Inter"', "sans-serif"],
       },
       colors: {
+        black: "#3c3c3c",
+        stone: {
+          950: "#3c3c3c",
+          900: "#3c3c3c",
+          800: "#3c3c3c",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -41,6 +53,11 @@ export default {
         accent: {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
+        },
+        roseAccent: {
+          DEFAULT: "#b24b74",
+          hover: "#993d62",
+          light: "#fbf0f4",
         },
         cta: {
           DEFAULT: "hsl(var(--cta))",

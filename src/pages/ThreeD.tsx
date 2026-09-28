@@ -70,30 +70,41 @@ const ThreeD = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-[#faf8f5] text-stone-900 font-jakarta selection:bg-[#b24b74] selection:text-white">
       <Navbar />
       <main className="flex-1">
-        <section className="container py-10 md:py-14">
-          <Link to="/" className="inline-flex items-center gap-2 font-mono text-sm uppercase tracking-wider hover:text-accent">
+        <section className="container pt-8 pb-8 md:pt-12 md:pb-12">
+          <Link
+            to="/"
+            className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-stone-500 hover:text-stone-950 transition-colors mb-6 md:mb-8"
+          >
             <ArrowLeft className="w-3.5 h-3.5" /> {t.common.back}
           </Link>
-          <div className="mt-6 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
-            <h1 className="font-display font-bold text-accent text-5xl md:text-7xl leading-tight">
-              {t.threed.title}
-            </h1>
-            <p className="max-w-md font-sans text-lg md:text-xl text-foreground/85">
-              {t.threed.lead}
-            </p>
+
+          <div className="flex flex-col md:flex-row md:items-center gap-8 lg:gap-12">
+            <div className="md:w-1/2 lg:w-5/12 shrink-0">
+              <h1 className="font-editorial text-5xl sm:text-6xl md:text-7xl font-normal leading-[1.06] text-stone-950 whitespace-pre-line">
+                {t.threed.title}
+              </h1>
+            </div>
+
+            <div className="hidden md:block w-px self-stretch bg-stone-300 my-1" />
+
+            <div className="flex-1 font-jakarta max-w-2xl">
+              <p className="text-base sm:text-lg text-stone-900 font-normal leading-relaxed">
+                {t.threed.lead}
+              </p>
+            </div>
           </div>
         </section>
 
-        <section className="container pb-12">
+        <section className="container pb-16">
           {/* Proyecto 1: Cámara */}
           <div className="mb-12 md:mb-16">
-            <h2 className="font-display font-bold text-2xl md:text-3xl text-accent mb-4 tracking-wider uppercase">
+            <h2 className="font-editorial italic text-2xl md:text-3xl text-stone-950 font-normal mb-4">
               01 — Cámara
             </h2>
-            <div className="hard-block w-full overflow-hidden flex flex-col bg-[#1c2b2d]">
+            <div className="bg-white border border-stone-200/90 rounded-3xl shadow-sm overflow-hidden flex flex-col">
               <img src={camara1} alt="3D Cámara 1" onClick={() => openImage(camara1)} className="w-full h-auto block cursor-pointer" />
               <div className="flex w-full justify-center">
                 <img src={camara2} alt="3D Cámara 2" onClick={() => openImage(camara2)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
@@ -105,10 +116,10 @@ const ThreeD = () => {
 
           {/* Proyecto 2: Sesderma */}
           <div className="mb-12 md:mb-16">
-            <h2 className="font-display font-bold text-2xl md:text-3xl text-accent mb-4 tracking-wider uppercase">
+            <h2 className="font-editorial italic text-2xl md:text-3xl text-stone-950 font-normal mb-4">
               02 — Sesderma
             </h2>
-            <div className="hard-block w-full overflow-hidden flex flex-col bg-[#1c2b2d]">
+            <div className="bg-white border border-stone-200/90 rounded-3xl shadow-sm overflow-hidden flex flex-col">
               <img src={sesderma5} alt="3D Sesderma 5" onClick={() => openImage(sesderma5)} className="w-full h-auto block cursor-pointer" />
               <div className="flex w-full justify-center">
                 <img src={sesderma6} alt="3D Sesderma 6" onClick={() => openImage(sesderma6)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
@@ -119,10 +130,10 @@ const ThreeD = () => {
 
           {/* Proyecto 3: Infoarquitectura */}
           <div className="mb-12 md:mb-16">
-            <h2 className="font-display font-bold text-2xl md:text-3xl text-accent mb-4 tracking-wider uppercase">
+            <h2 className="font-editorial italic text-2xl md:text-3xl text-stone-950 font-normal mb-4">
               03 — Infoarquitectura
             </h2>
-            <div className="hard-block w-full overflow-hidden flex flex-col bg-[#1c2b2d]">
+            <div className="bg-white border border-stone-200/90 rounded-3xl shadow-sm overflow-hidden flex flex-col">
               <img src={info8} alt="3D Infoarquitectura 8" onClick={() => openImage(info8)} className="w-full h-auto block cursor-pointer" />
               <img src={info9} alt="3D Infoarquitectura 9" onClick={() => openImage(info9)} className="w-full h-auto block cursor-pointer" />
               <img src={info10} alt="3D Infoarquitectura 10" onClick={() => openImage(info10)} className="w-full h-auto block cursor-pointer" />
@@ -135,10 +146,10 @@ const ThreeD = () => {
 
           {/* Proyecto 4: Reloj */}
           <div className="mb-14">
-            <h2 className="font-display font-bold text-2xl md:text-3xl text-accent mb-4 tracking-wider uppercase">
+            <h2 className="font-editorial italic text-2xl md:text-3xl text-stone-950 font-normal mb-4">
               04 — Reloj
             </h2>
-            <div className="hard-block w-full overflow-hidden flex flex-col bg-[#1c2b2d]">
+            <div className="bg-white border border-stone-200/90 rounded-3xl shadow-sm overflow-hidden flex flex-col">
               <div className="flex w-full justify-center">
                 <img src={reloj13} alt="3D Reloj 13" onClick={() => openImage(reloj13)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                 <img src={reloj14} alt="3D Reloj 14" onClick={() => openImage(reloj14)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
@@ -146,8 +157,11 @@ const ThreeD = () => {
             </div>
           </div>
 
-          <div className="mt-14 flex justify-center">
-            <Link to="/" className="hard-block-sm squish-sm inline-flex items-center gap-3 bg-cta text-cta-foreground font-display font-bold uppercase tracking-wider px-8 py-4">
+          <div className="flex justify-center mt-10">
+            <Link
+              to="/"
+              className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full bg-stone-950 text-white font-jakarta font-semibold text-xs uppercase tracking-wider hover:bg-[#b24b74] transition-all shadow-sm"
+            >
               <ArrowLeft className="w-4 h-4" /> {t.common.back}
             </Link>
           </div>
@@ -158,12 +172,54 @@ const ThreeD = () => {
       <Footer />
 
       {openIdx !== null && (
-        <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4 animate-in fade-in" onClick={close} role="dialog" aria-modal="true">
-          <button type="button" onClick={(e) => { e.stopPropagation(); close(); }} className="absolute top-4 right-4 text-white/90 hover:text-white p-2" aria-label={t.common.close}><X className="w-6 h-6" /></button>
-          <button type="button" onClick={(e) => { e.stopPropagation(); prev(); }} className="absolute left-2 md:left-6 text-white/90 hover:text-white p-2" aria-label={t.common.prev}><ArrowLeft className="w-7 h-7" /></button>
-          <img src={gallery[openIdx].src} alt={gallery[openIdx].alt} onClick={(e) => e.stopPropagation()} className="max-h-[88vh] max-w-[90vw] object-contain select-none" />
-          <button type="button" onClick={(e) => { e.stopPropagation(); next(); }} className="absolute right-2 md:right-6 text-white/90 hover:text-white p-2" aria-label={t.common.next}><ArrowRight className="w-7 h-7" /></button>
-          <div className="absolute bottom-4 left-0 right-0 text-center font-mono text-xs text-white/70">{openIdx + 1} / {gallery.length}</div>
+        <div
+          className="fixed inset-0 z-50 bg-stone-950/85 backdrop-blur-md flex items-center justify-center p-4 animate-in fade-in"
+          onClick={close}
+          role="dialog"
+          aria-modal="true"
+        >
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              close();
+            }}
+            className="absolute top-4 right-4 text-white/90 hover:text-white p-2"
+            aria-label={t.common.close}
+          >
+            <X className="w-6 h-6" />
+          </button>
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              prev();
+            }}
+            className="absolute left-2 md:left-6 text-white/90 hover:text-white p-2"
+            aria-label={t.common.prev}
+          >
+            <ArrowLeft className="w-7 h-7" />
+          </button>
+          <img
+            src={gallery[openIdx].src}
+            alt={gallery[openIdx].alt}
+            onClick={(e) => e.stopPropagation()}
+            className="max-h-[88vh] max-w-[90vw] object-contain select-none rounded-xl"
+          />
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              next();
+            }}
+            className="absolute right-2 md:right-6 text-white/90 hover:text-white p-2"
+            aria-label={t.common.next}
+          >
+            <ArrowRight className="w-7 h-7" />
+          </button>
+          <div className="absolute bottom-4 left-0 right-0 text-center font-mono text-xs text-white/70">
+            {openIdx + 1} / {gallery.length}
+          </div>
         </div>
       )}
     </div>

@@ -4,7 +4,7 @@ import { translations, type Lang, type Dict } from "./translations";
 type Ctx = { lang: Lang; setLang: (l: Lang) => void };
 const LanguageContext = createContext<Ctx>({ lang: "es", setLang: () => {} });
 
-const STORAGE_KEY = "danolo-lang";
+const STORAGE_KEY = "ds-portfolio-lang";
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const [lang, setLangState] = useState<Lang>(() => {

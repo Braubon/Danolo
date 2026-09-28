@@ -6,62 +6,62 @@ import { Footer } from "@/components/Footer";
 import { ContactSection } from "@/components/ContactSection";
 import { useT } from "@/i18n/LanguageContext";
 
-import fresli01 from "@/assets/fresli/cartel-01.png";
-import fresli02 from "@/assets/fresli/cartel-02.png";
-import fresli03 from "@/assets/fresli/cartel-03.png";
+import fresli01 from "@/assets/ia/fresli/cartel-01.png";
+import fresli02 from "@/assets/ia/fresli/cartel-02.png";
+import fresli03 from "@/assets/ia/fresli/cartel-03.png";
 
-import forseti1 from "@/assets/grafica-publicitaria/forseti-1.jpg";
-import forseti2 from "@/assets/grafica-publicitaria/forseti-2.jpg";
-import forseti3 from "@/assets/grafica-publicitaria/forseti-3.jpg";
+import forseti1 from "@/assets/ia/grafica-publicitaria/forseti-1.jpg";
+import forseti2 from "@/assets/ia/grafica-publicitaria/forseti-2.jpg";
+import forseti3 from "@/assets/ia/grafica-publicitaria/forseti-3.jpg";
 
-import anubis4 from "@/assets/grafica-publicitaria/anubis-4.jpg";
-import anubis5 from "@/assets/grafica-publicitaria/anubis-5.jpg";
-import anubis6 from "@/assets/grafica-publicitaria/anubis-6.jpg";
+import anubis4 from "@/assets/ia/grafica-publicitaria/anubis-4.jpg";
+import anubis5 from "@/assets/ia/grafica-publicitaria/anubis-5.jpg";
+import anubis6 from "@/assets/ia/grafica-publicitaria/anubis-6.jpg";
 
-import sneaker7 from "@/assets/grafica-publicitaria/sneaker-7.jpg";
-import sneaker8 from "@/assets/grafica-publicitaria/sneaker-8.jpg";
-import sneaker9 from "@/assets/grafica-publicitaria/sneaker-9.jpg";
+import sneaker7 from "@/assets/ia/grafica-publicitaria/sneaker-7.jpg";
+import sneaker8 from "@/assets/ia/grafica-publicitaria/sneaker-8.jpg";
+import sneaker9 from "@/assets/ia/grafica-publicitaria/sneaker-9.jpg";
 
-import becca1 from "@/assets/identidad-consistente/becca/becca-1.jpg";
-import becca2 from "@/assets/identidad-consistente/becca/becca-2.jpg";
-import becca3 from "@/assets/identidad-consistente/becca/becca-3.jpg";
-import becca4 from "@/assets/identidad-consistente/becca/becca-4.jpg";
-import becca5 from "@/assets/identidad-consistente/becca/becca-5.jpg";
-import becca6 from "@/assets/identidad-consistente/becca/becca-6.jpg";
-import becca6b from "@/assets/identidad-consistente/becca/becca-6b.jpg";
-import becca7 from "@/assets/identidad-consistente/becca/becca-7.jpg";
-import becca8 from "@/assets/identidad-consistente/becca/becca-8.jpg";
-import becca9 from "@/assets/identidad-consistente/becca/becca-9.jpg";
-import becca10 from "@/assets/identidad-consistente/becca/becca-10.jpg";
-import becca11 from "@/assets/identidad-consistente/becca/becca-11.jpg";
+import becca1 from "@/assets/ia/identidad-consistente/becca/becca-1.jpg";
+import becca2 from "@/assets/ia/identidad-consistente/becca/becca-2.jpg";
+import becca3 from "@/assets/ia/identidad-consistente/becca/becca-3.jpg";
+import becca4 from "@/assets/ia/identidad-consistente/becca/becca-4.jpg";
+import becca5 from "@/assets/ia/identidad-consistente/becca/becca-5.jpg";
+import becca6 from "@/assets/ia/identidad-consistente/becca/becca-6.jpg";
+import becca6b from "@/assets/ia/identidad-consistente/becca/becca-6b.jpg";
+import becca7 from "@/assets/ia/identidad-consistente/becca/becca-7.jpg";
+import becca8 from "@/assets/ia/identidad-consistente/becca/becca-8.jpg";
+import becca9 from "@/assets/ia/identidad-consistente/becca/becca-9.jpg";
+import becca10 from "@/assets/ia/identidad-consistente/becca/becca-10.jpg";
+import becca11 from "@/assets/ia/identidad-consistente/becca/becca-11.jpg";
 
-import burt12 from "@/assets/identidad-consistente/burt/burt-12.jpg";
-import burt13 from "@/assets/identidad-consistente/burt/burt-13.jpg";
-import burt14 from "@/assets/identidad-consistente/burt/burt-14.jpg";
-import burt15 from "@/assets/identidad-consistente/burt/burt-15.jpg";
-import burt16 from "@/assets/identidad-consistente/burt/burt-16.jpg";
-import burt17 from "@/assets/identidad-consistente/burt/burt-17.jpg";
-import burt18 from "@/assets/identidad-consistente/burt/burt-18.jpg";
-import burt19 from "@/assets/identidad-consistente/burt/burt-19.jpg";
-import burt20 from "@/assets/identidad-consistente/burt/burt-20.jpg";
-import burt21 from "@/assets/identidad-consistente/burt/burt-21.jpg";
-import burt22 from "@/assets/identidad-consistente/burt/burt-22.jpg";
+import burt12 from "@/assets/ia/identidad-consistente/burt/burt-12.jpg";
+import burt13 from "@/assets/ia/identidad-consistente/burt/burt-13.jpg";
+import burt14 from "@/assets/ia/identidad-consistente/burt/burt-14.jpg";
+import burt15 from "@/assets/ia/identidad-consistente/burt/burt-15.jpg";
+import burt16 from "@/assets/ia/identidad-consistente/burt/burt-16.jpg";
+import burt17 from "@/assets/ia/identidad-consistente/burt/burt-17.jpg";
+import burt18 from "@/assets/ia/identidad-consistente/burt/burt-18.jpg";
+import burt19 from "@/assets/ia/identidad-consistente/burt/burt-19.jpg";
+import burt20 from "@/assets/ia/identidad-consistente/burt/burt-20.jpg";
+import burt21 from "@/assets/ia/identidad-consistente/burt/burt-21.jpg";
+import burt22 from "@/assets/ia/identidad-consistente/burt/burt-22.jpg";
 
-import claudia23 from "@/assets/identidad-consistente/claudia/claudia-23.jpg";
-import claudia24 from "@/assets/identidad-consistente/claudia/claudia-24.jpg";
-import claudia25 from "@/assets/identidad-consistente/claudia/claudia-25.jpg";
-import claudia26 from "@/assets/identidad-consistente/claudia/claudia-26.jpg";
-import claudia27 from "@/assets/identidad-consistente/claudia/claudia-27.jpg";
-import claudia28 from "@/assets/identidad-consistente/claudia/claudia-28.jpg";
-import claudia29 from "@/assets/identidad-consistente/claudia/claudia-29.jpg";
-import claudia30 from "@/assets/identidad-consistente/claudia/claudia-30.jpg";
-import claudia31 from "@/assets/identidad-consistente/claudia/claudia-31.jpg";
-import claudia32 from "@/assets/identidad-consistente/claudia/claudia-32.jpg";
-import claudia33 from "@/assets/identidad-consistente/claudia/claudia-33.jpg";
-import claudia34 from "@/assets/identidad-consistente/claudia/claudia-34.jpg";
-import claudia35 from "@/assets/identidad-consistente/claudia/claudia-35.jpg";
-import claudia36 from "@/assets/identidad-consistente/claudia/claudia-36.jpg";
-import claudia37 from "@/assets/identidad-consistente/claudia/claudia-37.jpg";
+import claudia23 from "@/assets/ia/identidad-consistente/claudia/claudia-23.jpg";
+import claudia24 from "@/assets/ia/identidad-consistente/claudia/claudia-24.jpg";
+import claudia25 from "@/assets/ia/identidad-consistente/claudia/claudia-25.jpg";
+import claudia26 from "@/assets/ia/identidad-consistente/claudia/claudia-26.jpg";
+import claudia27 from "@/assets/ia/identidad-consistente/claudia/claudia-27.jpg";
+import claudia28 from "@/assets/ia/identidad-consistente/claudia/claudia-28.jpg";
+import claudia29 from "@/assets/ia/identidad-consistente/claudia/claudia-29.jpg";
+import claudia30 from "@/assets/ia/identidad-consistente/claudia/claudia-30.jpg";
+import claudia31 from "@/assets/ia/identidad-consistente/claudia/claudia-31.jpg";
+import claudia32 from "@/assets/ia/identidad-consistente/claudia/claudia-32.jpg";
+import claudia33 from "@/assets/ia/identidad-consistente/claudia/claudia-33.jpg";
+import claudia34 from "@/assets/ia/identidad-consistente/claudia/claudia-34.jpg";
+import claudia35 from "@/assets/ia/identidad-consistente/claudia/claudia-35.jpg";
+import claudia36 from "@/assets/ia/identidad-consistente/claudia/claudia-36.jpg";
+import claudia37 from "@/assets/ia/identidad-consistente/claudia/claudia-37.jpg";
 
 const IAProject = () => {
   const t = useT();
@@ -148,155 +148,167 @@ const IAProject = () => {
     return () => { window.removeEventListener("keydown", onKey); document.body.style.overflow = ""; };
   }, [openIdx, close, next, prev]);
 
+  const openImage = (src: string) => {
+    const idx = currentGallery.findIndex((g) => g.src === src);
+    if (idx >= 0) setOpenIdx(idx);
+  };
+
   if (!project) return <Navigate to="/ia" replace />;
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-[#faf8f5] text-stone-900 font-jakarta selection:bg-[#b24b74] selection:text-white">
       <Navbar />
       <main className="flex-1">
-        <section className="container py-10 md:py-14">
-          <Link to="/ia" className="inline-flex items-center gap-2 font-mono text-sm uppercase tracking-wider hover:text-accent">
+        <section className="container py-8 md:py-12">
+          <Link
+            to="/ia"
+            className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-stone-500 hover:text-stone-950 transition-colors"
+          >
             <ArrowLeft className="w-3.5 h-3.5" /> {t.ia.backLabel}
           </Link>
-          <div className="mt-6 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
-            <h1 className="font-display font-bold text-accent text-5xl md:text-7xl leading-tight">{project.title}</h1>
-            <p className="max-w-md font-sans text-lg md:text-xl text-foreground/85">{project.tagline}</p>
+          <div className="mt-4 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+            <h1 className="font-editorial italic font-normal text-5xl sm:text-6xl md:text-7xl leading-tight text-stone-950">
+              {project.title}
+            </h1>
+            <p className="max-w-md font-jakarta text-base md:text-lg text-stone-600 font-normal">
+              {project.tagline}
+            </p>
           </div>
         </section>
 
-        <section className="container pb-12">
+        <section className="container pb-16">
           {slug === "identidad-consistente" ? (
             <div className="space-y-12 md:space-y-16">
               {/* Sección 01: Becca */}
               <div>
-                <h2 className="font-display font-bold text-2xl md:text-3xl text-accent mb-4 tracking-wider uppercase">
+                <h2 className="font-editorial italic text-2xl md:text-3xl text-stone-950 font-normal mb-4">
                   01 — Becca
                 </h2>
-                <div className="hard-block w-full overflow-hidden flex flex-col bg-[#1c2b2d]">
+                <div className="bg-white border border-stone-200/90 rounded-3xl shadow-sm overflow-hidden flex flex-col">
                   {/* Becca 1 (Ancho completo) */}
-                  <img src={becca1} alt="Becca 1" onClick={() => setOpenIdx(0)} className="w-full h-auto block cursor-pointer" />
+                  <img src={becca1} alt="Becca 1" onClick={() => openImage(becca1)} className="w-full h-auto block cursor-pointer" />
                   
                   {/* Becca 2 y Becca 3 (2 columnas) */}
                   <div className="flex w-full justify-center">
-                    <img src={becca2} alt="Becca 2" onClick={() => setOpenIdx(1)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
-                    <img src={becca3} alt="Becca 3" onClick={() => setOpenIdx(2)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={becca2} alt="Becca 2" onClick={() => openImage(becca2)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={becca3} alt="Becca 3" onClick={() => openImage(becca3)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                   </div>
 
                   {/* Becca 4 (Ancho completo) */}
-                  <img src={becca4} alt="Becca 4" onClick={() => setOpenIdx(3)} className="w-full h-auto block cursor-pointer" />
+                  <img src={becca4} alt="Becca 4" onClick={() => openImage(becca4)} className="w-full h-auto block cursor-pointer" />
 
                   {/* Becca 5 (Ancho completo) */}
-                  <img src={becca5} alt="Becca 5" onClick={() => setOpenIdx(4)} className="w-full h-auto block cursor-pointer" />
+                  <img src={becca5} alt="Becca 5" onClick={() => openImage(becca5)} className="w-full h-auto block cursor-pointer" />
 
-                  {/* Becca 6 y Becca 6b (2 columnas — Pez velo & Busto cuarzo rosa) */}
+                  {/* Becca 6 y Becca 6b (2 columnas) */}
                   <div className="flex w-full justify-center">
-                    <img src={becca6} alt="Becca 6" onClick={() => setOpenIdx(5)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
-                    <img src={becca6b} alt="Becca 6b" onClick={() => setOpenIdx(6)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={becca6} alt="Becca 6" onClick={() => openImage(becca6)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={becca6b} alt="Becca 6b" onClick={() => openImage(becca6b)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                   </div>
 
-                  {/* Becca 7, 8, 9 (3 columnas — Yoga) */}
+                  {/* Becca 7, 8, 9 (3 columnas) */}
                   <div className="flex w-full justify-center">
-                    <img src={becca7} alt="Becca 7" onClick={() => setOpenIdx(7)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
-                    <img src={becca8} alt="Becca 8" onClick={() => setOpenIdx(8)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
-                    <img src={becca9} alt="Becca 9" onClick={() => setOpenIdx(9)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={becca7} alt="Becca 7" onClick={() => openImage(becca7)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={becca8} alt="Becca 8" onClick={() => openImage(becca8)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={becca9} alt="Becca 9" onClick={() => openImage(becca9)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                   </div>
 
-                  {/* Becca 10 y 11 (2 columnas — Ventana portátil & Ventana taza) */}
+                  {/* Becca 10 y 11 (2 columnas) */}
                   <div className="flex w-full justify-center">
-                    <img src={becca10} alt="Becca 10" onClick={() => setOpenIdx(10)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
-                    <img src={becca11} alt="Becca 11" onClick={() => setOpenIdx(11)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={becca10} alt="Becca 10" onClick={() => openImage(becca10)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={becca11} alt="Becca 11" onClick={() => openImage(becca11)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                   </div>
                 </div>
               </div>
 
               {/* Sección 02: Burt */}
               <div>
-                <h2 className="font-display font-bold text-2xl md:text-3xl text-accent mb-4 tracking-wider uppercase">
+                <h2 className="font-editorial italic text-2xl md:text-3xl text-stone-950 font-normal mb-4">
                   02 — Burt
                 </h2>
-                <div className="hard-block w-full overflow-hidden flex flex-col bg-[#1c2b2d]">
+                <div className="bg-white border border-stone-200/90 rounded-3xl shadow-sm overflow-hidden flex flex-col">
                   {/* Burt 12 (Ancho completo) */}
-                  <img src={burt12} alt="Burt 12" onClick={() => setOpenIdx(12)} className="w-full h-auto block cursor-pointer" />
+                  <img src={burt12} alt="Burt 12" onClick={() => openImage(burt12)} className="w-full h-auto block cursor-pointer" />
 
-                  {/* Burt 13 y 14 (2 columnas — Cuello alto & Sillón) */}
+                  {/* Burt 13 y 14 (2 columnas) */}
                   <div className="flex w-full justify-center">
-                    <img src={burt13} alt="Burt 13" onClick={() => setOpenIdx(13)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
-                    <img src={burt14} alt="Burt 14" onClick={() => setOpenIdx(14)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={burt13} alt="Burt 13" onClick={() => openImage(burt13)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={burt14} alt="Burt 14" onClick={() => openImage(burt14)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                   </div>
 
-                  {/* Burt 15 y 16 (2 columnas — Gafas naranja & Chaqueta chándal) */}
+                  {/* Burt 15 y 16 (2 columnas) */}
                   <div className="flex w-full justify-center">
-                    <img src={burt15} alt="Burt 15" onClick={() => setOpenIdx(15)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
-                    <img src={burt16} alt="Burt 16" onClick={() => setOpenIdx(16)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={burt15} alt="Burt 15" onClick={() => openImage(burt15)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={burt16} alt="Burt 16" onClick={() => openImage(burt16)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                   </div>
 
-                  {/* Burt 17 (Ancho completo — Busto mármol) */}
-                  <img src={burt17} alt="Burt 17" onClick={() => setOpenIdx(17)} className="w-full h-auto block cursor-pointer" />
+                  {/* Burt 17 (Ancho completo) */}
+                  <img src={burt17} alt="Burt 17" onClick={() => openImage(burt17)} className="w-full h-auto block cursor-pointer" />
 
-                  {/* Burt 18 (Ancho completo — Capa seda verde) */}
-                  <img src={burt18} alt="Burt 18" onClick={() => setOpenIdx(18)} className="w-full h-auto block cursor-pointer" />
+                  {/* Burt 18 (Ancho completo) */}
+                  <img src={burt18} alt="Burt 18" onClick={() => openImage(burt18)} className="w-full h-auto block cursor-pointer" />
 
-                  {/* Burt 19 y 20 (2 columnas — Camiseta tirantes & Playa atardecer) */}
+                  {/* Burt 19 y 20 (2 columnas) */}
                   <div className="flex w-full justify-center">
-                    <img src={burt19} alt="Burt 19" onClick={() => setOpenIdx(19)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
-                    <img src={burt20} alt="Burt 20" onClick={() => setOpenIdx(20)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={burt19} alt="Burt 19" onClick={() => openImage(burt19)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={burt20} alt="Burt 20" onClick={() => openImage(burt20)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                   </div>
 
-                  {/* Burt 21 y 22 (2 columnas — Bosque gorra & Banco jardín) */}
+                  {/* Burt 21 y 22 (2 columnas) */}
                   <div className="flex w-full justify-center">
-                    <img src={burt21} alt="Burt 21" onClick={() => setOpenIdx(21)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
-                    <img src={burt22} alt="Burt 22" onClick={() => setOpenIdx(22)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={burt21} alt="Burt 21" onClick={() => openImage(burt21)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={burt22} alt="Burt 22" onClick={() => openImage(burt22)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                   </div>
                 </div>
               </div>
 
               {/* Sección 03: Claudia */}
               <div>
-                <h2 className="font-display font-bold text-2xl md:text-3xl text-accent mb-4 tracking-wider uppercase">
+                <h2 className="font-editorial italic text-2xl md:text-3xl text-stone-950 font-normal mb-4">
                   03 — Claudia
                 </h2>
-                <div className="hard-block w-full overflow-hidden flex flex-col bg-[#1c2b2d]">
-                  {/* Claudia 23 (Ancho completo — Orquídea roja) */}
-                  <img src={claudia23} alt="Claudia 23" onClick={() => setOpenIdx(23)} className="w-full h-auto block cursor-pointer" />
+                <div className="bg-white border border-stone-200/90 rounded-3xl shadow-sm overflow-hidden flex flex-col">
+                  {/* Claudia 23 (Ancho completo) */}
+                  <img src={claudia23} alt="Claudia 23" onClick={() => openImage(claudia23)} className="w-full h-auto block cursor-pointer" />
 
-                  {/* Claudia 24 y 25 (2 columnas — Sombras & Desierto) */}
+                  {/* Claudia 24 y 25 (2 columnas) */}
                   <div className="flex w-full justify-center">
-                    <img src={claudia24} alt="Claudia 24" onClick={() => setOpenIdx(24)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
-                    <img src={claudia25} alt="Claudia 25" onClick={() => setOpenIdx(25)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={claudia24} alt="Claudia 24" onClick={() => openImage(claudia24)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={claudia25} alt="Claudia 25" onClick={() => openImage(claudia25)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                   </div>
 
-                  {/* Claudia 26 y 27 (2 columnas — Chaqueta neón & Sombrero paja) */}
+                  {/* Claudia 26 y 27 (2 columnas) */}
                   <div className="flex w-full justify-center">
-                    <img src={claudia26} alt="Claudia 26" onClick={() => setOpenIdx(26)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
-                    <img src={claudia27} alt="Claudia 27" onClick={() => setOpenIdx(27)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={claudia26} alt="Claudia 26" onClick={() => openImage(claudia26)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={claudia27} alt="Claudia 27" onClick={() => openImage(claudia27)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                   </div>
 
-                  {/* Claudia 28 (Ancho completo — Auriculares) */}
-                  <img src={claudia28} alt="Claudia 28" onClick={() => setOpenIdx(28)} className="w-full h-auto block cursor-pointer" />
+                  {/* Claudia 28 (Ancho completo) */}
+                  <img src={claudia28} alt="Claudia 28" onClick={() => openImage(claudia28)} className="w-full h-auto block cursor-pointer" />
 
-                  {/* Claudia 29, 30 y 31 (3 COLUMNAS EN PARALELO — Pop Art, Silueta roja & Glitch RGB) */}
+                  {/* Claudia 29, 30 y 31 (3 columnas) */}
                   <div className="flex w-full justify-center">
-                    <img src={claudia29} alt="Claudia 29" onClick={() => setOpenIdx(28)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
-                    <img src={claudia30} alt="Claudia 30" onClick={() => setOpenIdx(29)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
-                    <img src={claudia31} alt="Claudia 31" onClick={() => setOpenIdx(30)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={claudia29} alt="Claudia 29" onClick={() => openImage(claudia29)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={claudia30} alt="Claudia 30" onClick={() => openImage(claudia30)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={claudia31} alt="Claudia 31" onClick={() => openImage(claudia31)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                   </div>
 
-                  {/* Claudia 32 y 33 (2 columnas — Blazer blanco & Bajo el agua) */}
+                  {/* Claudia 32 y 33 (2 columnas) */}
                   <div className="flex w-full justify-center">
-                    <img src={claudia32} alt="Claudia 32" onClick={() => setOpenIdx(31)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
-                    <img src={claudia33} alt="Claudia 33" onClick={() => setOpenIdx(32)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={claudia32} alt="Claudia 32" onClick={() => openImage(claudia32)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={claudia33} alt="Claudia 33" onClick={() => openImage(claudia33)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                   </div>
 
-                  {/* Claudia 34 y 35 (2 columnas — Piscina bata roja & Cocina manzana verde) */}
+                  {/* Claudia 34 y 35 (2 columnas) */}
                   <div className="flex w-full justify-center">
-                    <img src={claudia34} alt="Claudia 34" onClick={() => setOpenIdx(33)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
-                    <img src={claudia35} alt="Claudia 35" onClick={() => setOpenIdx(34)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={claudia34} alt="Claudia 34" onClick={() => openImage(claudia34)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={claudia35} alt="Claudia 35" onClick={() => openImage(claudia35)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                   </div>
 
-                  {/* Claudia 36 y 37 (2 columnas — Azotea luces & Playa atardecer) */}
+                  {/* Claudia 36 y 37 (2 columnas) */}
                   <div className="flex w-full justify-center">
-                    <img src={claudia36} alt="Claudia 36" onClick={() => setOpenIdx(35)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
-                    <img src={claudia37} alt="Claudia 37" onClick={() => setOpenIdx(36)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={claudia36} alt="Claudia 36" onClick={() => openImage(claudia36)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={claudia37} alt="Claudia 37" onClick={() => openImage(claudia37)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                   </div>
                 </div>
               </div>
@@ -306,43 +318,43 @@ const IAProject = () => {
             <div className="space-y-12 md:space-y-16">
               {/* 01: Fresli */}
               <div>
-                <h2 className="font-display font-bold text-2xl md:text-3xl text-accent mb-4 tracking-wider uppercase">
+                <h2 className="font-editorial italic text-2xl md:text-3xl text-stone-950 font-normal mb-4">
                   01 — Fresli
                 </h2>
-                <div className="hard-block w-full overflow-hidden flex flex-col bg-[#1c2b2d]">
+                <div className="bg-white border border-stone-200/90 rounded-3xl shadow-sm overflow-hidden flex flex-col">
                   <div className="flex w-full justify-center">
-                    <img src={fresli01} alt={t.ia.altFresli1} onClick={() => setOpenIdx(0)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
-                    <img src={fresli02} alt={t.ia.altFresli2} onClick={() => setOpenIdx(1)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
-                    <img src={fresli03} alt={t.ia.altFresli3} onClick={() => setOpenIdx(2)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={fresli01} alt={t.ia.altFresli1} onClick={() => openImage(fresli01)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={fresli02} alt={t.ia.altFresli2} onClick={() => openImage(fresli02)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={fresli03} alt={t.ia.altFresli3} onClick={() => openImage(fresli03)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                   </div>
                 </div>
               </div>
 
               {/* 02: Forseti */}
               <div>
-                <h2 className="font-display font-bold text-2xl md:text-3xl text-accent mb-4 tracking-wider uppercase">
+                <h2 className="font-editorial italic text-2xl md:text-3xl text-stone-950 font-normal mb-4">
                   02 — Forseti
                 </h2>
-                <div className="hard-block w-full overflow-hidden flex flex-col bg-[#1c2b2d]">
-                  <img src={forseti1} alt="Forseti 1" onClick={() => setOpenIdx(3)} className="w-full h-auto block cursor-pointer" />
+                <div className="bg-white border border-stone-200/90 rounded-3xl shadow-sm overflow-hidden flex flex-col">
+                  <img src={forseti1} alt="Forseti 1" onClick={() => openImage(forseti1)} className="w-full h-auto block cursor-pointer" />
                   <div className="flex w-full justify-center">
-                    <img src={forseti2} alt="Forseti 2" onClick={() => setOpenIdx(4)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
-                    <img src={forseti3} alt="Forseti 3" onClick={() => setOpenIdx(5)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={forseti2} alt="Forseti 2" onClick={() => openImage(forseti2)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={forseti3} alt="Forseti 3" onClick={() => openImage(forseti3)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                   </div>
                 </div>
               </div>
 
               {/* 03: Anubis */}
               <div>
-                <h2 className="font-display font-bold text-2xl md:text-3xl text-accent mb-4 tracking-wider uppercase">
+                <h2 className="font-editorial italic text-2xl md:text-3xl text-stone-950 font-normal mb-4">
                   03 — Anubis
                 </h2>
-                <div className="hard-block w-full overflow-hidden flex flex-col bg-[#1c2b2d]">
+                <div className="bg-white border border-stone-200/90 rounded-3xl shadow-sm overflow-hidden flex flex-col">
                   <div className="flex w-full justify-center items-start">
-                    <img src={anubis4} alt="Anubis 4" onClick={() => setOpenIdx(6)} style={{ width: "60.95%" }} className="h-auto block cursor-pointer object-contain" />
+                    <img src={anubis4} alt="Anubis 4" onClick={() => openImage(anubis4)} style={{ width: "60.95%" }} className="h-auto block cursor-pointer object-contain" />
                     <div className="flex flex-col" style={{ width: "39.05%" }}>
-                      <img src={anubis5} alt="Anubis 5" onClick={() => setOpenIdx(7)} className="w-full h-auto block cursor-pointer object-contain" />
-                      <img src={anubis6} alt="Anubis 6" onClick={() => setOpenIdx(8)} className="w-full h-auto block cursor-pointer object-contain" />
+                      <img src={anubis5} alt="Anubis 5" onClick={() => openImage(anubis5)} className="w-full h-auto block cursor-pointer object-contain" />
+                      <img src={anubis6} alt="Anubis 6" onClick={() => openImage(anubis6)} className="w-full h-auto block cursor-pointer object-contain" />
                     </div>
                   </div>
                 </div>
@@ -350,22 +362,25 @@ const IAProject = () => {
 
               {/* 04: Sneaker */}
               <div>
-                <h2 className="font-display font-bold text-2xl md:text-3xl text-accent mb-4 tracking-wider uppercase">
+                <h2 className="font-editorial italic text-2xl md:text-3xl text-stone-950 font-normal mb-4">
                   04 — Sneaker
                 </h2>
-                <div className="hard-block w-full overflow-hidden flex flex-col bg-[#1c2b2d]">
+                <div className="bg-white border border-stone-200/90 rounded-3xl shadow-sm overflow-hidden flex flex-col">
                   <div className="flex w-full justify-center">
-                    <img src={sneaker7} alt="Sneaker 7" onClick={() => setOpenIdx(9)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
-                    <img src={sneaker8} alt="Sneaker 8" onClick={() => setOpenIdx(10)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={sneaker7} alt="Sneaker 7" onClick={() => openImage(sneaker7)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                    <img src={sneaker8} alt="Sneaker 8" onClick={() => openImage(sneaker8)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
                   </div>
-                  <img src={sneaker9} alt="Sneaker 9" onClick={() => setOpenIdx(11)} className="w-full h-auto block cursor-pointer" />
+                  <img src={sneaker9} alt="Sneaker 9" onClick={() => openImage(sneaker9)} className="w-full h-auto block cursor-pointer" />
                 </div>
               </div>
             </div>
           )}
 
-          <div className="mt-14 flex justify-center">
-            <Link to="/ia" className="hard-block-sm squish-sm inline-flex items-center gap-3 bg-cta text-cta-foreground font-display font-bold uppercase tracking-wider px-8 py-4">
+          <div className="flex justify-center mt-10">
+            <Link
+              to="/ia"
+              className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full bg-stone-950 text-white font-jakarta font-semibold text-xs uppercase tracking-wider hover:bg-[#b24b74] transition-all shadow-sm"
+            >
               <ArrowLeft className="w-4 h-4" /> {t.ia.backToProjects}
             </Link>
           </div>
@@ -376,12 +391,54 @@ const IAProject = () => {
       <Footer />
 
       {openIdx !== null && (
-        <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4 animate-in fade-in" onClick={close} role="dialog" aria-modal="true">
-          <button type="button" onClick={(e) => { e.stopPropagation(); close(); }} className="absolute top-4 right-4 text-white/90 hover:text-white p-2" aria-label={t.common.close}><X className="w-6 h-6" /></button>
-          <button type="button" onClick={(e) => { e.stopPropagation(); prev(); }} className="absolute left-2 md:left-6 text-white/90 hover:text-white p-2" aria-label={t.common.prev}><ArrowLeft className="w-7 h-7" /></button>
-          <img src={currentGallery[openIdx].src} alt={currentGallery[openIdx].alt} onClick={(e) => e.stopPropagation()} className="max-h-[88vh] max-w-[90vw] object-contain select-none" />
-          <button type="button" onClick={(e) => { e.stopPropagation(); next(); }} className="absolute right-2 md:right-6 text-white/90 hover:text-white p-2" aria-label={t.common.next}><ArrowRight className="w-7 h-7" /></button>
-          <div className="absolute bottom-4 left-0 right-0 text-center font-mono text-xs text-white/70">{openIdx + 1} / {currentGallery.length}</div>
+        <div
+          className="fixed inset-0 z-50 bg-stone-950/85 backdrop-blur-md flex items-center justify-center p-4 animate-in fade-in"
+          onClick={close}
+          role="dialog"
+          aria-modal="true"
+        >
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              close();
+            }}
+            className="absolute top-4 right-4 text-white/90 hover:text-white p-2"
+            aria-label={t.common.close}
+          >
+            <X className="w-6 h-6" />
+          </button>
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              prev();
+            }}
+            className="absolute left-2 md:left-6 text-white/90 hover:text-white p-2"
+            aria-label={t.common.prev}
+          >
+            <ArrowLeft className="w-7 h-7" />
+          </button>
+          <img
+            src={currentGallery[openIdx].src}
+            alt={currentGallery[openIdx].alt}
+            onClick={(e) => e.stopPropagation()}
+            className="max-h-[88vh] max-w-[90vw] object-contain select-none rounded-xl"
+          />
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              next();
+            }}
+            className="absolute right-2 md:right-6 text-white/90 hover:text-white p-2"
+            aria-label={t.common.next}
+          >
+            <ArrowRight className="w-7 h-7" />
+          </button>
+          <div className="absolute bottom-4 left-0 right-0 text-center font-mono text-xs text-white/70">
+            {openIdx + 1} / {currentGallery.length}
+          </div>
         </div>
       )}
     </div>
