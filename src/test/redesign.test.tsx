@@ -26,8 +26,8 @@ describe("Redesigned Portfolio Web (Studio Magazine Editorial)", () => {
   it("renders Index page with approved Studio Magazine header, hero, and disciplines", () => {
     const { container } = renderWithProviders(<Index />);
     expect(container.textContent).toContain("Daniel Sánchez");
-    expect(container.textContent).toContain("Diseño gráfico · Control de IA · Render 3D");
-    expect(container.textContent).toContain("Rigor técnico");
+    expect(container.textContent).toContain("Diseño gráfico · IA bajo control · Render 3D");
+    expect(container.textContent).toContain("Diseño gráfico adaptado a los");
     expect(container.textContent).toContain("Sobre mí");
     expect(container.textContent).toContain("Diseño Gráfico & Retoque");
     expect(container.textContent).toContain("IA bajo control");
@@ -76,7 +76,7 @@ describe("Redesigned Portfolio Web (Studio Magazine Editorial)", () => {
     const { container, getAllByText } = renderWithProviders(<Index />);
     const enButtons = getAllByText("EN");
     fireEvent.click(enButtons[0]);
-    expect(container.textContent).toContain("Graphic design · AI Control · 3D render");
+    expect(container.textContent).toContain("Graphic design · AI under control · 3D render");
     expect(container.textContent).toContain("Graphic Design & Retouching");
     expect(container.textContent).toContain("AI under control");
     expect(container.textContent).toContain("3D Design & Modeling");

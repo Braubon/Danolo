@@ -28,7 +28,7 @@ export const translations = {
       cobalto: "Cobalto",
       diceup: "DiceUp",
       oshun: "Oshun",
-      aiPhotography: "Fotografía publicitaria",
+      aiPhotography: "Fotografía virtual",
       aiIdentity: "Consistencia en la imagen",
       product: "Producto",
       arch: "Visualización arquitectónica",
@@ -41,24 +41,24 @@ export const translations = {
     contact: {
       eyebrow: "Trabajemos juntos",
       title: "Trabajemos juntos",
-      writeMe: "Cuéntame tu idea por email:",
+      writeMe: "Cuéntame tu proyecto, envíame un correo:",
       openEmail: "Abrir email",
       preferCall: "¿Prefieres un trato más directo? Llámame:",
       callDirect: "Llamar directamente",
       copyEmail: "Copiar",
       copiedEmail: "Copiado",
-      copyTooltip: "Copiar email al portapapeles",
+      copyTooltip: "Copiar al portapapeles",
     },
     marquee: {
       title: "Marcas, colaboraciones e identidades visuales",
     },
     hero: {
-      headlineStart: "Rigor técnico y ",
-      headlineHighlight: "propósito visual",
-      headlineEnd: " en cada proyecto.",
+      headlineStart: "Diseño gráfico adaptado a los ",
+      headlineHighlight: "nuevos tiempos",
+      headlineEnd: ".",
       welcome: "¡Bienvenido!",
       intro:
-        "Soy Daniel. Diseñador con perfil técnico. Échale un vistazo a mi portfolio: si tu equipo necesita un diseño sólido, escalable y donde cada píxel tenga un propósito, estoy buscando mi próximo gran proyecto. Hablemos.",
+        "Soy Dani. Diseñador gráfico y tecnófilo con fascinación por la productividad. Si tu equipo necesita a un diseñador sólido, eficiente y transparente, hablemos.",
       cv: "Descargar CV",
       about: "Sobre mí",
       portraitAlt: "Retrato de Daniel con efecto de luz",
@@ -68,18 +68,18 @@ export const translations = {
       design: {
         title: "Diseño Gráfico & Retoque",
         subtitle: "Packaging, branding y dirección de arte cosmética",
-        tag: "10+ AÑOS DE EXPERIENCIA",
+        tag: "20+ AÑOS DE EXPERIENCIA",
         imageAlt: "Diseño gráfico y packaging — Cobalto",
         body:
-          "El origen de todo. Llevo **más de una década dándole al píxel**, trabajando principalmente para el sector cosmético (laboratorios BABÉ, Sesderma) y la moda. Me considero un diseñador de perfil técnico: **me obsesiona la eficiencia**, la precisión y la estructura gráfica. Si buscas un diseño sólido, funcional y donde cada elemento tiene un porqué, dale a la imagen para ver más.",
+          "El origen de todo. Llevo **más de dos décadas dándole al píxel**, trabajando principalmente para el sector cosmético (laboratorios BABÉ, Sesderma). Me considero un diseñador de perfil técnico: **me obsesiona la eficiencia**, la precisión y la estructura gráfica. Si buscas un diseño sólido, funcional y donde cada elemento tiene un porqué, dale a la imagen para ver más.",
       },
       ai: {
         title: "IA bajo control",
-        subtitle: "Flujos de nodos con ComfyUI y máxima privacidad",
-        tag: "WORKFLOW NODAL PRIVADO",
+        subtitle: "Flujos de trabajo con herramientas locales para máxima privacidad en tu marca",
+        tag: "IA",
         imageAlt: "Tenista en acción capturada con IA",
         body:
-          "Ni magia ni azar: pura técnica. Integro la IA en mi flujo de trabajo para multiplicar las posibilidades visuales. Trabajo de forma local mediante flujos de nodos con ComfyUI. ¿Por qué? Por su versatilidad brutal, me permite escalar proyectos y, lo más importante para las empresas: **garantiza un entorno seguro y la privacidad absoluta de sus datos**. El diseño tradicional dándose la mano con el futuro.",
+          "**Ni magia ni azar: pura técnica.** Integro la IA en mi flujo de trabajo para multiplicar las posibilidades visuales, siempre combinado con herramientas de control, desde la composición hasta el color. **Los años de experiencia retocando fotografía hacen el resto**, finalizando las imágenes con detalle para un resultado óptimo.",
       },
       threed: {
         title: "Diseño y Modelado 3D",
@@ -93,9 +93,9 @@ export const translations = {
     diseno: {
       title: "Diseño Gráfico & Retoque",
       lead:
-        "Más de 15 años cuidando cada píxel para que tus ideas no solo se vean bien, sino que **funcionen**.",
+        "Más de 2 décadas cuidando de cada píxel para que tus ideas **funcionen**.",
       body:
-        "Llevo más de una década pegado a la pantalla, ayudando a marcas de cosmética y moda (como Sesderma o Laboratorios BABÉ) a encontrar su sitio visual. Me gusta el trabajo bien hecho: ese que es limpio, ordenado y que tiene sentido.",
+        "Llevo más de 20 años pegado a la pantalla, ayudando a marcas a encontrar su sitio visual. Me gusta el trabajo ordenado, efectivo y preciso.",
       backToProjects: "Volver a proyectos de diseño",
       backLabel: "Diseño gráfico",
       projects: {
@@ -104,7 +104,7 @@ export const translations = {
           blurb:
             "Equipamiento deportivo con actitud de trinchera. Una marca que no compite: asedia.",
           description: [
-            "Arsenal es una marca de equipamiento deportivo que mezcla estética táctica con identidad de calle. Desarrollé un logotipo heráldico y una tipografía stencil que funcionan en cualquier soporte.",
+            "Arsenal es una marca de equipamiento deportivo que mezcla estética táctica con identidad de calle. Heráldica militar y una tipografía stencil que potencian el mensaje de durabilidad y resiliencia del equipo y del atleta.",
             "Llevé el sistema a campaña, vídeo y punto de venta: hormigón, niebla y producto en color saturado como hilo conductor de todo el universo visual.",
           ],
         },
@@ -129,9 +129,9 @@ export const translations = {
         diceup: {
           title: "DiceUp",
           blurb:
-            "Juegos, azar y letras con mucha personalidad. Una marca que juega con el blanco y negro para que la diversión sea la protagonista.",
+            "Juegos, azar y tipografía. Una marca que juega con el blanco y negro para que la diversión sea la protagonista.",
           description: [
-            "DiceUp es una tienda especializada en juegos de mesa y rol. La identidad se construye sobre un blanco y negro contundente que deja todo el protagonismo a la tipografía.",
+            "DiceUp es una tienda especializada en juegos de mesa y rol. La identidad se construye sobre un blanco y negro para optimizar los costes de una pequeña tienda con grandes aspiraciones.",
             "Diseñé un sistema modular de carteles, dados y piezas de comunicación que convierten la propia tienda en parte del juego.",
           ],
         },
@@ -252,15 +252,15 @@ export const translations = {
       backToProjects: "Volver a proyectos de IA",
       projects: {
         photo: {
-          title: "Fotografía publicitaria",
+          title: "Fotografía virtual",
           blurb:
-            "Bodegones imposibles, salpicaduras imposibles y composiciones al milímetro. Producción de imagen publicitaria sin set ni atrezzo.",
+            "Bodegones, fotos de detalle o ideas de fantasía combinadas con composiciones al milímetro. Producción de imagen publicitaria sin set ni atrezzo.",
           description: [
             "La IA me permite construir piezas publicitarias completas desde cero, manteniendo una estética consistente entre variantes del mismo concepto.",
             "Esta serie para Fresli traduce un mismo lenguaje —«naturaleza sin filtros»— a tres sabores que funcionan como campaña visual unificada.",
           ],
           tagline:
-            "Producción de imagen publicitaria sin set ni atrezzo: bodegones, salpicaduras y composiciones al milímetro.",
+            "Producción de imagen publicitaria controlada al mínimo detalle para presentar tu producto de la mejor manera posible.",
         },
         identity: {
           title: "Consistencia en la imagen",
@@ -320,7 +320,7 @@ export const translations = {
     },
     about: {
       eyebrow: "Daniel Sánchez",
-      role: "Diseño gráfico · Control de IA · Render 3D",
+      role: "Diseño gráfico · IA bajo control · Render 3D",
       portraitAlt: "Retrato de Daniel Sánchez",
       bio1:
         "Llevo más de una década moviendo píxeles y construyendo identidades visuales para referentes del sector cosmético y moda, como **Laboratorios BABÉ** y **Sesderma**.",
@@ -431,24 +431,24 @@ export const translations = {
     contact: {
       eyebrow: "Let's work together",
       title: "Let's work together",
-      writeMe: "Tell me your idea via email:",
+      writeMe: "Tell me about your project, send me an email:",
       openEmail: "Open email",
       preferCall: "Prefer a more direct conversation? Call me:",
       callDirect: "Call directly",
       copyEmail: "Copy",
       copiedEmail: "Copied",
-      copyTooltip: "Copy email to clipboard",
+      copyTooltip: "Copy to clipboard",
     },
     marquee: {
       title: "Brands, collaborations & visual identities",
     },
     hero: {
-      headlineStart: "Technical rigor and ",
-      headlineHighlight: "visual purpose",
-      headlineEnd: " in every project.",
+      headlineStart: "Graphic design adapted to ",
+      headlineHighlight: "modern times",
+      headlineEnd: ".",
       welcome: "Welcome!",
       intro:
-        "I'm Daniel. Designer with a technical profile. Take a look at my portfolio: if your team needs solid, scalable design where every pixel serves a purpose, I'm looking for my next big project. Let's talk.",
+        "I'm Dani. Graphic designer and tech enthusiast with a fascination for productivity. If your team needs a solid, efficient, and transparent designer, let's talk.",
       cv: "Download CV",
       about: "About me",
       portraitAlt: "Portrait of Daniel with light effect",
@@ -458,18 +458,18 @@ export const translations = {
       design: {
         title: "Graphic Design & Retouching",
         subtitle: "Packaging, branding and cosmetics art direction",
-        tag: "10+ YEARS EXPERIENCE",
+        tag: "20+ YEARS EXPERIENCE",
         imageAlt: "Graphic design and packaging — Cobalto",
         body:
-          "Where it all started. I've spent **more than a decade pushing pixels**, mostly for cosmetics (BABÉ Laboratories, Sesderma) and fashion. I'm a designer with a technical mindset: **obsessed with efficiency**, precision and visual structure. If you're after solid, functional design where every element has a reason to be there, click the image to see more.",
+          "Where it all started. I've spent **more than two decades pushing pixels**, mostly for the cosmetics sector (BABÉ Laboratories, Sesderma). I consider myself a designer with a technical mindset: **obsessed with efficiency**, precision, and graphic structure. If you're after solid, functional design where every element has a reason to be there, click the image to see more.",
       },
       ai: {
         title: "AI under control",
-        subtitle: "ComfyUI node workflows and maximum privacy",
-        tag: "PRIVATE NODE WORKFLOW",
+        subtitle: "Workflows with local tools for maximum privacy for your brand",
+        tag: "AI",
         imageAlt: "Tennis player in action captured with AI",
         body:
-          "No magic, no luck: pure craft. I integrate AI into my workflow to multiply visual possibilities. I work locally using node-based flows in ComfyUI. Why? For its sheer versatility — it lets me scale projects and, crucially for companies, **guarantees a secure environment and absolute privacy for their data**. Traditional design shaking hands with the future.",
+          "**Neither magic nor chance: pure craft.** I integrate AI into my workflow to multiply visual possibilities, always combined with control tools, from composition to color. **Years of experience in photo retouching do the rest**, refining images in detail for an optimal result.",
       },
       threed: {
         title: "3D Design & Modeling",
@@ -483,9 +483,9 @@ export const translations = {
     diseno: {
       title: "Graphic Design & Retouching",
       lead:
-        "Over 15 years looking after every pixel so your ideas don't just look good — they **work**.",
+        "Over 2 decades looking after every pixel so your ideas **work**.",
       body:
-        "I've spent more than a decade glued to the screen, helping cosmetics and fashion brands (like Sesderma or BABÉ Laboratories) find their visual place. I like work done right: clean, tidy, and meaningful.",
+        "I've spent over 20 years glued to the screen, helping brands find their visual place. I like orderly, effective, and precise work.",
       backToProjects: "Back to design projects",
       backLabel: "Graphic design",
       projects: {
@@ -494,7 +494,7 @@ export const translations = {
           blurb:
             "Sports gear with a trench attitude. A brand that doesn't compete: it lays siege.",
           description: [
-            "Arsenal is a sports equipment brand blending tactical aesthetics with street identity. I crafted a heraldic logo and a stencil typeface that hold up on any surface.",
+            "Arsenal is a sports equipment brand blending tactical aesthetics with street identity. Military heraldry and a stencil typeface that enhance the message of durability and resilience for both the team and the athlete.",
             "I extended the system to campaign, video and point of sale: concrete, fog and saturated product colour as the thread running through the whole visual universe.",
           ],
         },
@@ -519,9 +519,9 @@ export const translations = {
         diceup: {
           title: "DiceUp",
           blurb:
-            "Games, chance and lettering with serious personality. A brand that plays with black and white so fun stays in the spotlight.",
+            "Games, chance, and typography. A brand that plays with black and white so fun stays in the spotlight.",
           description: [
-            "DiceUp is a shop specialised in board and role-playing games. The identity is built on bold black and white that lets typography take centre stage.",
+            "DiceUp is a shop specialised in board and role-playing games. The identity is built on black and white to optimize costs for a small shop with big aspirations.",
             "I designed a modular system of posters, dice and communication pieces that turn the shop itself into part of the game.",
           ],
         },
@@ -644,13 +644,13 @@ export const translations = {
         photo: {
           title: "Virtual photography",
           blurb:
-            "Impossible still lifes, impossible splashes and pixel-perfect compositions. Advertising image production without set or props.",
+            "Still lifes, detail shots, or fantasy ideas paired with pixel-perfect compositions. Advertising image production without set or props.",
           description: [
             "AI lets me build complete advertising pieces from scratch, keeping a consistent aesthetic across variants of the same concept.",
             "This series for Fresli translates one language —'nature unfiltered'— into three flavours that work as a unified visual campaign.",
           ],
           tagline:
-            "Advertising image production without set or props: still lifes, splashes and pixel-perfect compositions.",
+            "Advertising image production controlled down to the finest detail to present your product in the best possible way.",
         },
         identity: {
           title: "Consistent identity",
@@ -710,7 +710,7 @@ export const translations = {
     },
     about: {
       eyebrow: "Daniel Sánchez",
-      role: "Graphic design · AI Control · 3D render",
+      role: "Graphic design · AI under control · 3D render",
       portraitAlt: "Portrait of Daniel Sánchez",
       bio1:
         "I've spent over a decade pushing pixels and building visual identities for leaders in the cosmetics and fashion sectors, such as **BABÉ Laboratories** and **Sesderma**.",
