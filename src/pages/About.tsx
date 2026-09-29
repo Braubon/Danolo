@@ -3,7 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ContactSection } from "@/components/ContactSection";
-import { useT } from "@/i18n/LanguageContext";
+import { useLang, useT } from "@/i18n/LanguageContext";
 import { RichText } from "@/i18n/RichText";
 import portrait from "@/assets/profile/portrait.jpg";
 import iconPhotoshop from "@/assets/tools/photoshop.svg";
@@ -95,21 +95,22 @@ const CircleStat = ({ icon, label, sub, value }: { icon: string; label: string; 
 
 type Tool = { label: string; sub?: string; icon: string; value: number };
 
-const herramientas: Tool[] = [
-  { label: "Photoshop", icon: iconPhotoshop, value: 95 },
-  { label: "Illustrator", icon: iconIllustrator, value: 90 },
-  { label: "InDesign", icon: iconIndesign, value: 80 },
-  { label: "Figma", icon: iconFigma, value: 80 },
-  { label: "Blender", sub: "(3D)", icon: iconBlender, value: 75 },
-  { label: "Affinity", icon: iconAffinity, value: 70 },
-  { label: "ComfyUI", sub: "(IA)", icon: iconComfyui, value: 70 },
-  { label: "HTML", icon: iconHtml, value: 75 },
-  { label: "CSS", icon: iconCss, value: 65 },
-  { label: "JavaScript", sub: "(JS)", icon: iconJs, value: 55 },
-];
-
 const About = () => {
+  const { lang } = useLang();
   const t = useT();
+
+  const herramientas: Tool[] = [
+    { label: "Photoshop", icon: iconPhotoshop, value: 95 },
+    { label: "Illustrator", icon: iconIllustrator, value: 90 },
+    { label: "InDesign", icon: iconIndesign, value: 80 },
+    { label: "Figma", icon: iconFigma, value: 80 },
+    { label: "Blender", sub: "(3D)", icon: iconBlender, value: 75 },
+    { label: "Affinity", icon: iconAffinity, value: 70 },
+    { label: "ComfyUI", sub: lang === "es" ? "(IA)" : "(AI)", icon: iconComfyui, value: 70 },
+    { label: "HTML", icon: iconHtml, value: 75 },
+    { label: "CSS", icon: iconCss, value: 65 },
+    { label: "JavaScript", sub: "(JS)", icon: iconJs, value: 55 },
+  ];
 
   return (
     <div className="min-h-screen flex flex-col bg-[#faf8f5] text-stone-900 font-jakarta selection:bg-[#b24b74] selection:text-white">

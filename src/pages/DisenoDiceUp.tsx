@@ -25,20 +25,20 @@ import cajaCartas from "@/assets/diseno/diceup/14-caja-cartas.jpg";
 const DisenoDiceUp = () => {
   const t = useT();
   const gallery = [
-    { src: estuche, alt: "DiceUp Estuche" },
-    { src: carteles, alt: "DiceUp Carteles" },
-    { src: cartelesDado, alt: "DiceUp Carteles Dado" },
-    { src: colores, alt: "DiceUp Colores" },
-    { src: tipografia, alt: "DiceUp Tipografía" },
-    { src: fachada, alt: "DiceUp Fachada" },
-    { src: pattern1, alt: "DiceUp Pattern" },
-    { src: papelRegalo, alt: "DiceUp Papel Regalo" },
-    { src: bolsas, alt: "DiceUp Bolsas" },
-    { src: pattern2, alt: "DiceUp Pattern" },
-    { src: tarjetas, alt: "DiceUp Tarjetas" },
-    { src: identificaciones, alt: "DiceUp Identificaciones" },
-    { src: pattern3, alt: "DiceUp Pattern" },
-    { src: cajaCartas, alt: "DiceUp Caja Cartas" }
+    { src: estuche, alt: t.diceupPage.galleryAlts.estuche },
+    { src: carteles, alt: t.diceupPage.galleryAlts.carteles },
+    { src: cartelesDado, alt: t.diceupPage.galleryAlts.cartelesDado },
+    { src: colores, alt: t.diceupPage.galleryAlts.colores },
+    { src: tipografia, alt: t.diceupPage.galleryAlts.tipografia },
+    { src: fachada, alt: t.diceupPage.galleryAlts.fachada },
+    { src: pattern1, alt: t.diceupPage.galleryAlts.pattern1 },
+    { src: papelRegalo, alt: t.diceupPage.galleryAlts.papelRegalo },
+    { src: bolsas, alt: t.diceupPage.galleryAlts.bolsas },
+    { src: pattern2, alt: t.diceupPage.galleryAlts.pattern2 },
+    { src: tarjetas, alt: t.diceupPage.galleryAlts.tarjetas },
+    { src: identificaciones, alt: t.diceupPage.galleryAlts.identificaciones },
+    { src: pattern3, alt: t.diceupPage.galleryAlts.pattern3 },
+    { src: cajaCartas, alt: t.diceupPage.galleryAlts.cajaCartas },
   ];
 
   const [openIdx, setOpenIdx] = useState<number | null>(null);
@@ -79,28 +79,28 @@ const DisenoDiceUp = () => {
           <div className="bg-white border border-stone-200/90 rounded-3xl shadow-sm overflow-hidden flex flex-col mb-14">
             <video src={videoSrc} controls autoPlay muted loop playsInline preload="metadata" className="w-full h-auto block bg-black" />
             
-            <img src={estuche} alt="DiceUp Estuche" onClick={() => openImage(estuche)} className="w-full h-auto block cursor-pointer" />
-            <img src={carteles} alt="DiceUp Carteles" onClick={() => openImage(carteles)} className="w-full h-auto block cursor-pointer" />
-            <img src={cartelesDado} alt="DiceUp Carteles Dado" onClick={() => openImage(cartelesDado)} className="w-full h-auto block cursor-pointer" />
-            <img src={colores} alt="DiceUp Colores" onClick={() => openImage(colores)} className="w-full h-auto block cursor-pointer" />
-            <img src={tipografia} alt="DiceUp Tipografía" onClick={() => openImage(tipografia)} className="w-full h-auto block cursor-pointer" />
-            <img src={fachada} alt="DiceUp Fachada" onClick={() => openImage(fachada)} className="w-full h-auto block cursor-pointer" />
-            <img src={pattern1} alt="DiceUp Pattern" onClick={() => openImage(pattern1)} className="w-full h-auto block cursor-pointer" />
+            <img src={estuche} alt={t.diceupPage.galleryAlts.estuche} onClick={() => openImage(estuche)} className="w-full h-auto block cursor-pointer" />
+            <img src={carteles} alt={t.diceupPage.galleryAlts.carteles} onClick={() => openImage(carteles)} className="w-full h-auto block cursor-pointer" />
+            <img src={cartelesDado} alt={t.diceupPage.galleryAlts.cartelesDado} onClick={() => openImage(cartelesDado)} className="w-full h-auto block cursor-pointer" />
+            <img src={colores} alt={t.diceupPage.galleryAlts.colores} onClick={() => openImage(colores)} className="w-full h-auto block cursor-pointer" />
+            <img src={tipografia} alt={t.diceupPage.galleryAlts.tipografia} onClick={() => openImage(tipografia)} className="w-full h-auto block cursor-pointer" />
+            <img src={fachada} alt={t.diceupPage.galleryAlts.fachada} onClick={() => openImage(fachada)} className="w-full h-auto block cursor-pointer" />
+            <img src={pattern1} alt={t.diceupPage.galleryAlts.pattern1} onClick={() => openImage(pattern1)} className="w-full h-auto block cursor-pointer" />
             
             <div className="flex w-full justify-center">
-              <img src={papelRegalo} alt="DiceUp Papel Regalo" onClick={() => openImage(papelRegalo)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
-              <img src={bolsas} alt="DiceUp Bolsas" onClick={() => openImage(bolsas)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+              <img src={papelRegalo} alt={t.diceupPage.galleryAlts.papelRegalo} onClick={() => openImage(papelRegalo)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+              <img src={bolsas} alt={t.diceupPage.galleryAlts.bolsas} onClick={() => openImage(bolsas)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
             </div>
 
-            <img src={pattern2} alt="DiceUp Pattern" onClick={() => openImage(pattern2)} className="w-full h-auto block cursor-pointer" />
+            <img src={pattern2} alt={t.diceupPage.galleryAlts.pattern2} onClick={() => openImage(pattern2)} className="w-full h-auto block cursor-pointer" />
             
             <div className="flex w-full justify-center">
-              <img src={tarjetas} alt="DiceUp Tarjetas" onClick={() => openImage(tarjetas)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
-              <img src={identificaciones} alt="DiceUp Identificaciones" onClick={() => openImage(identificaciones)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+              <img src={tarjetas} alt={t.diceupPage.galleryAlts.tarjetas} onClick={() => openImage(tarjetas)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+              <img src={identificaciones} alt={t.diceupPage.galleryAlts.identificaciones} onClick={() => openImage(identificaciones)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
             </div>
 
-            <img src={pattern3} alt="DiceUp Pattern" onClick={() => openImage(pattern3)} className="w-full h-auto block cursor-pointer" />
-            <img src={cajaCartas} alt="DiceUp Caja Cartas" onClick={() => openImage(cajaCartas)} className="w-full h-auto block cursor-pointer" />
+            <img src={pattern3} alt={t.diceupPage.galleryAlts.pattern3} onClick={() => openImage(pattern3)} className="w-full h-auto block cursor-pointer" />
+            <img src={cajaCartas} alt={t.diceupPage.galleryAlts.cajaCartas} onClick={() => openImage(cajaCartas)} className="w-full h-auto block cursor-pointer" />
           </div>
 
           <div className="flex justify-center mt-10">

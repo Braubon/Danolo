@@ -75,7 +75,7 @@ export const Navbar = () => {
             Daniel Sánchez
           </span>
           <span className="text-[10px] sm:text-xs font-mono tracking-wider text-stone-500 uppercase flex items-center">
-            Graphic design · AI Control · 3D render
+            {t.about.role}
           </span>
         </Link>
 
@@ -132,8 +132,8 @@ export const Navbar = () => {
         <div className="hidden md:flex items-center gap-4">
           <LangToggle />
           <a
-            href="/CV-Daniel-Sanchez.pdf"
-            download="CV-Daniel-Sanchez.pdf"
+            href={t.common.cvFile}
+            download={t.common.cvFilename}
             className="inline-flex items-center gap-1.5 px-4 py-1.5 text-xs font-semibold font-jakarta tracking-wide transition-all bg-stone-950 text-white rounded-full hover:bg-[#b24b74] shadow-sm"
           >
             <Download className="w-3.5 h-3.5" />
@@ -197,12 +197,12 @@ export const Navbar = () => {
             <li className="pt-4 border-t border-stone-200 flex items-center justify-between">
               <span className="text-xs font-mono text-stone-500 uppercase">Curriculum Vitae</span>
               <a
-                href="/CV-Daniel-Sanchez.pdf"
-                download="CV-Daniel-Sanchez.pdf"
+                href={t.common.cvFile}
+                download={t.common.cvFilename}
                 className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold bg-stone-950 text-white rounded-full"
               >
                 <Download className="w-3.5 h-3.5" />
-                Descargar CV
+                {t.hero.cv}
               </a>
             </li>
           </ul>

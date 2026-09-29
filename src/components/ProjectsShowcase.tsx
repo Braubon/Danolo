@@ -52,7 +52,7 @@ export const ProjectsShowcase = ({ projects, basePath }: ProjectsShowcaseProps) 
               {/* Panel Content */}
               <div className="relative z-10 p-6 lg:p-8 text-white">
                 <span className="inline-block px-2.5 py-0.5 rounded-full bg-white/20 backdrop-blur-md text-[10px] font-mono uppercase tracking-wider mb-2">
-                  {`0${i + 1} · CASO DE ESTUDIO`}
+                  {`0${i + 1} · ${t.common.caseStudy.toUpperCase()}`}
                 </span>
 
                 <h3 className="text-2xl lg:text-3xl font-bold font-editorial text-white tracking-wide">
@@ -102,7 +102,7 @@ export const ProjectsShowcase = ({ projects, basePath }: ProjectsShowcaseProps) 
               <div className="absolute inset-0 bg-gradient-to-t from-stone-950/85 via-stone-950/30 to-transparent" />
               <div className="absolute bottom-3 left-4 right-4 text-white">
                 <span className="text-[10px] font-mono bg-white/20 backdrop-blur-md px-2 py-0.5 rounded">
-                  {`0${i + 1} · CASO DE ESTUDIO`}
+                  {`0${i + 1} · ${t.common.caseStudy.toUpperCase()}`}
                 </span>
                 <h3 className="text-2xl font-bold font-editorial mt-1">{p.title}</h3>
                 <p className="text-xs text-stone-300 font-mono mt-0.5">{p.blurb}</p>

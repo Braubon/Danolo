@@ -28,20 +28,20 @@ const ThreeD = () => {
   const t = useT();
 
   const gallery = [
-    { src: camara1, alt: "3D Cámara 1" },
-    { src: camara2, alt: "3D Cámara 2" },
-    { src: camara3, alt: "3D Cámara 3" },
-    { src: camara4, alt: "3D Cámara 4" },
-    { src: sesderma5, alt: "3D Sesderma 5" },
-    { src: sesderma6, alt: "3D Sesderma 6" },
-    { src: sesderma7, alt: "3D Sesderma 7" },
-    { src: info8, alt: "3D Infoarquitectura 8" },
-    { src: info9, alt: "3D Infoarquitectura 9" },
-    { src: info10, alt: "3D Infoarquitectura 10" },
-    { src: info11, alt: "3D Infoarquitectura 11" },
-    { src: info12, alt: "3D Infoarquitectura 12" },
-    { src: reloj13, alt: "3D Reloj 13" },
-    { src: reloj14, alt: "3D Reloj 14" },
+    { src: camara1, alt: `${t.threed.gallery.camara} 1` },
+    { src: camara2, alt: `${t.threed.gallery.camara} 2` },
+    { src: camara3, alt: `${t.threed.gallery.camara} 3` },
+    { src: camara4, alt: `${t.threed.gallery.camara} 4` },
+    { src: sesderma5, alt: `${t.threed.gallery.sesderma} 5` },
+    { src: sesderma6, alt: `${t.threed.gallery.sesderma} 6` },
+    { src: sesderma7, alt: `${t.threed.gallery.sesderma} 7` },
+    { src: info8, alt: `${t.threed.gallery.arch} 8` },
+    { src: info9, alt: `${t.threed.gallery.arch} 9` },
+    { src: info10, alt: `${t.threed.gallery.arch} 10` },
+    { src: info11, alt: `${t.threed.gallery.arch} 11` },
+    { src: info12, alt: `${t.threed.gallery.arch} 12` },
+    { src: reloj13, alt: `${t.threed.gallery.watch} 13` },
+    { src: reloj14, alt: `${t.threed.gallery.watch} 14` },
   ];
 
   const [openIdx, setOpenIdx] = useState<number | null>(null);
@@ -102,28 +102,28 @@ const ThreeD = () => {
           {/* Proyecto 1: Cámara */}
           <div className="mb-12 md:mb-16">
             <h2 className="font-editorial italic text-2xl md:text-3xl text-stone-950 font-normal mb-4">
-              01 — Cámara
+              01 — {t.threed.sections.camera}
             </h2>
             <div className="bg-white border border-stone-200/90 rounded-3xl shadow-sm overflow-hidden flex flex-col">
-              <img src={camara1} alt="3D Cámara 1" onClick={() => openImage(camara1)} className="w-full h-auto block cursor-pointer" />
+              <img src={camara1} alt={`${t.threed.gallery.camara} 1`} onClick={() => openImage(camara1)} className="w-full h-auto block cursor-pointer" />
               <div className="flex w-full justify-center">
-                <img src={camara2} alt="3D Cámara 2" onClick={() => openImage(camara2)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
-                <img src={camara3} alt="3D Cámara 3" onClick={() => openImage(camara3)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                <img src={camara2} alt={`${t.threed.gallery.camara} 2`} onClick={() => openImage(camara2)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                <img src={camara3} alt={`${t.threed.gallery.camara} 3`} onClick={() => openImage(camara3)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
               </div>
-              <img src={camara4} alt="3D Cámara 4" onClick={() => openImage(camara4)} className="w-full h-auto block cursor-pointer" />
+              <img src={camara4} alt={`${t.threed.gallery.camara} 4`} onClick={() => openImage(camara4)} className="w-full h-auto block cursor-pointer" />
             </div>
           </div>
 
           {/* Proyecto 2: Sesderma */}
           <div className="mb-12 md:mb-16">
             <h2 className="font-editorial italic text-2xl md:text-3xl text-stone-950 font-normal mb-4">
-              02 — Sesderma
+              02 — {t.threed.sections.sesderma}
             </h2>
             <div className="bg-white border border-stone-200/90 rounded-3xl shadow-sm overflow-hidden flex flex-col">
-              <img src={sesderma5} alt="3D Sesderma 5" onClick={() => openImage(sesderma5)} className="w-full h-auto block cursor-pointer" />
+              <img src={sesderma5} alt={`${t.threed.gallery.sesderma} 5`} onClick={() => openImage(sesderma5)} className="w-full h-auto block cursor-pointer" />
               <div className="flex w-full justify-center">
-                <img src={sesderma6} alt="3D Sesderma 6" onClick={() => openImage(sesderma6)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
-                <img src={sesderma7} alt="3D Sesderma 7" onClick={() => openImage(sesderma7)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                <img src={sesderma6} alt={`${t.threed.gallery.sesderma} 6`} onClick={() => openImage(sesderma6)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                <img src={sesderma7} alt={`${t.threed.gallery.sesderma} 7`} onClick={() => openImage(sesderma7)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
               </div>
             </div>
           </div>
@@ -131,15 +131,15 @@ const ThreeD = () => {
           {/* Proyecto 3: Infoarquitectura */}
           <div className="mb-12 md:mb-16">
             <h2 className="font-editorial italic text-2xl md:text-3xl text-stone-950 font-normal mb-4">
-              03 — Infoarquitectura
+              03 — {t.threed.sections.arch}
             </h2>
             <div className="bg-white border border-stone-200/90 rounded-3xl shadow-sm overflow-hidden flex flex-col">
-              <img src={info8} alt="3D Infoarquitectura 8" onClick={() => openImage(info8)} className="w-full h-auto block cursor-pointer" />
-              <img src={info9} alt="3D Infoarquitectura 9" onClick={() => openImage(info9)} className="w-full h-auto block cursor-pointer" />
-              <img src={info10} alt="3D Infoarquitectura 10" onClick={() => openImage(info10)} className="w-full h-auto block cursor-pointer" />
+              <img src={info8} alt={`${t.threed.gallery.arch} 8`} onClick={() => openImage(info8)} className="w-full h-auto block cursor-pointer" />
+              <img src={info9} alt={`${t.threed.gallery.arch} 9`} onClick={() => openImage(info9)} className="w-full h-auto block cursor-pointer" />
+              <img src={info10} alt={`${t.threed.gallery.arch} 10`} onClick={() => openImage(info10)} className="w-full h-auto block cursor-pointer" />
               <div className="flex w-full justify-center">
-                <img src={info11} alt="3D Infoarquitectura 11" onClick={() => openImage(info11)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
-                <img src={info12} alt="3D Infoarquitectura 12" onClick={() => openImage(info12)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                <img src={info11} alt={`${t.threed.gallery.arch} 11`} onClick={() => openImage(info11)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                <img src={info12} alt={`${t.threed.gallery.arch} 12`} onClick={() => openImage(info12)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
               </div>
             </div>
           </div>
@@ -147,12 +147,12 @@ const ThreeD = () => {
           {/* Proyecto 4: Reloj */}
           <div className="mb-14">
             <h2 className="font-editorial italic text-2xl md:text-3xl text-stone-950 font-normal mb-4">
-              04 — Reloj
+              04 — {t.threed.sections.watch}
             </h2>
             <div className="bg-white border border-stone-200/90 rounded-3xl shadow-sm overflow-hidden flex flex-col">
               <div className="flex w-full justify-center">
-                <img src={reloj13} alt="3D Reloj 13" onClick={() => openImage(reloj13)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
-                <img src={reloj14} alt="3D Reloj 14" onClick={() => openImage(reloj14)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                <img src={reloj13} alt={`${t.threed.gallery.watch} 13`} onClick={() => openImage(reloj13)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+                <img src={reloj14} alt={`${t.threed.gallery.watch} 14`} onClick={() => openImage(reloj14)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
               </div>
             </div>
           </div>

@@ -39,10 +39,10 @@ export const ContactSection = () => {
                 type="button"
                 onClick={handleCopy}
                 className="text-xs font-mono text-stone-500 hover:text-stone-900 inline-flex items-center gap-1 transition-colors px-2 py-1 rounded-lg bg-stone-100"
-                title="Copiar email al portapapeles"
+                title={t.contact.copyTooltip}
               >
                 {copied ? <Check className="w-3.5 h-3.5 text-[#b24b74]" /> : <Copy className="w-3.5 h-3.5" />}
-                {copied ? (lang === "es" ? "Copiado" : "Copied") : (lang === "es" ? "Copiar" : "Copy")}
+                {copied ? t.contact.copiedEmail : t.contact.copyEmail}
               </button>
             </div>
 
@@ -85,7 +85,7 @@ export const ContactSection = () => {
                 href="tel:+34638512171"
                 className="inline-flex items-center gap-2 px-6 py-3 font-semibold text-xs font-jakarta tracking-wide border border-stone-300 bg-white text-stone-900 hover:bg-stone-50 hover:border-[#b24b74] hover:text-[#b24b74] rounded-full transition-all"
               >
-                <span>{t.contact.callDirect || (lang === "es" ? "Llamar directamente" : "Call directly")}</span>
+                <span>{t.contact.callDirect}</span>
                 <ArrowUpRight className="w-4 h-4" />
               </a>
             </div>

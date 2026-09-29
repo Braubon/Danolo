@@ -19,33 +19,33 @@ const Index = () => {
   const disciplines = [
     {
       idx: 0,
-      title: "Diseño Gráfico & Retoque",
-      subtitle: "Packaging, branding y dirección de arte cosmética",
+      title: t.home.design.title,
+      subtitle: t.home.design.subtitle,
       to: "/diseno",
       image: designImg,
       alt: t.home.design.imageAlt,
       body: t.home.design.body,
-      tag: "10+ AÑOS DE EXPERIENCIA",
+      tag: t.home.design.tag,
     },
     {
       idx: 1,
-      title: "IA bajo control",
-      subtitle: "Flujos de nodos con ComfyUI y máxima privacidad",
+      title: t.home.ai.title,
+      subtitle: t.home.ai.subtitle,
       to: "/ia",
       image: aiImg,
       alt: t.home.ai.imageAlt,
       body: t.home.ai.body,
-      tag: "WORKFLOW NODAL PRIVADO",
+      tag: t.home.ai.tag,
     },
     {
       idx: 2,
-      title: "Diseño y Modelado 3D",
-      subtitle: "Hard surface, packshots e infoarquitectura",
+      title: t.home.threed.title,
+      subtitle: t.home.threed.subtitle,
       to: "/3d",
       image: threeDImg,
       alt: t.home.threed.imageAlt,
       body: t.home.threed.body,
-      tag: "BLENDER & CYCLES",
+      tag: t.home.threed.tag,
     },
   ];
 
@@ -61,7 +61,11 @@ const Index = () => {
               {/* Left Column (7 cols) */}
               <div className="lg:col-span-7 py-10 sm:py-12 md:py-16 lg:py-20 flex flex-col justify-center">
                 <h1 className="font-editorial text-5xl sm:text-6xl lg:text-7xl font-normal leading-[1.04] text-stone-950">
-                  Rigor técnico y <span className="italic font-normal underline decoration-stone-300 decoration-1 underline-offset-4">propósito visual</span> en cada proyecto.
+                  {t.hero.headlineStart}
+                  <span className="italic font-normal underline decoration-stone-300 decoration-1 underline-offset-4">
+                    {t.hero.headlineHighlight}
+                  </span>
+                  {t.hero.headlineEnd}
                 </h1>
 
                 <p className="mt-6 sm:mt-7 text-lg sm:text-xl text-stone-600 font-normal leading-relaxed max-w-2xl">
@@ -70,8 +74,8 @@ const Index = () => {
 
                 <div className="mt-8 flex flex-wrap items-center gap-4">
                   <a
-                    href="/CV-Daniel-Sanchez.pdf"
-                    download="CV-Daniel-Sanchez.pdf"
+                    href={t.common.cvFile}
+                    download={t.common.cvFilename}
                     className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-stone-900 text-stone-50 hover:bg-[#b24b74] transition-all duration-300 text-sm font-medium shadow-md hover:shadow-lg hover:translate-y-[-1px]"
                   >
                     <Download className="w-4 h-4" />
@@ -104,7 +108,7 @@ const Index = () => {
                     {/* Cartel Hover Sobre mí */}
                     <div className="absolute inset-0 bg-stone-950/20 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center p-4">
                       <div className="px-6 py-2.5 rounded-full bg-white/95 text-stone-950 shadow-2xl border border-stone-200 font-editorial text-lg tracking-wide flex items-center gap-2 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                        <span className="italic font-normal">Sobre mí</span>
+                        <span className="italic font-normal">{t.hero.about}</span>
                         <ArrowRight className="w-4 h-4 text-[#b24b74]" />
                       </div>
                     </div>
@@ -123,7 +127,7 @@ const Index = () => {
           <div className="container">
             <div className="mb-10">
               <h2 className="text-4xl sm:text-5xl font-editorial italic font-normal text-stone-950">
-                Tres pilares visuales
+                {t.home.pillarsTitle}
               </h2>
             </div>
 

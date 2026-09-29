@@ -11,14 +11,17 @@ export const translations = {
       prev: "Anterior",
       next: "Siguiente",
       portfolioBanner: "portfolio en construcción",
+      caseStudy: "Caso de estudio",
+      cvFile: "/Portfolio_2026_ES.pdf",
+      cvFilename: "Portfolio_2026_ES.pdf",
     },
     nav: {
       home: "Inicio",
       design: "Diseño",
       ai: "IA",
       threed: "3D",
-      about: "About",
-      contact: "contacto",
+      about: "Sobre mí",
+      contact: "Contacto",
       openMenu: "Abrir menú",
       language: "Idioma",
       arsenal: "Arsenal",
@@ -33,6 +36,7 @@ export const translations = {
     footer: {
       city: "Burjassot · Valencia",
       backTop: "Volver arriba",
+      copy: "© 2026 · Diseño gráfico, IA y render 3D",
     },
     contact: {
       eyebrow: "Trabajemos juntos",
@@ -41,11 +45,17 @@ export const translations = {
       openEmail: "Abrir email",
       preferCall: "¿Prefieres un trato más directo? Llámame:",
       callDirect: "Llamar directamente",
+      copyEmail: "Copiar",
+      copiedEmail: "Copiado",
+      copyTooltip: "Copiar email al portapapeles",
     },
     marquee: {
       title: "Marcas, colaboraciones e identidades visuales",
     },
     hero: {
+      headlineStart: "Rigor técnico y ",
+      headlineHighlight: "propósito visual",
+      headlineEnd: " en cada proyecto.",
       welcome: "¡Bienvenido!",
       intro:
         "Soy Daniel. Diseñador con perfil técnico. Échale un vistazo a mi portfolio: si tu equipo necesita un diseño sólido, escalable y donde cada píxel tenga un propósito, estoy buscando mi próximo gran proyecto. Hablemos.",
@@ -54,20 +64,27 @@ export const translations = {
       portraitAlt: "Retrato de Daniel con efecto de luz",
     },
     home: {
+      pillarsTitle: "Tres pilares visuales",
       design: {
-        title: "Diseño Gráfico\n& Retoque",
+        title: "Diseño Gráfico & Retoque",
+        subtitle: "Packaging, branding y dirección de arte cosmética",
+        tag: "10+ AÑOS DE EXPERIENCIA",
         imageAlt: "Diseño gráfico y packaging — Cobalto",
         body:
           "El origen de todo. Llevo **más de una década dándole al píxel**, trabajando principalmente para el sector cosmético (laboratorios BABÉ, Sesderma) y la moda. Me considero un diseñador de perfil técnico: **me obsesiona la eficiencia**, la precisión y la estructura gráfica. Si buscas un diseño sólido, funcional y donde cada elemento tiene un porqué, dale a la imagen para ver más.",
       },
       ai: {
         title: "IA bajo control",
+        subtitle: "Flujos de nodos con ComfyUI y máxima privacidad",
+        tag: "WORKFLOW NODAL PRIVADO",
         imageAlt: "Tenista en acción capturada con IA",
         body:
           "Ni magia ni azar: pura técnica. Integro la IA en mi flujo de trabajo para multiplicar las posibilidades visuales. Trabajo de forma local mediante flujos de nodos con ComfyUI. ¿Por qué? Por su versatilidad brutal, me permite escalar proyectos y, lo más importante para las empresas: **garantiza un entorno seguro y la privacidad absoluta de sus datos**. El diseño tradicional dándose la mano con el futuro.",
       },
       threed: {
         title: "Diseño y Modelado 3D",
+        subtitle: "Hard surface, packshots e infoarquitectura",
+        tag: "BLENDER & CYCLES",
         imageAlt: "Estudio 3D con doble monitor y tableta gráfica",
         body:
           "Lo que empezó como un reto personal por puro hambre de aprender nuevas habilidades, acabó colándose de lleno en mi día a día profesional. El 3D me da la libertad técnica para salir del plano, crear volúmenes, iluminar y texturizar desde cero. **Es mi as en la manga para resolver problemas visuales cuando el 2D o la fotografía se quedan cortos.** Echa un vistazo.",
@@ -140,6 +157,17 @@ export const translations = {
       altBaseball: "Cartel Arsenal — bate de béisbol Flail",
       altFootball: "Cartel Arsenal — casco de fútbol americano",
       altTennis: "Cartel Arsenal — raqueta de tenis",
+      galleryAlts: {
+        logo: "Logotipo Arsenal",
+        padel: "Fotografía de pádel Arsenal",
+        fonts: "Tipografías Arsenal",
+        colors: "Paleta de color Arsenal",
+        siege: "Campaña Built for the Siege",
+        rrss: "Diseño para redes sociales Arsenal",
+        racketReveal: "Presentación de pala Arsenal",
+        store: "Espacio comercial Arsenal",
+        end: "Cierre de presentación Arsenal",
+      },
     },
     cobaltoPage: {
       title: "Cobalto",
@@ -178,6 +206,22 @@ export const translations = {
       altLuck: "Cartel Prueba Tu Suerte de DiceUp",
       altDice: "Dados promocionales de DiceUp",
       altBadge: "Acreditación Sci-Fi Week para staff",
+      galleryAlts: {
+        estuche: "Estuche de dados promocional DiceUp",
+        carteles: "Cartelería promocional DiceUp",
+        cartelesDado: "Carteles dado de la suerte DiceUp",
+        colores: "Paleta corporativa blanco y negro DiceUp",
+        tipografia: "Sistema tipográfico DiceUp",
+        fachada: "Fachada exterior DiceUp",
+        pattern1: "Patrón geométrico 1 DiceUp",
+        papelRegalo: "Papel de regalo corporativo DiceUp",
+        bolsas: "Bolsas de compra DiceUp",
+        pattern2: "Patrón geométrico 2 DiceUp",
+        tarjetas: "Tarjetas de fidelidad y visita DiceUp",
+        identificaciones: "Acreditaciones para eventos DiceUp",
+        pattern3: "Patrón geométrico 3 DiceUp",
+        cajaCartas: "Packaging para baraja de cartas DiceUp",
+      },
     },
     oshunPage: {
       title: "Oshun",
@@ -240,6 +284,18 @@ export const translations = {
         "Salir del plano para resolver lo que la fotografía o el 2D no llegan a contar. Aquí aterrizan los proyectos de modelado, iluminación y texturizado donde el 3D es la herramienta más eficaz para visualizar una idea.",
       backLabel: "Diseño y Modelado 3D",
       backToProjects: "Volver a proyectos 3D",
+      sections: {
+        camera: "Cámara",
+        sesderma: "Sesderma",
+        arch: "Infoarquitectura",
+        watch: "Reloj",
+      },
+      gallery: {
+        camara: "3D Cámara",
+        sesderma: "3D Sesderma",
+        arch: "3D Infoarquitectura",
+        watch: "3D Reloj",
+      },
       projects: {
         product: {
           title: "Producto",
@@ -261,51 +317,10 @@ export const translations = {
             "Interiores y espacios construidos digitalmente para anticipar la experiencia real.",
         },
       },
-      product: {
-        block1: {
-          heading: "Bodegón de producto",
-          text: "Composiciones limpias y materiales calibrados. El producto siempre es el protagonista.",
-        },
-        block2: {
-          heading: "Acabados y detalle macro",
-          text: "Acetatos, metales, cristales degradados. Diales y microtipografía que aguantan el zoom.",
-        },
-        block3: {
-          heading: "Materiales con carácter",
-          text: "Madera barnizada, oro, plásticos y metales conviviendo con su propia respuesta a la luz.",
-        },
-        alt: {
-          cover: "Set de cámaras blancas con elementos geométricos pastel",
-          gafas: "Gafas de sol con montura tortuga",
-          detalle: "Detalle macro de los controles de una cámara réflex",
-          guitarra: "Guitarra eléctrica roja tipo SG con herrajes dorados",
-          reloj: "Reloj cronógrafo con esfera negra y detalles en oro rosa",
-        },
-      },
-      arch: {
-        block1: {
-          heading: "Espacios habitados",
-          text: "Interiores construidos desde el plano hasta el último textil. La luz y los materiales cuentan cómo se vive cada estancia.",
-        },
-        block2: {
-          heading: "Color y materialidad",
-          text: "Paletas calibradas, maderas, cerámicas y tapizados conviviendo con coherencia. El render como herramienta para decidir antes de construir.",
-        },
-        block3: {
-          heading: "Puesta en escena",
-          text: "Encuadres pensados como fotografía de interiorismo: cámara, lente y atmósfera al servicio del proyecto.",
-        },
-        alt: {
-          salon: "Salón con pared verde geométrica y mueble de TV",
-          cocina: "Cocina abierta en tonos rosa empolvado y verde",
-          estudio: "Estudio de trabajo frontal con monitores y estantería",
-          escritorio: "Vista lateral del escritorio con tableta gráfica y silla amarilla",
-        },
-      },
     },
     about: {
       eyebrow: "Daniel Sánchez",
-      role: "Graphic design · AI Control · 3D render",
+      role: "Diseño gráfico · Control de IA · Render 3D",
       portraitAlt: "Retrato de Daniel Sánchez",
       bio1:
         "Llevo más de una década moviendo píxeles y construyendo identidades visuales para referentes del sector cosmético y moda, como **Laboratorios BABÉ** y **Sesderma**.",
@@ -349,6 +364,12 @@ export const translations = {
         { label: "Valenciano", value: 50, nivel: "Básico-medio" },
       ],
     },
+    notFound: {
+      eyebrow: "Error 404",
+      title: "Página no encontrada",
+      description: "La página que buscas no existe o ha sido trasladada.",
+      backHome: "Volver al inicio",
+    },
     marqueeDesc: {
       baccio: "Marca de accesorios para hombres elegantes y distinguidos.",
       bullRider: "Tienda de bicicletas especializada en BMX y montaña.",
@@ -380,6 +401,9 @@ export const translations = {
       prev: "Previous",
       next: "Next",
       portfolioBanner: "portfolio under construction",
+      caseStudy: "Case study",
+      cvFile: "/Portfolio_2026_EN.pdf",
+      cvFilename: "Portfolio_2026_EN.pdf",
     },
     nav: {
       home: "Home",
@@ -387,7 +411,7 @@ export const translations = {
       ai: "AI",
       threed: "3D",
       about: "About",
-      contact: "contact",
+      contact: "Contact",
       openMenu: "Open menu",
       language: "Language",
       arsenal: "Arsenal",
@@ -402,6 +426,7 @@ export const translations = {
     footer: {
       city: "Burjassot · Valencia",
       backTop: "Back to top",
+      copy: "© 2026 · Graphic design, AI & 3D render",
     },
     contact: {
       eyebrow: "Let's work together",
@@ -410,11 +435,17 @@ export const translations = {
       openEmail: "Open email",
       preferCall: "Prefer a more direct conversation? Call me:",
       callDirect: "Call directly",
+      copyEmail: "Copy",
+      copiedEmail: "Copied",
+      copyTooltip: "Copy email to clipboard",
     },
     marquee: {
       title: "Brands, collaborations & visual identities",
     },
     hero: {
+      headlineStart: "Technical rigor and ",
+      headlineHighlight: "visual purpose",
+      headlineEnd: " in every project.",
       welcome: "Welcome!",
       intro:
         "I'm Daniel. Designer with a technical profile. Take a look at my portfolio: if your team needs solid, scalable design where every pixel serves a purpose, I'm looking for my next big project. Let's talk.",
@@ -423,20 +454,27 @@ export const translations = {
       portraitAlt: "Portrait of Daniel with light effect",
     },
     home: {
+      pillarsTitle: "Three visual pillars",
       design: {
-        title: "Graphic Design\n& Retouching",
+        title: "Graphic Design & Retouching",
+        subtitle: "Packaging, branding and cosmetics art direction",
+        tag: "10+ YEARS EXPERIENCE",
         imageAlt: "Graphic design and packaging — Cobalto",
         body:
           "Where it all started. I've spent **more than a decade pushing pixels**, mostly for cosmetics (BABÉ Laboratories, Sesderma) and fashion. I'm a designer with a technical mindset: **obsessed with efficiency**, precision and visual structure. If you're after solid, functional design where every element has a reason to be there, click the image to see more.",
       },
       ai: {
         title: "AI under control",
+        subtitle: "ComfyUI node workflows and maximum privacy",
+        tag: "PRIVATE NODE WORKFLOW",
         imageAlt: "Tennis player in action captured with AI",
         body:
           "No magic, no luck: pure craft. I integrate AI into my workflow to multiply visual possibilities. I work locally using node-based flows in ComfyUI. Why? For its sheer versatility — it lets me scale projects and, crucially for companies, **guarantees a secure environment and absolute privacy for their data**. Traditional design shaking hands with the future.",
       },
       threed: {
         title: "3D Design & Modeling",
+        subtitle: "Hard surface, packshots and architectural visualization",
+        tag: "BLENDER & CYCLES",
         imageAlt: "3D studio with dual monitor and graphic tablet",
         body:
           "What began as a personal challenge driven by a hunger to learn new skills ended up slipping right into my day-to-day work. 3D gives me the technical freedom to leave the flat plane behind, build volumes, light and texture from scratch. **It's my ace in the hole when 2D or photography fall short of solving a visual problem.** Take a look.",
@@ -509,6 +547,17 @@ export const translations = {
       altBaseball: "Arsenal poster — Flail baseball bat",
       altFootball: "Arsenal poster — American football helmet",
       altTennis: "Arsenal poster — tennis racquet",
+      galleryAlts: {
+        logo: "Arsenal Logo",
+        padel: "Arsenal Padel Photo",
+        fonts: "Arsenal Typography",
+        colors: "Arsenal Color Palette",
+        siege: "Built for the Siege Campaign",
+        rrss: "Arsenal Social Media Design",
+        racketReveal: "Arsenal Racket Reveal",
+        store: "Arsenal Retail Store",
+        end: "Arsenal Closing Slide",
+      },
     },
     cobaltoPage: {
       title: "Cobalto",
@@ -547,6 +596,22 @@ export const translations = {
       altLuck: "DiceUp 'Try Your Luck' poster",
       altDice: "DiceUp promotional dice",
       altBadge: "Sci-Fi Week staff badge",
+      galleryAlts: {
+        estuche: "DiceUp Promotional Dice Case",
+        carteles: "DiceUp Promotional Posters",
+        cartelesDado: "DiceUp Lucky Dice Posters",
+        colores: "DiceUp Black & White Palette",
+        tipografia: "DiceUp Type System",
+        fachada: "DiceUp Storefront",
+        pattern1: "DiceUp Geometric Pattern 1",
+        papelRegalo: "DiceUp Branded Wrapping Paper",
+        bolsas: "DiceUp Shopping Bags",
+        pattern2: "DiceUp Geometric Pattern 2",
+        tarjetas: "DiceUp Loyalty & Business Cards",
+        identificaciones: "DiceUp Event Badges",
+        pattern3: "DiceUp Geometric Pattern 3",
+        cajaCartas: "DiceUp Playing Card Box",
+      },
     },
     oshunPage: {
       title: "Oshun",
@@ -609,6 +674,18 @@ export const translations = {
         "Stepping out of the flat plane to solve what photography or 2D can't quite tell. This is where modeling, lighting and texturing projects land — when 3D is the most effective way to visualise an idea.",
       backLabel: "3D Design & Modeling",
       backToProjects: "Back to 3D projects",
+      sections: {
+        camera: "Camera",
+        sesderma: "Sesderma",
+        arch: "Architectural Visualization",
+        watch: "Watch",
+      },
+      gallery: {
+        camara: "3D Camera",
+        sesderma: "3D Sesderma",
+        arch: "3D Architectural Visualization",
+        watch: "3D Watch",
+      },
       projects: {
         product: {
           title: "Product",
@@ -628,47 +705,6 @@ export const translations = {
           ],
           tagline:
             "Interiors and spaces digitally built to anticipate the real experience.",
-        },
-      },
-      product: {
-        block1: {
-          heading: "Product still life",
-          text: "Clean compositions and calibrated materials. The product is always the lead.",
-        },
-        block2: {
-          heading: "Finishes and macro detail",
-          text: "Acetates, metals, gradient glass. Dials and microtype that hold up to the zoom.",
-        },
-        block3: {
-          heading: "Materials with character",
-          text: "Lacquered wood, gold, plastics and metals coexisting with their own response to light.",
-        },
-        alt: {
-          cover: "Set of white cameras with pastel geometric elements",
-          gafas: "Sunglasses with tortoise frame",
-          detalle: "Macro detail of a DSLR camera's controls",
-          guitarra: "Red SG-style electric guitar with gold hardware",
-          reloj: "Chronograph watch with black dial and rose gold details",
-        },
-      },
-      arch: {
-        block1: {
-          heading: "Lived-in spaces",
-          text: "Interiors built from the floor plan to the last textile. Light and materials tell how each room is lived in.",
-        },
-        block2: {
-          heading: "Colour and materiality",
-          text: "Calibrated palettes, woods, ceramics and upholstery coexisting coherently. Rendering as a tool to decide before building.",
-        },
-        block3: {
-          heading: "Mise-en-scène",
-          text: "Framings thought as interior photography: camera, lens and atmosphere at the service of the project.",
-        },
-        alt: {
-          salon: "Living room with geometric green wall and TV cabinet",
-          cocina: "Open kitchen in dusty pink and green tones",
-          estudio: "Front view of a workstation with monitors and shelving",
-          escritorio: "Side view of the desk with graphic tablet and yellow chair",
         },
       },
     },
@@ -717,6 +753,12 @@ export const translations = {
         { label: "English", value: 60, nivel: "Intermediate" },
         { label: "Valencian", value: 50, nivel: "Basic-intermediate" },
       ],
+    },
+    notFound: {
+      eyebrow: "404 Error",
+      title: "Page not found",
+      description: "The page you are looking for doesn't exist or has been moved.",
+      backHome: "Back to home",
     },
     marqueeDesc: {
       baccio: "Accessories brand for elegant, distinguished men.",

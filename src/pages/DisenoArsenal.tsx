@@ -20,15 +20,15 @@ import videoSrc from "@/assets/diseno/arsenal/Presentación Portfolio_2_vídeo.m
 const DisenoArsenal = () => {
   const t = useT();
   const gallery = [
-    { src: logo, alt: "Arsenal Logo" },
-    { src: padelPhoto, alt: "Arsenal Padel" },
-    { src: fonts, alt: "Arsenal Fonts" },
-    { src: colors, alt: "Arsenal Colors" },
-    { src: builtForTheSiege, alt: "Built for the siege" },
-    { src: rrss, alt: "Arsenal Social Media" },
-    { src: racketReveal, alt: "Arsenal Racket Reveal" },
-    { src: store, alt: "Arsenal Store" },
-    { src: end, alt: "Arsenal End Presentation" }
+    { src: logo, alt: t.arsenal.galleryAlts.logo },
+    { src: padelPhoto, alt: t.arsenal.galleryAlts.padel },
+    { src: fonts, alt: t.arsenal.galleryAlts.fonts },
+    { src: colors, alt: t.arsenal.galleryAlts.colors },
+    { src: builtForTheSiege, alt: t.arsenal.galleryAlts.siege },
+    { src: rrss, alt: t.arsenal.galleryAlts.rrss },
+    { src: racketReveal, alt: t.arsenal.galleryAlts.racketReveal },
+    { src: store, alt: t.arsenal.galleryAlts.store },
+    { src: end, alt: t.arsenal.galleryAlts.end },
   ];
 
   const [openIdx, setOpenIdx] = useState<number | null>(null);
@@ -80,22 +80,22 @@ const DisenoArsenal = () => {
         <section className="container pb-16">
           {/* Bloque continuo de presentación estilo Studio Magazine */}
           <div className="bg-white border border-stone-200/90 rounded-3xl shadow-sm overflow-hidden flex flex-col mb-14">
-            <img src={logo} alt="Arsenal Logo" onClick={() => openImage(logo)} className="w-full h-auto block cursor-pointer" />
-            <img src={padelPhoto} alt="Arsenal Padel" onClick={() => openImage(padelPhoto)} className="w-full h-auto block cursor-pointer" />
+            <img src={logo} alt={t.arsenal.galleryAlts.logo} onClick={() => openImage(logo)} className="w-full h-auto block cursor-pointer" />
+            <img src={padelPhoto} alt={t.arsenal.galleryAlts.padel} onClick={() => openImage(padelPhoto)} className="w-full h-auto block cursor-pointer" />
             
             <div className="flex w-full justify-center">
-              <img src={fonts} alt="Arsenal Fonts" onClick={() => openImage(fonts)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
-              <img src={colors} alt="Arsenal Colors" onClick={() => openImage(colors)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+              <img src={fonts} alt={t.arsenal.galleryAlts.fonts} onClick={() => openImage(fonts)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
+              <img src={colors} alt={t.arsenal.galleryAlts.colors} onClick={() => openImage(colors)} className="w-auto h-auto min-w-0 shrink block cursor-pointer object-contain" />
             </div>
 
-            <img src={builtForTheSiege} alt="Built for the siege" onClick={() => openImage(builtForTheSiege)} className="w-full h-auto block cursor-pointer" />
-            <img src={rrss} alt="Arsenal Social Media" onClick={() => openImage(rrss)} className="w-full h-auto block cursor-pointer" />
-            <img src={racketReveal} alt="Arsenal Racket Reveal" onClick={() => openImage(racketReveal)} className="w-full h-auto block cursor-pointer" />
+            <img src={builtForTheSiege} alt={t.arsenal.galleryAlts.siege} onClick={() => openImage(builtForTheSiege)} className="w-full h-auto block cursor-pointer" />
+            <img src={rrss} alt={t.arsenal.galleryAlts.rrss} onClick={() => openImage(rrss)} className="w-full h-auto block cursor-pointer" />
+            <img src={racketReveal} alt={t.arsenal.galleryAlts.racketReveal} onClick={() => openImage(racketReveal)} className="w-full h-auto block cursor-pointer" />
 
             <video src={videoSrc} controls autoPlay muted loop playsInline preload="metadata" className="w-full h-auto block bg-black" />
             
-            <img src={store} alt="Arsenal Store" onClick={() => openImage(store)} className="w-full h-auto block cursor-pointer" />
-            <img src={end} alt="Arsenal End Presentation" onClick={() => openImage(end)} className="w-full h-auto block cursor-pointer" />
+            <img src={store} alt={t.arsenal.galleryAlts.store} onClick={() => openImage(store)} className="w-full h-auto block cursor-pointer" />
+            <img src={end} alt={t.arsenal.galleryAlts.end} onClick={() => openImage(end)} className="w-full h-auto block cursor-pointer" />
           </div>
 
           <div className="flex justify-center mt-10">

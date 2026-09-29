@@ -13,7 +13,7 @@ export const Footer = () => {
           </span>
           <span className="text-stone-300">·</span>
           <span className="text-stone-500 text-[11px] font-normal">
-            © 2026 · Graphic design, AI & 3D render
+            {t.footer.copy}
           </span>
         </div>
 

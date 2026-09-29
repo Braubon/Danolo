@@ -16,6 +16,9 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   useEffect(() => {
     document.documentElement.lang = lang;
     window.localStorage.setItem(STORAGE_KEY, lang);
+    if (typeof document !== "undefined") {
+      document.title = `Daniel Sánchez — ${translations[lang].about.role}`;
+    }
   }, [lang]);
 
   return (
